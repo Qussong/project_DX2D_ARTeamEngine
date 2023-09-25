@@ -153,7 +153,6 @@ namespace van::math
         float LengthSquared() const noexcept;
 
         float Dot(const Vector2& V) const noexcept;
-        float Dot(const Vector2& V1, const Vector2& V2) const noexcept;
         void Cross(const Vector2& V, Vector2& result) const noexcept;
         Vector2 Cross(const Vector2& V) const noexcept;
 
