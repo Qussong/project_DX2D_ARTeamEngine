@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="CS">
+      <UniqueIdentifier>{a4a0ee50-12d0-4f0b-aad6-a87c54df534e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DS">
+      <UniqueIdentifier>{8250157a-de5e-46fd-aafa-d4608e841bcf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GS">
+      <UniqueIdentifier>{681012e1-ea5b-4058-abab-e870fd0850bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HS">
+      <UniqueIdentifier>{e1ee169c-327d-4977-b103-7ab95648f313}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PS">
+      <UniqueIdentifier>{8277d860-dc9f-4a9a-868d-8b3e00db2cbc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="VS">
+      <UniqueIdentifier>{7fdf92f0-e78f-4bb5-8990-6e02155b3f0f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="$(MSBuildThisFileDirectory)TrianglePS.hlsl">
+      <Filter>PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)TriangleVS.hlsl">
+      <Filter>VS</Filter>
+    </FxCompile>
+  </ItemGroup>
+</Project>

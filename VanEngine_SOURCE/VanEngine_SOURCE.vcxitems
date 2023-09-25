@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{c7dcb966-ae65-469e-9b7d-60befcc4c016}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)vanApplication.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)vanCollider.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)vanComponent.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)vanConstantBuffer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)vanEntity.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)vanEnums.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)vanEngine.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)vanGameObject.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)vanGraphics.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)vanGraphicsDevice_DX11.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)vanInput.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)vanLayer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)vanMaterial.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)vanMath.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)vanMesh.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)vanMeshRenderer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)vanRenderer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)vanResource.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)vanResources.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)vanRigidBody.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)vanScene.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)vanSceneManager.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)vanScript.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)vanShader.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)vanTime.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)vanTransform.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)vanGraphicsDevice.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)vanCanvas.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)vanApplication.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)vanCollider.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)vanComponent.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)vanConstantBuffer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)vanEntity.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)vanGameObject.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)vanGraphicsDevice_DX11.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)vanInput.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)vanLayer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)vanMaterial.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)vanMath.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)vanMesh.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)vanMeshRenderer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)vanRenderer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)vanResource.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)vanResources.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)vanRigidBody.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)vanScene.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)vanSceneManager.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)vanScript.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)vanShader.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)vanTime.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)vanTransform.cpp" />
+  </ItemGroup>
+</Project>
