@@ -1,20 +1,23 @@
-C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_SOURCE\vanApplication.cpp;C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_Windows\x64\Debug\vanApplication.obj
-C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_SOURCE\vanComponent.cpp;C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_Windows\x64\Debug\vanComponent.obj
-C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_SOURCE\vanConstantBuffer.cpp;C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_Windows\x64\Debug\vanConstantBuffer.obj
-C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_SOURCE\vanEntity.cpp;C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_Windows\x64\Debug\vanEntity.obj
-C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_SOURCE\vanGameObject.cpp;C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_Windows\x64\Debug\vanGameObject.obj
-C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_SOURCE\vanGraphicsDevice_DX11.cpp;C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_Windows\x64\Debug\vanGraphicsDevice_DX11.obj
-C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_SOURCE\vanInput.cpp;C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_Windows\x64\Debug\vanInput.obj
-C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_SOURCE\vanLayer.cpp;C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_Windows\x64\Debug\vanLayer.obj
-C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_SOURCE\vanMaterial.cpp;C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_Windows\x64\Debug\vanMaterial.obj
-C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_SOURCE\vanMath.cpp;C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_Windows\x64\Debug\vanMath.obj
-C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_SOURCE\vanMesh.cpp;C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_Windows\x64\Debug\vanMesh.obj
-C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_SOURCE\vanMeshRenderer.cpp;C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_Windows\x64\Debug\vanMeshRenderer.obj
-C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_SOURCE\vanRenderer.cpp;C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_Windows\x64\Debug\vanRenderer.obj
-C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_SOURCE\vanResource.cpp;C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_Windows\x64\Debug\vanResource.obj
-C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_SOURCE\vanResources.cpp;C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_Windows\x64\Debug\vanResources.obj
-C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_SOURCE\vanScene.cpp;C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_Windows\x64\Debug\vanScene.obj
-C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_SOURCE\vanSceneManager.cpp;C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_Windows\x64\Debug\vanSceneManager.obj
-C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_SOURCE\vanShader.cpp;C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_Windows\x64\Debug\vanShader.obj
-C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_SOURCE\vanTime.cpp;C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_Windows\x64\Debug\vanTime.obj
-C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_SOURCE\vanTransform.cpp;C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_Windows\x64\Debug\vanTransform.obj
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_Windows\vanPlayerScript.cpp;C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_Windows\x64\Debug\vanPlayerScript.obj
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_Windows\vanPlayScene.cpp;C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_Windows\x64\Debug\vanPlayScene.obj
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanApplication.cpp;C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_Windows\x64\Debug\vanApplication.obj
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanComponent.cpp;C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_Windows\x64\Debug\vanComponent.obj
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanConstantBuffer.cpp;C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_Windows\x64\Debug\vanConstantBuffer.obj
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanEntity.cpp;C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_Windows\x64\Debug\vanEntity.obj
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.cpp;C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_Windows\x64\Debug\vanGameObject.obj
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGraphicsDevice_DX11.cpp;C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_Windows\x64\Debug\vanGraphicsDevice_DX11.obj
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanInput.cpp;C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_Windows\x64\Debug\vanInput.obj
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanLayer.cpp;C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_Windows\x64\Debug\vanLayer.obj
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanMaterial.cpp;C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_Windows\x64\Debug\vanMaterial.obj
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanMath.cpp;C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_Windows\x64\Debug\vanMath.obj
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanMesh.cpp;C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_Windows\x64\Debug\vanMesh.obj
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanMeshRenderer.cpp;C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_Windows\x64\Debug\vanMeshRenderer.obj
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanRenderer.cpp;C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_Windows\x64\Debug\vanRenderer.obj
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanResource.cpp;C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_Windows\x64\Debug\vanResource.obj
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanResources.cpp;C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_Windows\x64\Debug\vanResources.obj
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanScene.cpp;C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_Windows\x64\Debug\vanScene.obj
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanSceneManager.cpp;C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_Windows\x64\Debug\vanSceneManager.obj
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanScript.cpp;C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_Windows\x64\Debug\vanScript.obj
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanShader.cpp;C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_Windows\x64\Debug\vanShader.obj
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanTime.cpp;C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_Windows\x64\Debug\vanTime.obj
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanTransform.cpp;C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_Windows\x64\Debug\vanTransform.obj

@@ -558,15 +558,6 @@ namespace van::math
 		return XMVectorGetX(X);
 	}
 
-	float Vector2::Dot(const Vector2& V1, const Vector2& V2) const noexcept
-	{
-		using namespace DirectX;
-		const XMVECTOR v1 = XMLoadFloat2(&V1);
-		const XMVECTOR v2 = XMLoadFloat2(&V2);
-		const XMVECTOR X = XMVector2Dot(v1, v2);
-		return XMVectorGetX(X);
-	}
-
 	void Vector2::Cross(const Vector2& V, Vector2& result) const noexcept
 	{
 		using namespace DirectX;

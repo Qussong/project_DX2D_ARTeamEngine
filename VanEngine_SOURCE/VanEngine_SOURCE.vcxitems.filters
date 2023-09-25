@@ -52,21 +52,6 @@
     <Filter Include="Engine\Resource\Shader">
       <UniqueIdentifier>{3bc469e5-a552-4282-a32b-f5f93c251605}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\Component\Transform">
-      <UniqueIdentifier>{9c0ec067-459e-4b50-b87e-78ad70a0efb7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\Component\MeshRenderer">
-      <UniqueIdentifier>{8daf051a-db66-4d8e-b3d2-2e695cf18ae1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\Component\Collider">
-      <UniqueIdentifier>{4e499261-d646-43c4-bf30-7350b029c920}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\Script">
-      <UniqueIdentifier>{45ad93d9-2aee-4321-b592-4a1f307a1bdb}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\Component\RigidBody">
-      <UniqueIdentifier>{6858e792-743b-4d80-a328-090445a59587}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h">
@@ -94,6 +79,12 @@
       <Filter>Engine\High Level Interface</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)vanComponent.h">
+      <Filter>Engine\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)vanMeshRenderer.h">
+      <Filter>Engine\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)vanTransform.h">
       <Filter>Engine\Component</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)vanEntity.h">
@@ -141,20 +132,8 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)vanCanvas.h">
       <Filter>Engine\System</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)vanTransform.h">
-      <Filter>Engine\Component\Transform</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)vanMeshRenderer.h">
-      <Filter>Engine\Component\MeshRenderer</Filter>
-    </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)vanScript.h">
-      <Filter>Engine\Script</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)vanCollider.h">
-      <Filter>Engine\Component\Collider</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)vanRigidBody.h">
-      <Filter>Engine\Component\RigidBody</Filter>
+      <Filter>Engine\Component</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -174,6 +153,12 @@
       <Filter>Engine\High Level Interface</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)vanComponent.cpp">
+      <Filter>Engine\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)vanMeshRenderer.cpp">
+      <Filter>Engine\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)vanTransform.cpp">
       <Filter>Engine\Component</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)vanEntity.cpp">
@@ -212,20 +197,8 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)vanSceneManager.cpp">
       <Filter>Engine\Scene</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)vanTransform.cpp">
-      <Filter>Engine\Component\Transform</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)vanMeshRenderer.cpp">
-      <Filter>Engine\Component\MeshRenderer</Filter>
-    </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)vanScript.cpp">
-      <Filter>Engine\Script</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)vanCollider.cpp">
-      <Filter>Engine\Component\Collider</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)vanRigidBody.cpp">
-      <Filter>Engine\Component\RigidBody</Filter>
+      <Filter>Engine\Component</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
