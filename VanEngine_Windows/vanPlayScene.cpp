@@ -31,7 +31,7 @@ namespace van
 			meshRenderer->SetShader(Resources::Find<Shader>(L"TriangleShader"));
 
 			AddGameObject(object, LAYER::NONE);
-			object->AddComponent<PlayerScript>();
+			//object->AddComponent<PlayerScript>();
 			//object->AddComponent<PlayerScript2>();
 		}
 	}

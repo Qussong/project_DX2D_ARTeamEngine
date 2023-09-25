@@ -7,6 +7,7 @@ namespace van
 	MeshRenderer::MeshRenderer()
 		: Component(COMPONENTTYPE::MESH)
 	{
+		SetName(L"MeshRenderer class");
 	}
 
 	MeshRenderer::~MeshRenderer()

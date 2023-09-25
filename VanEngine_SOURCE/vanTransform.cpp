@@ -7,7 +7,7 @@ namespace van
 	Transform::Transform()
 		: Component(COMPONENTTYPE::TRANSFORM)
 	{
-
+		SetName(L"Transform class");
 	}
 
 	Transform::~Transform()

@@ -1,1 +1,244 @@
-﻿  VanEngine_Windows.vcxproj -> C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\x64\Debug\VanEngine_Windows.lib
+﻿  vanPlayerScript.cpp
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(66,15): error C2065: 'Component': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(66,25): error C2059: 구문 오류: '>'
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(67,15): error C2065: 'Script': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(67,22): error C2059: 구문 오류: '>'
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,4): error C2065: 'Component': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,16): error C2065: 'comp': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,36): error C2065: 'Component': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,36): error C2760: 구문 오류: 여기서 'Component'은(는) 예상치 못한 오류였습니다. 예상된 오류는 '형식 지정자'였습니다
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,45): error C3878: 구문 오류: 예기치 않은 토큰 '*'이(가) 'expression' 다음에 있습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,45): message : 오류 복구를 건너뛰었습니다. '* > (  . . . 식별자'
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,57): error C2760: 구문 오류: 여기서 ')'은(는) 예상치 못한 오류였습니다. 예상된 오류는 ';'였습니다
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,57): error C3878: 구문 오류: 예기치 않은 토큰 ')'이(가) 'expression_statement' 다음에 있습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,57): message : 오류 복구를 건너뛰었습니다. ')'
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(27,7): error C2065: 'comp': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(29,19): error C2065: 'comp': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(30,28): error C2065: 'comp': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(34,4): error C2065: 'Script': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(34,12): error C2065: 'script': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(34,34): error C2065: 'Script': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(34,34): error C2760: 구문 오류: 여기서 'Script'은(는) 예상치 못한 오류였습니다. 예상된 오류는 '형식 지정자'였습니다
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(34,40): error C3878: 구문 오류: 예기치 않은 토큰 '*'이(가) 'expression' 다음에 있습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(34,40): message : 오류 복구를 건너뛰었습니다. '* > (  . . . 식별자'
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(34,52): error C2760: 구문 오류: 여기서 ')'은(는) 예상치 못한 오류였습니다. 예상된 오류는 ';'였습니다
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(34,52): error C3878: 구문 오류: 예기치 않은 토큰 ')'이(가) 'expression_statement' 다음에 있습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(34,52): message : 오류 복구를 건너뛰었습니다. ')'
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(35,7): error C2065: 'script': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(37,24): error C2065: 'script': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(38,5): error C2065: 'script': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+  vanCollider.cpp
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(66,15): error C2065: 'Component': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(66,25): error C2059: 구문 오류: '>'
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,4): error C2065: 'Component': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,16): error C2065: 'comp': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,36): error C2065: 'Component': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,36): error C2760: 구문 오류: 여기서 'Component'은(는) 예상치 못한 오류였습니다. 예상된 오류는 '형식 지정자'였습니다
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,45): error C3878: 구문 오류: 예기치 않은 토큰 '*'이(가) 'expression' 다음에 있습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,45): message : 오류 복구를 건너뛰었습니다. '* > (  . . . 식별자'
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,57): error C2760: 구문 오류: 여기서 ')'은(는) 예상치 못한 오류였습니다. 예상된 오류는 ';'였습니다
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,57): error C3878: 구문 오류: 예기치 않은 토큰 ')'이(가) 'expression_statement' 다음에 있습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,57): message : 오류 복구를 건너뛰었습니다. ')'
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(27,7): error C2065: 'comp': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(29,19): error C2065: 'comp': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(30,28): error C2065: 'comp': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+  vanComponent.cpp
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(66,15): error C2065: 'Component': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(66,25): error C2059: 구문 오류: '>'
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,4): error C2065: 'Component': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,16): error C2065: 'comp': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,36): error C2065: 'Component': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,36): error C2760: 구문 오류: 여기서 'Component'은(는) 예상치 못한 오류였습니다. 예상된 오류는 '형식 지정자'였습니다
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,45): error C3878: 구문 오류: 예기치 않은 토큰 '*'이(가) 'expression' 다음에 있습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,45): message : 오류 복구를 건너뛰었습니다. '* > (  . . . 식별자'
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,57): error C2760: 구문 오류: 여기서 ')'은(는) 예상치 못한 오류였습니다. 예상된 오류는 ';'였습니다
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,57): error C3878: 구문 오류: 예기치 않은 토큰 ')'이(가) 'expression_statement' 다음에 있습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,57): message : 오류 복구를 건너뛰었습니다. ')'
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(27,7): error C2065: 'comp': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(29,19): error C2065: 'comp': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(30,28): error C2065: 'comp': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+  vanGameObject.cpp
+  vanMeshRenderer.cpp
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(66,15): error C2065: 'Component': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(66,25): error C2059: 구문 오류: '>'
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,4): error C2065: 'Component': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,16): error C2065: 'comp': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,36): error C2065: 'Component': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,36): error C2760: 구문 오류: 여기서 'Component'은(는) 예상치 못한 오류였습니다. 예상된 오류는 '형식 지정자'였습니다
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,45): error C3878: 구문 오류: 예기치 않은 토큰 '*'이(가) 'expression' 다음에 있습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,45): message : 오류 복구를 건너뛰었습니다. '* > (  . . . 식별자'
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,57): error C2760: 구문 오류: 여기서 ')'은(는) 예상치 못한 오류였습니다. 예상된 오류는 ';'였습니다
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,57): error C3878: 구문 오류: 예기치 않은 토큰 ')'이(가) 'expression_statement' 다음에 있습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,57): message : 오류 복구를 건너뛰었습니다. ')'
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(27,7): error C2065: 'comp': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(29,19): error C2065: 'comp': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(30,28): error C2065: 'comp': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+  vanRigidBody.cpp
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(66,15): error C2065: 'Component': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(66,25): error C2059: 구문 오류: '>'
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,4): error C2065: 'Component': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,16): error C2065: 'comp': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,36): error C2065: 'Component': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,36): error C2760: 구문 오류: 여기서 'Component'은(는) 예상치 못한 오류였습니다. 예상된 오류는 '형식 지정자'였습니다
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,45): error C3878: 구문 오류: 예기치 않은 토큰 '*'이(가) 'expression' 다음에 있습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,45): message : 오류 복구를 건너뛰었습니다. '* > (  . . . 식별자'
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,57): error C2760: 구문 오류: 여기서 ')'은(는) 예상치 못한 오류였습니다. 예상된 오류는 ';'였습니다
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,57): error C3878: 구문 오류: 예기치 않은 토큰 ')'이(가) 'expression_statement' 다음에 있습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,57): message : 오류 복구를 건너뛰었습니다. ')'
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(27,7): error C2065: 'comp': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(29,19): error C2065: 'comp': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(30,28): error C2065: 'comp': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+  vanScene.cpp
+  vanScript.cpp
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(66,15): error C2065: 'Component': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(66,25): error C2059: 구문 오류: '>'
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(67,15): error C2065: 'Script': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(67,22): error C2059: 구문 오류: '>'
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,4): error C2065: 'Component': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,16): error C2065: 'comp': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,36): error C2065: 'Component': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,36): error C2760: 구문 오류: 여기서 'Component'은(는) 예상치 못한 오류였습니다. 예상된 오류는 '형식 지정자'였습니다
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,45): error C3878: 구문 오류: 예기치 않은 토큰 '*'이(가) 'expression' 다음에 있습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,45): message : 오류 복구를 건너뛰었습니다. '* > (  . . . 식별자'
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,57): error C2760: 구문 오류: 여기서 ')'은(는) 예상치 못한 오류였습니다. 예상된 오류는 ';'였습니다
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,57): error C3878: 구문 오류: 예기치 않은 토큰 ')'이(가) 'expression_statement' 다음에 있습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,57): message : 오류 복구를 건너뛰었습니다. ')'
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(27,7): error C2065: 'comp': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(29,19): error C2065: 'comp': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(30,28): error C2065: 'comp': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(34,4): error C2065: 'Script': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(34,12): error C2065: 'script': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(34,34): error C2065: 'Script': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(34,34): error C2760: 구문 오류: 여기서 'Script'은(는) 예상치 못한 오류였습니다. 예상된 오류는 '형식 지정자'였습니다
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(34,40): error C3878: 구문 오류: 예기치 않은 토큰 '*'이(가) 'expression' 다음에 있습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(34,40): message : 오류 복구를 건너뛰었습니다. '* > (  . . . 식별자'
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(34,52): error C2760: 구문 오류: 여기서 ')'은(는) 예상치 못한 오류였습니다. 예상된 오류는 ';'였습니다
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(34,52): error C3878: 구문 오류: 예기치 않은 토큰 ')'이(가) 'expression_statement' 다음에 있습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(34,52): message : 오류 복구를 건너뛰었습니다. ')'
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(35,7): error C2065: 'script': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(37,24): error C2065: 'script': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(38,5): error C2065: 'script': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+  vanTransform.cpp
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(66,15): error C2065: 'Component': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(66,25): error C2059: 구문 오류: '>'
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,4): error C2065: 'Component': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,16): error C2065: 'comp': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,36): error C2065: 'Component': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,36): error C2760: 구문 오류: 여기서 'Component'은(는) 예상치 못한 오류였습니다. 예상된 오류는 '형식 지정자'였습니다
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,45): error C3878: 구문 오류: 예기치 않은 토큰 '*'이(가) 'expression' 다음에 있습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,45): message : 오류 복구를 건너뛰었습니다. '* > (  . . . 식별자'
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,57): error C2760: 구문 오류: 여기서 ')'은(는) 예상치 못한 오류였습니다. 예상된 오류는 ';'였습니다
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,57): error C3878: 구문 오류: 예기치 않은 토큰 ')'이(가) 'expression_statement' 다음에 있습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(26,57): message : 오류 복구를 건너뛰었습니다. ')'
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(27,7): error C2065: 'comp': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(29,19): error C2065: 'comp': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(30,28): error C2065: 'comp': 선언되지 않은 식별자입니다.
+C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\VanEngine_SOURCE\vanGameObject.h(22,6): message : 이 진단은 컴파일러 생성 함수 'T *van::GameObject::AddComponent(void)'에서 수행되었습니다.
+  코드를 생성하고 있습니다...

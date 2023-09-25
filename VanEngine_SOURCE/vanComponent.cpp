@@ -6,6 +6,7 @@ namespace van
         : mType(type)
         , mOwner(nullptr)
     {
+        SetName(L"Componenet class");
     }
 
     Component::~Component()
