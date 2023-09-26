@@ -3,6 +3,7 @@
 #include "vanComponent.h"
 #include "vanScript.h"
 
+
 namespace van
 {
 	class GameObject : public Entity
