@@ -2,7 +2,6 @@
 #include "vanEnums.h"
 #include "vanEntity.h"
 #include "vanMath.h"
-#include "vanGameObject.h"
 
 namespace van
 {
@@ -14,6 +13,7 @@ namespace van
 	{
 	public:
 		friend GameObject;
+
 		Component(COMPONENTTYPE type);
 		virtual ~Component();
 

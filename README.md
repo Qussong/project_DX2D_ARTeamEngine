@@ -1,3 +1,3 @@
 # VanEngine
 
-DirectX2D 팀플용 엔진입니다.
+DirectX2D Engine 공부중입니다.
