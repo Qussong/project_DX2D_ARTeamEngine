@@ -52,6 +52,12 @@
     <Filter Include="Engine\Resource\Shader">
       <UniqueIdentifier>{3bc469e5-a552-4282-a32b-f5f93c251605}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\Component\Rigidbody">
+      <UniqueIdentifier>{a245bfc1-e318-4156-9a4f-bd085e7757c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Component\Collider">
+      <UniqueIdentifier>{57f81b7e-88e6-40e6-857f-956eec2bfe3e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h">
@@ -135,6 +141,12 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)vanScript.h">
       <Filter>Engine\Component</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)vanRigidbody.h">
+      <Filter>Engine\Component\Rigidbody</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)vanCollider.h">
+      <Filter>Engine\Component\Collider</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)vanInput.cpp">
@@ -199,6 +211,12 @@
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)vanScript.cpp">
       <Filter>Engine\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)vanRigidbody.cpp">
+      <Filter>Engine\Component\Rigidbody</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)vanCollider.cpp">
+      <Filter>Engine\Component\Collider</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

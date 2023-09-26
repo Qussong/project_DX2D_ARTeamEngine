@@ -133,6 +133,8 @@ namespace van::enums
 	{
 		COMPONENT = 0,
 		TRANSFORM,
+		RIGIDBODY,
+		COLLIDER,
 		CAMERA,
 
 		//render
