@@ -23,11 +23,11 @@ namespace van
 		{
 			GameObject* object = new GameObject();
 			Transform* tr = object->AddComponent<Transform>();
-			tr->SetPosition(Vector3(0.5f, 0.2f, 0.0f));
-			tr->SetScale(Vector3(2.0f, 2.0f, 1.0f));
+			tr->SetPosition(Vector3(0.0f, -0.5f, 0.0f));
+			tr->SetScale(Vector3(0.5f, 0.5f, 0.5f));
 
 			MeshRenderer* meshRenderer = object->AddComponent<MeshRenderer>();
-			meshRenderer->SetMesh(Resources::Find<Mesh>(L"TriangleMesh"));
+			meshRenderer->SetMesh(Resources::Find<Mesh>(L"RectangleMesh"));
 			meshRenderer->SetShader(Resources::Find<Shader>(L"TriangleShader"));
 
 			AddGameObject(object, LAYER::NONE);
