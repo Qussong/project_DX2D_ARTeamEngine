@@ -23,7 +23,7 @@ namespace van
 		{
 			T* component = new T();
 
-			Component* comp = dynamic_cast<Component*>(component);
+			Component * comp = dynamic_cast<Component*>(component);
 			if(comp != nullptr)
 			{
 				int myOrder = comp->GetUpdateOrder();

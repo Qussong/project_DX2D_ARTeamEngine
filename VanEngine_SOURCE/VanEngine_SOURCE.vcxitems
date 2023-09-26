@@ -16,6 +16,7 @@
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)vanApplication.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)vanCollider.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)vanComponent.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)vanConstantBuffer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)vanEntity.h" />
@@ -33,6 +34,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)vanRenderer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)vanResource.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)vanResources.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)vanRigidBody.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)vanScene.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)vanSceneManager.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)vanScript.h" />
@@ -44,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)vanApplication.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)vanCollider.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)vanComponent.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)vanConstantBuffer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)vanEntity.cpp" />
@@ -58,6 +61,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)vanRenderer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)vanResource.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)vanResources.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)vanRigidBody.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)vanScene.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)vanSceneManager.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)vanScript.cpp" />
