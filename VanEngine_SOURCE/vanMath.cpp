@@ -374,6 +374,17 @@ namespace van::math
 	 // Comparision operators
 	 //------------------------------------------------------------------------------
 
+	void Vector2::clear() noexcept
+	{
+		x = 0.0f;
+		y = 0.0f;
+	}
+
+	float Vector2::length() const noexcept
+	{
+		return sqrtf(x * x + y * y);
+	}
+
 	bool Vector2::operator == (const Vector2& V) const noexcept
 	{
 		using namespace DirectX;

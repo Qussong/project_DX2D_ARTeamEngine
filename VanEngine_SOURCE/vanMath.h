@@ -114,6 +114,10 @@ namespace van::math
     // 2D vector
     struct Vector2 : public XMFLOAT2
     {
+        // custom
+        void clear() noexcept;
+        float length() const noexcept;
+
         Vector2() noexcept : XMFLOAT2(0.f, 0.f) {}
         constexpr explicit Vector2(float ix) noexcept : XMFLOAT2(ix, ix) {}
         constexpr Vector2(float ix, float iy) noexcept : XMFLOAT2(ix, iy) {}

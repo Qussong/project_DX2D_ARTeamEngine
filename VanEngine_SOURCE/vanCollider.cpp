@@ -32,8 +32,8 @@ namespace van
 
 	void Collider::Render()
 	{
-		/*Transform* tr = GetOwner()->GetComponent<Transform>();
-		Vector2 pos = tr->GetPosition();
+		Transform* tr = GetOwner()->GetComponent<Transform>();
+		Vector3 pos = tr->GetPosition();
 		mPosition = pos + mOffset;
 
 		pos.x -= mSize.x / 2.0f;
@@ -41,12 +41,12 @@ namespace van
 		pos.x += mOffset.x;
 		pos.y += mOffset.y;
 
-		pos = Camera::CalculatePosition(pos);
+		//pos = Camera::CalculatePosition(pos);
 
-		HBRUSH transparentBrush = (HBRUSH)GetStockObject(NULL_BRUSH);
-		HBRUSH oldBrush = (HBRUSH)SelectObject(hdc, transparentBrush);
+	/*	HBRUSH transparentBrush = (HBRUSH)GetStockObject(NULL_BRUSH);
+		HBRUSH oldBrush = (HBRUSH)SelectObject(hdc, transparentBrush);*/
 
-		HPEN pen = NULL;
+	/*	HPEN pen = NULL;
 		if (mbIsCollision)
 		{
 			pen = CreatePen(PS_SOLID, 2, RGB(255, 50, 50));
