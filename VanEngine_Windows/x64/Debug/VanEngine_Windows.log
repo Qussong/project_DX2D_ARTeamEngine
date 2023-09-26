@@ -1,1 +1,35 @@
-﻿  VanEngine_Windows.vcxproj -> C:\Users\kih09\OneDrive\바탕 화면\VS\TeamEngine\x64\Debug\VanEngine_Windows.lib
+﻿  vanPlayerScript.cpp
+  vanPlayScene.cpp
+  vanApplication.cpp
+  vanComponent.cpp
+  vanConstantBuffer.cpp
+  vanEntity.cpp
+  vanGameObject.cpp
+  vanGraphicsDevice_DX11.cpp
+  vanInput.cpp
+  vanLayer.cpp
+  vanMaterial.cpp
+  vanMath.cpp
+  vanMesh.cpp
+  vanMeshRenderer.cpp
+C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_SOURCE\vanEntity.cpp(6,9): warning C4311: 'reinterpret_cast': 'van::Entity *'에서 'UINT32'(으)로 포인터가 잘립니다.
+C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_SOURCE\vanEntity.cpp(6,9): warning C4302: 'reinterpret_cast': 'van::Entity *'에서 'UINT32'(으)로 잘립니다.
+C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_SOURCE\vanEntity.cpp(10,9): warning C4311: 'reinterpret_cast': 'van::Entity *'에서 'UINT32'(으)로 포인터가 잘립니다.
+C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_SOURCE\vanEntity.cpp(10,9): warning C4302: 'reinterpret_cast': 'van::Entity *'에서 'UINT32'(으)로 잘립니다.
+C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_SOURCE\vanConstantBuffer.cpp(16,20): warning C4267: '=': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_SOURCE\vanInput.cpp(80,30): warning C4244: '=': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_SOURCE\vanInput.cpp(81,30): warning C4244: '=': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  vanRenderer.cpp
+  vanResource.cpp
+  vanResources.cpp
+  vanScene.cpp
+  vanSceneManager.cpp
+  vanScript.cpp
+  vanShader.cpp
+  vanTime.cpp
+  vanTransform.cpp
+C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_SOURCE\vanResources.cpp(12,4): warning C4150: 불완전한 형식 'van::Resource'에 대한 포인터를 삭제했습니다. 소멸자가 호출되지 않습니다.
+C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_SOURCE\vanResources.h(7,8): message : 'van::Resource' 선언을 참조하십시오.
+C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_SOURCE\vanRenderer.cpp(46,55): warning C4267: '인수': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\kih09\Desktop\VS\VanEngine\VanEngine_SOURCE\vanTime.cpp(52,22): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  VanEngine_Windows.vcxproj -> C:\Users\kih09\Desktop\VS\VanEngine\x64\Debug\VanEngine_Windows.lib
