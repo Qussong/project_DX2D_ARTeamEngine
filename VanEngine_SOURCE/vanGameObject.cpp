@@ -1,14 +1,12 @@
 #include "vanGameObject.h"
-//#include "vanTransform.h"
+
 
 namespace van
 {
 	GameObject::GameObject()
 		: mState(eState::Active)
 	{
-		SetName(L"GameObject class");
 		mComponents.resize(COMPONENTTYPE::END);
-		//AddComponent<Transform>();
 	}
 
 	GameObject::~GameObject()
