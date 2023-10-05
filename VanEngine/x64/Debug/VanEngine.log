@@ -1,8 +1,2 @@
-<<<<<<< HEAD
 ﻿  main.cpp
-C:\vero\Team_Project\VanEngine_SOURCE\vanMath.h(21,1): warning C4005: 'XM_CONSTEXPR': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\DirectXMath.h(37,1): message : 'XM_CONSTEXPR'의 이전 정의를 참조하십시오.
-  VanEngine.vcxproj -> C:\vero\Team_Project\x64\Debug\Editor_Windows.exe
-=======
-﻿  VanEngine.vcxproj -> E:\TeamEngine\x64\Debug\Editor_Windows.exe
->>>>>>> 2ad420218440a37858c13dae73273eb15b291ffe
+  VanEngine.vcxproj -> C:\Users\kih09\Desktop\VS\TeamEngine\DX2D_TeamEngine\x64\Debug\Editor_Windows.exe
