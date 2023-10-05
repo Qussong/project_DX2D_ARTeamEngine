@@ -27,16 +27,16 @@ namespace van
 		{
 			Player* player = new Player();
 			Transform* tr = player->AddComponent<Transform>();
-			tr->SetPosition(Vector3(0.5f, 1.0f, 0.0f));
-			tr->SetScale(Vector3(0.1f, 0.1f, 0.1f));
+			tr->SetPosition(Vector3(0.0f, 0.5f, 0.0f));
+			tr->SetScale(Vector3(0.1f, 0.1f, 0.0f));
 
 			MeshRenderer* meshRenderer = player->AddComponent<MeshRenderer>();
 			meshRenderer->SetMesh(Resources::Find<Mesh>(L"CircleMesh"));
 			meshRenderer->SetShader(Resources::Find<Shader>(L"TriangleShader"));
 
-			Rigidbody* rb = player->AddComponent<Rigidbody>();
+			//Rigidbody* rb = player->AddComponent<Rigidbody>();
 			Collider* col = player->AddComponent<Collider>();
-			col->SetSize(Vector3(0.05f, 0.05f, 0.0f));
+			col->SetSize(Vector3(0.1f, 0.1f, 0.0f));
 			col->SetPosition(tr->GetPosition());
 
 			AddGameObject(player, LAYER::PLAYER);
@@ -63,7 +63,7 @@ namespace van
 			//
 			Floor* floor = new Floor();
 			Transform* tr1 = floor->AddComponent<Transform>();
-			tr1->SetPosition(Vector3(0.3f, -1.5f, 0.0f));
+			tr1->SetPosition(Vector3(0.0f, 0.0f, 0.0f));
 			tr1->SetScale(Vector3(0.5f, 0.25f, 0.5f));
 
 			MeshRenderer* meshRenderer1 = floor->AddComponent<MeshRenderer>();

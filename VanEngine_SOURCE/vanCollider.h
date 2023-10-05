@@ -1,9 +1,12 @@
 #pragma once
 #include "vanComponent.h"
+#include "vanShader.h"
+#include "vanMesh.h"
 
 namespace van
 {
 	using namespace math;
+	using namespace graphics;
 	class Collider : public Component
 	{
 	public:
@@ -35,6 +38,9 @@ namespace van
 		Vector3 mSize;
 		Vector3 mOffset;
 		Vector3 mPosition;
+
+		Mesh* mMesh;
+		Shader* mShader;
 
 		UINT mCollisionNumber;
 		bool mbIsCollision;

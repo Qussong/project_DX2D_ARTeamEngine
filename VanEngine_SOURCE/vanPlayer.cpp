@@ -30,6 +30,7 @@ void van::Player::Render()
 
 void van::Player::OnCollisionEnter(Collider* other)
 {
+	int a = 0;
 }
 
 void van::Player::OnCollisionStay(Collider* other)

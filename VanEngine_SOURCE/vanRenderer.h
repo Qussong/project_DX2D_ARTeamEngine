@@ -32,7 +32,10 @@ namespace van::renderer
 
 	extern Mesh* mesh;	// Circle
 	extern Mesh* mesh2;	// Rectangle
+	extern Mesh* mesh3;	// collider
+	extern Mesh* mesh4;	// collider
 	extern Shader* shader;
+	extern Shader* shader2; // collider
 	extern ConstantBuffer* constantBuffers[];
 
 	// Initialize the renderer

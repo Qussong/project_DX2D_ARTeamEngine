@@ -1,6 +1,10 @@
 #include "vanCollider.h"
 #include "vanTransform.h"
 #include "vanGameObject.h"
+#include "vanConstantBuffer.h"
+#include "vanRenderer.h"
+#include "vanMeshRenderer.h"
+#include "vanResources.h"
 
 
 namespace van
@@ -16,6 +20,13 @@ namespace van
 	{
 		mCollisionNumber = mCollisionCount;
 		mCollisionCount++;
+
+		mMesh = Resources::Find<Mesh>(L"CircleColliderMesh");
+		mShader = Resources::Find<Shader>(L"TriangleShader2");
+
+		//MeshRenderer* meshRenderer = new MeshRenderer;
+		//meshRenderer->SetMesh(mMesh);
+		//meshRenderer->SetShader(mShader);
 	}
 
 	Collider::~Collider()
@@ -28,14 +39,7 @@ namespace van
 
 	void Collider::Update()
 	{
-		// 나중에 initial로
-		//Transform* tr = GetOwner()->GetComponent<Transform>();
-		//Vector3 pos = tr->GetPosition();
 
-		//pos.x -= mSize.x / 2.0f;
-		//pos.y -= mSize.y / 2.0f;
-
-		//mPosition = pos;
 	}
 
 	void Collider::LateUpdate()
@@ -44,41 +48,22 @@ namespace van
 
 	void Collider::Render()
 	{
-		//Transform* tr = GetOwner()->GetComponent<Transform>();
-		//Vector3 pos = tr->GetPosition();
-		//mPosition = pos + mOffset;
+		// 상수버퍼설정
+		ConstantBuffer* cb = renderer::constantBuffers[(UINT)graphics::eCBType::Transform];
 
-		//pos.x -= mSize.x / 2.0f;
-		//pos.y -= mSize.y / 2.0f;
-		//pos.x += mOffset.x;
-		//pos.y += mOffset.y;
+		renderer::TransformCB data = {};
+		data.pos = mPosition;
+		//data.scale = mScale;
+		data.scale = mSize;
+		cb->SetData(&data);
 
-		////pos = Camera::CalculatePosition(pos);
+		cb->Bind(graphics::eShaderStage::VS);
 
-		//HBRUSH transparentBrush = (HBRUSH)GetStockObject(NULL_BRUSH);
-		//HBRUSH oldBrush = (HBRUSH)SelectObject(hdc, transparentBrush);
+		mShader->SetToplogy(D3D11_PRIMITIVE_TOPOLOGY_LINELIST);
 
-		//HPEN pen = NULL;
-		//if (mbIsCollision)
-		//{
-		//	pen = CreatePen(PS_SOLID, 2, RGB(255, 50, 50));
-		//}
-		//else
-		//{
-		//	pen = CreatePen(PS_SOLID, 2, RGB(50, 255, 50));
-		//}
+		mShader->Update();
+		mMesh->Render();
 
-		//HPEN oldPen = (HPEN)SelectObject(hdc, pen);
-
-		//Rectangle(hdc
-		//	, pos.x, pos.y
-		//	, pos.x + mSize.x, pos.y + mSize.y);
-
-		//SelectObject(hdc, oldBrush);
-		//DeleteObject(transparentBrush);
-
-		//SelectObject(hdc, oldPen);
-		//DeleteObject(pen);
 	}
 
 	void Collider::OnCollisionEnter(Collider* other)

@@ -30,6 +30,8 @@ namespace van::graphics
 			return mVSBlob.Get();
 		}
 
+		void SetToplogy(D3D_PRIMITIVE_TOPOLOGY topology) { mTopology = topology; }
+
 	private:
 		Microsoft::WRL::ComPtr<ID3D11InputLayout> mInputLayout;
 		D3D11_PRIMITIVE_TOPOLOGY mTopology;

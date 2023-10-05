@@ -12,7 +12,10 @@ namespace van::renderer
 	D3D11_INPUT_ELEMENT_DESC InputLayouts[2];
 	Mesh* mesh = nullptr;
 	Mesh* mesh2 = nullptr;
+	Mesh* mesh3 = nullptr;
+	Mesh* mesh4 = nullptr;
 	Shader* shader = nullptr;
+	Shader* shader2 = nullptr;
 	ConstantBuffer* constantBuffers[(UINT)graphics::eCBType::End];
 
 	void SetUpStates()
@@ -57,10 +60,13 @@ namespace van::renderer
 
 			vertexes[0].pos = Vector3(-0.5f, 0.5f, 0.f);
 			vertexes[0].color = Vector4(0.f, 1.f, 0.f, 1.f);
+
 			vertexes[1].pos = Vector3(0.5f, 0.5f, 0.f);
 			vertexes[1].color = Vector4(1.f, 0.f, 0.f, 1.f);
+
 			vertexes[2].pos = Vector3(0.5f, -0.5f, 0.f);
 			vertexes[2].color = Vector4(0.f, 0.f, 1.f, 1.f);
+
 			vertexes[3].pos = Vector3(-0.5f, -0.5f, 0.f);
 			vertexes[3].color = Vector4(0.f, 0.f, 1.f, 1.f);
 
@@ -80,6 +86,67 @@ namespace van::renderer
 			Resources::Insert(L"RectangleMesh", mesh2);
 		}
 
+		// Collider Rectangle
+		{
+			std::vector<Vertex> vertexes;
+			vertexes.resize(4);
+
+			vertexes[0].pos = Vector3(-0.5f, 0.5f, 0.f);
+			vertexes[0].color = Vector4(1.f, 0.f, 0.f, 1.f);
+			vertexes[1].pos = Vector3(0.5f, 0.5f, 0.f);
+			vertexes[1].color = Vector4(1.f, 0.f, 0.f, 1.f);
+			vertexes[2].pos = Vector3(0.5f, -0.5f, 0.f);
+			vertexes[2].color = Vector4(1.f, 0.f, 0.f, 1.f);
+			vertexes[3].pos = Vector3(-0.5f, -0.5f, 0.f);
+			vertexes[3].color = Vector4(1.f, 0.f, 0.f, 1.f);
+
+			std::vector<UINT> indexes;
+			indexes.push_back(0);
+			indexes.push_back(1);
+			
+			indexes.push_back(0);
+			indexes.push_back(3);
+			
+			indexes.push_back(3);
+			indexes.push_back(2);
+
+			indexes.push_back(2);
+			indexes.push_back(1);
+
+			// Collider Vertex Buffer
+			mesh3->CreateVertexBuffer(vertexes.data(), 4);						// 수정
+			mesh3->CreateIndexBuffer(indexes.data(), indexes.size());
+			// 사각형 Mesh 생성후 삽입
+			Resources::Insert(L"ColliderMesh", mesh3);
+		}
+
+		// Collider Circle
+		{
+			std::vector<Vertex> vertexes;
+			vertexes.resize(362);
+
+			float r = 0.5f; // 반지름
+
+			for (int i = 0; i < 361; i++)
+			{
+				vertexes[i + 1].pos = Vector3(r * cos(Radian(i)) * 9 / 16 /*화면비*/, r * sin(Radian(i)), 0.f);
+				vertexes[i + 1].color = Vector4(1.f, 0.f, 0.f, 1.f);
+			}
+
+			std::vector<UINT> indexes;
+			for (int i = 0; i <= 360 - 2; i++)
+			{
+				indexes.push_back(i + 1);
+			}
+				indexes.push_back(1); // 원점
+
+			// Circle Vertex Buffer
+			mesh4->CreateVertexBuffer(vertexes.data(), 362);						// 수정
+			mesh4->CreateIndexBuffer(indexes.data(), indexes.size());
+			// 원 Mesh 생성후 삽입
+			Resources::Insert(L"CircleColliderMesh", mesh4);
+		}
+
 		constantBuffers[(UINT)graphics::eCBType::Transform] = new ConstantBuffer();
 		constantBuffers[(UINT)graphics::eCBType::Transform]->Create(sizeof(TransformCB));
 		//mesh->CreateConstantBuffer(nullptr, sizeof(Vector4));
@@ -90,6 +157,11 @@ namespace van::renderer
 		shader->Create(eShaderStage::VS, L"TriangleVS.hlsl", "VS_Test");
 		shader->Create(eShaderStage::PS, L"TrianglePS.hlsl", "PS_Test");
 		Resources::Insert(L"TriangleShader", shader);
+
+		// collider
+		shader2->Create(eShaderStage::VS, L"TriangleVS.hlsl", "VS_Test");
+		shader2->Create(eShaderStage::PS, L"TrianglePS.hlsl", "PS_Test");
+		Resources::Insert(L"TriangleShader2", shader2);
 		//GetDevice()->CreateShader(eShaderStage::NONE);
 		//GetDevice()->CreateVertexShader();`
 				// Input layout 정점 구조 정보
@@ -111,13 +183,22 @@ namespace van::renderer
 			shader->GetVSCode()->GetBufferPointer()
 			, shader->GetVSCode()->GetBufferSize()
 			, shader->GetInputLayoutAddressOf());
+
+		// collider
+		GetDevice()->CreateInputLayout(InputLayouts, 2,
+			shader2->GetVSCode()->GetBufferPointer()
+			, shader2->GetVSCode()->GetBufferSize()
+			, shader2->GetInputLayoutAddressOf());
 	}
 
 	void Initialize()
 	{
 		mesh = new Mesh();
 		mesh2 = new Mesh();
+		mesh3 = new Mesh();
+		mesh4 = new Mesh();
 		shader = new Shader();
+		shader2 = new Shader();
 
 		LoadShader();
 		SetUpStates();
@@ -128,6 +209,7 @@ namespace van::renderer
 	{
 		delete mesh;
 		delete mesh2;
+		delete mesh3;
 		delete shader;
 
 		delete constantBuffers[(UINT)graphics::eCBType::Transform];

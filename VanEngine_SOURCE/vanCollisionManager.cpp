@@ -41,8 +41,8 @@ namespace van
 
 		if (left > right)
 		{
-			row = (UINT)left;
-			col = (UINT)right;
+			row = (UINT)right;
+			col = (UINT)left;
 		}
 		else
 		{
@@ -144,7 +144,10 @@ namespace van
 		{
 			return true;
 		}
+		else
+		{
+			return false;
+		}
 
-		return false;
 	}
 }
