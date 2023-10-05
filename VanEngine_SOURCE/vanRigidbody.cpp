@@ -70,10 +70,11 @@ namespace van
 		mVelocity = gravity + sideVelocity;
 
 		//마찰력 조건 ( 적용된 힘이 없고, 속도가 0 이 아닐 )
-		if (!(mVelocity == Vector3::Zero))
+		//if (!(mVelocity == Vector3::Zero))
+		if (!(mVelocity.x == 0.0f))
 		{
 			// 속도에 반대 방향으로 마찰력을 적용
-			Vector3 friction = -mVelocity;
+			Vector3 friction = Vector3(-mVelocity.x, 0.0f, 0.0f);
 			friction.Normalize();
 			friction = friction * mFriction * mMass * Time::DeltaTime();
 

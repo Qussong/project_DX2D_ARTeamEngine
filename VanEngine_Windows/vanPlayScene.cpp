@@ -28,7 +28,8 @@ namespace van
 			Player* player = new Player();
 			Transform* tr = player->AddComponent<Transform>();
 			tr->SetPosition(Vector3(0.5f, 1.0f, 0.0f));
-			tr->SetScale(Vector3(0.1f, 0.1f, 0.1f));
+			//tr->SetScale(Vector3(0.1f, 0.1f, 0.1f));
+			tr->SetScale(Vector3(0.15f, 0.15f, 0.f));
 
 			MeshRenderer* meshRenderer = player->AddComponent<MeshRenderer>();
 			meshRenderer->SetMesh(Resources::Find<Mesh>(L"CircleMesh"));
@@ -36,7 +37,7 @@ namespace van
 
 			Rigidbody* rb = player->AddComponent<Rigidbody>();
 			Collider* col = player->AddComponent<Collider>();
-			col->SetSize(Vector3(0.05f, 0.05f, 0.0f));
+			col->SetSize(Vector3(0.15f, 0.15f, 0.f));
 			col->SetPosition(tr->GetPosition());
 
 			AddGameObject(player, LAYER::PLAYER);

@@ -22,6 +22,7 @@ namespace van
 		void SetGround(bool ground) { mbGround = ground; }
 		Vector3 GetVelocity() { return mVelocity; }
 		void SetVelocity(Vector3 velocity) { mVelocity = velocity; }
+		void SetFriction(float friction) { mFriction = friction; }
 
 	private:
 		float mMass;
