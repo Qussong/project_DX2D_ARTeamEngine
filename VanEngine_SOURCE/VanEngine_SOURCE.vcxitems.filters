@@ -58,6 +58,12 @@
     <Filter Include="Engine\Component\Collider">
       <UniqueIdentifier>{57f81b7e-88e6-40e6-857f-956eec2bfe3e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\GameObject\Player">
+      <UniqueIdentifier>{550be857-5aca-428a-861e-ab84f4c0000b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\GameObject\Floor">
+      <UniqueIdentifier>{c2fb4ddf-79dd-4253-b4d4-86e7c80071ed}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h">
@@ -150,6 +156,12 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)vanCollisionManager.h">
       <Filter>Engine\Component\Collider</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)vanFloor.h">
+      <Filter>Engine\GameObject\Floor</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)vanPlayer.h">
+      <Filter>Engine\GameObject\Player</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)vanInput.cpp">
@@ -223,6 +235,12 @@
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)vanCollisionManager.cpp">
       <Filter>Engine\Component\Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)vanFloor.cpp">
+      <Filter>Engine\GameObject\Floor</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)vanPlayer.cpp">
+      <Filter>Engine\GameObject\Player</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
