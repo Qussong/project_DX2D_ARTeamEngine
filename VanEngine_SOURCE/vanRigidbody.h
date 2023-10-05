@@ -17,10 +17,12 @@ namespace van
 		virtual void Render() override;
 
 		void AddForce(Vector3 force) { mForce += force; }
+		void AddVelocity(Vector3 velocity) { mVelocity += velocity; }
 		void SetMass(float mass) { mMass = mass; }
 		void SetGround(bool ground) { mbGround = ground; }
 		Vector3 GetVelocity() { return mVelocity; }
 		void SetVelocity(Vector3 velocity) { mVelocity = velocity; }
+		void SetFriction(float friction) { mFriction = friction; }
 
 	private:
 		float mMass;
