@@ -1,5 +1,8 @@
-﻿  vanApplication.cpp
+﻿  vanPlayerScript.cpp
+  vanPlayScene.cpp
+  vanApplication.cpp
   vanCollider.cpp
+  vanCollisionManager.cpp
   vanComponent.cpp
   vanConstantBuffer.cpp
   vanEntity.cpp
@@ -7,18 +10,55 @@
   vanGraphicsDevice_DX11.cpp
   vanInput.cpp
   vanLayer.cpp
+  vanMaterial.cpp
   vanMath.cpp
   vanMesh.cpp
   vanMeshRenderer.cpp
   vanRenderer.cpp
-E:\TeamEngine\VanEngine_SOURCE\vanEntity.cpp(6,9): warning C4311: 'reinterpret_cast': 'van::Entity *'에서 'UINT32'(으)로 포인터가 잘립니다.
-E:\TeamEngine\VanEngine_SOURCE\vanEntity.cpp(6,9): warning C4302: 'reinterpret_cast': 'van::Entity *'에서 'UINT32'(으)로 잘립니다.
-E:\TeamEngine\VanEngine_SOURCE\vanEntity.cpp(10,9): warning C4311: 'reinterpret_cast': 'van::Entity *'에서 'UINT32'(으)로 포인터가 잘립니다.
-E:\TeamEngine\VanEngine_SOURCE\vanEntity.cpp(10,9): warning C4302: 'reinterpret_cast': 'van::Entity *'에서 'UINT32'(으)로 잘립니다.
-E:\TeamEngine\VanEngine_SOURCE\vanConstantBuffer.cpp(16,20): warning C4267: '=': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-E:\TeamEngine\VanEngine_SOURCE\vanInput.cpp(80,30): warning C4244: '=': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-E:\TeamEngine\VanEngine_SOURCE\vanInput.cpp(81,30): warning C4244: '=': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\vero\Team_Project\VanEngine_SOURCE\vanMath.h(21,1): warning C4005: 'XM_CONSTEXPR': 매크로 재정의 (소스 파일 컴파일 중 C:\vero\Team_Project\VanEngine_SOURCE\vanMath.cpp)
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\DirectXMath.h(37,1): message : 'XM_CONSTEXPR'의 이전 정의를 참조하십시오. (소스 파일 컴파일 중 C:\vero\Team_Project\VanEngine_SOURCE\vanMath.cpp)
   vanResource.cpp
+C:\vero\Team_Project\VanEngine_SOURCE\vanMath.h(21,1): warning C4005: 'XM_CONSTEXPR': 매크로 재정의 (소스 파일 컴파일 중 C:\vero\Team_Project\VanEngine_SOURCE\vanInput.cpp)
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\DirectXMath.h(37,1): message : 'XM_CONSTEXPR'의 이전 정의를 참조하십시오. (소스 파일 컴파일 중 C:\vero\Team_Project\VanEngine_SOURCE\vanInput.cpp)
+C:\vero\Team_Project\VanEngine_SOURCE\vanMath.h(21,1): warning C4005: 'XM_CONSTEXPR': 매크로 재정의 (소스 파일 컴파일 중 C:\vero\Team_Project\VanEngine_SOURCE\vanMesh.cpp)
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\DirectXMath.h(37,1): message : 'XM_CONSTEXPR'의 이전 정의를 참조하십시오. (소스 파일 컴파일 중 C:\vero\Team_Project\VanEngine_SOURCE\vanMesh.cpp)
+C:\vero\Team_Project\VanEngine_SOURCE\vanMath.h(21,1): warning C4005: 'XM_CONSTEXPR': 매크로 재정의 (소스 파일 컴파일 중 C:\vero\Team_Project\VanEngine_SOURCE\vanLayer.cpp)
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\DirectXMath.h(37,1): message : 'XM_CONSTEXPR'의 이전 정의를 참조하십시오. (소스 파일 컴파일 중 C:\vero\Team_Project\VanEngine_SOURCE\vanLayer.cpp)
+C:\vero\Team_Project\VanEngine_SOURCE\vanMath.h(21,1): warning C4005: 'XM_CONSTEXPR': 매크로 재정의 (소스 파일 컴파일 중 C:\vero\Team_Project\VanEngine_SOURCE\vanComponent.cpp)
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\DirectXMath.h(37,1): message : 'XM_CONSTEXPR'의 이전 정의를 참조하십시오. (소스 파일 컴파일 중 C:\vero\Team_Project\VanEngine_SOURCE\vanComponent.cpp)
+C:\vero\Team_Project\VanEngine_SOURCE\vanMath.h(21,1): warning C4005: 'XM_CONSTEXPR': 매크로 재정의 (소스 파일 컴파일 중 C:\vero\Team_Project\VanEngine_SOURCE\vanEntity.cpp)
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\DirectXMath.h(37,1): message : 'XM_CONSTEXPR'의 이전 정의를 참조하십시오. (소스 파일 컴파일 중 C:\vero\Team_Project\VanEngine_SOURCE\vanEntity.cpp)
+C:\vero\Team_Project\VanEngine_SOURCE\vanMath.h(21,1): warning C4005: 'XM_CONSTEXPR': 매크로 재정의 (소스 파일 컴파일 중 C:\vero\Team_Project\VanEngine_SOURCE\vanCollider.cpp)
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\DirectXMath.h(37,1): message : 'XM_CONSTEXPR'의 이전 정의를 참조하십시오. (소스 파일 컴파일 중 C:\vero\Team_Project\VanEngine_SOURCE\vanCollider.cpp)
+C:\vero\Team_Project\VanEngine_SOURCE\vanMath.h(21,1): warning C4005: 'XM_CONSTEXPR': 매크로 재정의 (소스 파일 컴파일 중 vanPlayerScript.cpp)
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\DirectXMath.h(37,1): message : 'XM_CONSTEXPR'의 이전 정의를 참조하십시오. (소스 파일 컴파일 중 vanPlayerScript.cpp)
+C:\vero\Team_Project\VanEngine_SOURCE\vanMath.h(21,1): warning C4005: 'XM_CONSTEXPR': 매크로 재정의 (소스 파일 컴파일 중 vanPlayScene.cpp)
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\DirectXMath.h(37,1): message : 'XM_CONSTEXPR'의 이전 정의를 참조하십시오. (소스 파일 컴파일 중 vanPlayScene.cpp)
+C:\vero\Team_Project\VanEngine_SOURCE\vanMath.h(21,1): warning C4005: 'XM_CONSTEXPR': 매크로 재정의 (소스 파일 컴파일 중 C:\vero\Team_Project\VanEngine_SOURCE\vanConstantBuffer.cpp)
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\DirectXMath.h(37,1): message : 'XM_CONSTEXPR'의 이전 정의를 참조하십시오. (소스 파일 컴파일 중 C:\vero\Team_Project\VanEngine_SOURCE\vanConstantBuffer.cpp)
+C:\vero\Team_Project\VanEngine_SOURCE\vanMath.h(21,1): warning C4005: 'XM_CONSTEXPR': 매크로 재정의 (소스 파일 컴파일 중 C:\vero\Team_Project\VanEngine_SOURCE\vanGameObject.cpp)
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\DirectXMath.h(37,1): message : 'XM_CONSTEXPR'의 이전 정의를 참조하십시오. (소스 파일 컴파일 중 C:\vero\Team_Project\VanEngine_SOURCE\vanGameObject.cpp)
+C:\vero\Team_Project\VanEngine_SOURCE\vanMath.h(21,1): warning C4005: 'XM_CONSTEXPR': 매크로 재정의 (소스 파일 컴파일 중 C:\vero\Team_Project\VanEngine_SOURCE\vanRenderer.cpp)
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\DirectXMath.h(37,1): message : 'XM_CONSTEXPR'의 이전 정의를 참조하십시오. (소스 파일 컴파일 중 C:\vero\Team_Project\VanEngine_SOURCE\vanRenderer.cpp)
+C:\vero\Team_Project\VanEngine_SOURCE\vanMath.h(21,1): warning C4005: 'XM_CONSTEXPR': 매크로 재정의 (소스 파일 컴파일 중 C:\vero\Team_Project\VanEngine_SOURCE\vanMeshRenderer.cpp)
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\DirectXMath.h(37,1): message : 'XM_CONSTEXPR'의 이전 정의를 참조하십시오. (소스 파일 컴파일 중 C:\vero\Team_Project\VanEngine_SOURCE\vanMeshRenderer.cpp)
+C:\vero\Team_Project\VanEngine_SOURCE\vanEntity.cpp(6,9): warning C4311: 'reinterpret_cast': 'van::Entity *'에서 'UINT32'(으)로 포인터가 잘립니다.
+C:\vero\Team_Project\VanEngine_SOURCE\vanEntity.cpp(6,9): warning C4302: 'reinterpret_cast': 'van::Entity *'에서 'UINT32'(으)로 잘립니다.
+C:\vero\Team_Project\VanEngine_SOURCE\vanEntity.cpp(10,9): warning C4311: 'reinterpret_cast': 'van::Entity *'에서 'UINT32'(으)로 포인터가 잘립니다.
+C:\vero\Team_Project\VanEngine_SOURCE\vanEntity.cpp(10,9): warning C4302: 'reinterpret_cast': 'van::Entity *'에서 'UINT32'(으)로 잘립니다.
+C:\vero\Team_Project\VanEngine_SOURCE\vanMath.h(21,1): warning C4005: 'XM_CONSTEXPR': 매크로 재정의 (소스 파일 컴파일 중 C:\vero\Team_Project\VanEngine_SOURCE\vanCollisionManager.cpp)
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\DirectXMath.h(37,1): message : 'XM_CONSTEXPR'의 이전 정의를 참조하십시오. (소스 파일 컴파일 중 C:\vero\Team_Project\VanEngine_SOURCE\vanCollisionManager.cpp)
+C:\vero\Team_Project\VanEngine_SOURCE\vanInput.cpp(80,30): warning C4244: '=': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\vero\Team_Project\VanEngine_SOURCE\vanInput.cpp(81,30): warning C4244: '=': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\vero\Team_Project\VanEngine_SOURCE\vanMath.h(21,1): warning C4005: 'XM_CONSTEXPR': 매크로 재정의 (소스 파일 컴파일 중 C:\vero\Team_Project\VanEngine_SOURCE\vanGraphicsDevice_DX11.cpp)
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\DirectXMath.h(37,1): message : 'XM_CONSTEXPR'의 이전 정의를 참조하십시오. (소스 파일 컴파일 중 C:\vero\Team_Project\VanEngine_SOURCE\vanGraphicsDevice_DX11.cpp)
+C:\vero\Team_Project\VanEngine_SOURCE\vanConstantBuffer.cpp(16,20): warning C4267: '=': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\vero\Team_Project\VanEngine_SOURCE\vanRenderer.cpp(34,50): warning C4244: '인수': 'int'에서 'const float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\vero\Team_Project\VanEngine_SOURCE\vanRenderer.cpp(34,93): warning C4244: '인수': 'int'에서 'const float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\vero\Team_Project\VanEngine_SOURCE\vanRenderer.cpp(48,56): warning C4267: '인수': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\vero\Team_Project\VanEngine_SOURCE\vanRenderer.cpp(78,57): warning C4267: '인수': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\vero\Team_Project\VanEngine_SOURCE\vanMath.h(21,1): warning C4005: 'XM_CONSTEXPR': 매크로 재정의 (소스 파일 컴파일 중 C:\vero\Team_Project\VanEngine_SOURCE\vanApplication.cpp)
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\DirectXMath.h(37,1): message : 'XM_CONSTEXPR'의 이전 정의를 참조하십시오. (소스 파일 컴파일 중 C:\vero\Team_Project\VanEngine_SOURCE\vanApplication.cpp)
   vanResources.cpp
   vanRigidbody.cpp
   vanScene.cpp
@@ -27,10 +67,25 @@ E:\TeamEngine\VanEngine_SOURCE\vanInput.cpp(81,30): warning C4244: '=': 'LONG'�
   vanShader.cpp
   vanTime.cpp
   vanTransform.cpp
-  vanPlayScene.cpp
-  vanPlayerScript.cpp
-E:\TeamEngine\VanEngine_SOURCE\vanRenderer.cpp(46,55): warning C4267: '인수': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-E:\TeamEngine\VanEngine_SOURCE\vanResources.cpp(12,4): warning C4150: 불완전한 형식 'van::Resource'에 대한 포인터를 삭제했습니다. 소멸자가 호출되지 않습니다.
-E:\TeamEngine\VanEngine_SOURCE\vanResources.h(7,8): message : 'van::Resource' 선언을 참조하십시오.
-E:\TeamEngine\VanEngine_SOURCE\vanTime.cpp(52,22): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  VanEngine_Windows.vcxproj -> E:\TeamEngine\x64\Debug\VanEngine_Windows.lib
+C:\vero\Team_Project\VanEngine_SOURCE\vanMath.h(21,1): warning C4005: 'XM_CONSTEXPR': 매크로 재정의 (소스 파일 컴파일 중 C:\vero\Team_Project\VanEngine_SOURCE\vanResource.cpp)
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\DirectXMath.h(37,1): message : 'XM_CONSTEXPR'의 이전 정의를 참조하십시오. (소스 파일 컴파일 중 C:\vero\Team_Project\VanEngine_SOURCE\vanResource.cpp)
+C:\vero\Team_Project\VanEngine_SOURCE\vanMath.h(21,1): warning C4005: 'XM_CONSTEXPR': 매크로 재정의 (소스 파일 컴파일 중 C:\vero\Team_Project\VanEngine_SOURCE\vanRigidbody.cpp)
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\DirectXMath.h(37,1): message : 'XM_CONSTEXPR'의 이전 정의를 참조하십시오. (소스 파일 컴파일 중 C:\vero\Team_Project\VanEngine_SOURCE\vanRigidbody.cpp)
+C:\vero\Team_Project\VanEngine_SOURCE\vanMath.h(21,1): warning C4005: 'XM_CONSTEXPR': 매크로 재정의 (소스 파일 컴파일 중 C:\vero\Team_Project\VanEngine_SOURCE\vanShader.cpp)
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\DirectXMath.h(37,1): message : 'XM_CONSTEXPR'의 이전 정의를 참조하십시오. (소스 파일 컴파일 중 C:\vero\Team_Project\VanEngine_SOURCE\vanShader.cpp)
+C:\vero\Team_Project\VanEngine_SOURCE\vanMath.h(21,1): warning C4005: 'XM_CONSTEXPR': 매크로 재정의 (소스 파일 컴파일 중 C:\vero\Team_Project\VanEngine_SOURCE\vanSceneManager.cpp)
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\DirectXMath.h(37,1): message : 'XM_CONSTEXPR'의 이전 정의를 참조하십시오. (소스 파일 컴파일 중 C:\vero\Team_Project\VanEngine_SOURCE\vanSceneManager.cpp)
+C:\vero\Team_Project\VanEngine_SOURCE\vanMath.h(21,1): warning C4005: 'XM_CONSTEXPR': 매크로 재정의 (소스 파일 컴파일 중 C:\vero\Team_Project\VanEngine_SOURCE\vanScene.cpp)
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\DirectXMath.h(37,1): message : 'XM_CONSTEXPR'의 이전 정의를 참조하십시오. (소스 파일 컴파일 중 C:\vero\Team_Project\VanEngine_SOURCE\vanScene.cpp)
+C:\vero\Team_Project\VanEngine_SOURCE\vanMath.h(21,1): warning C4005: 'XM_CONSTEXPR': 매크로 재정의 (소스 파일 컴파일 중 C:\vero\Team_Project\VanEngine_SOURCE\vanResources.cpp)
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\DirectXMath.h(37,1): message : 'XM_CONSTEXPR'의 이전 정의를 참조하십시오. (소스 파일 컴파일 중 C:\vero\Team_Project\VanEngine_SOURCE\vanResources.cpp)
+C:\vero\Team_Project\VanEngine_SOURCE\vanResources.cpp(12,4): warning C4150: 불완전한 형식 'van::Resource'에 대한 포인터를 삭제했습니다. 소멸자가 호출되지 않습니다.
+C:\vero\Team_Project\VanEngine_SOURCE\vanResources.h(7,8): message : 'van::Resource' 선언을 참조하십시오.
+C:\vero\Team_Project\VanEngine_SOURCE\vanMath.h(21,1): warning C4005: 'XM_CONSTEXPR': 매크로 재정의 (소스 파일 컴파일 중 C:\vero\Team_Project\VanEngine_SOURCE\vanScript.cpp)
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\DirectXMath.h(37,1): message : 'XM_CONSTEXPR'의 이전 정의를 참조하십시오. (소스 파일 컴파일 중 C:\vero\Team_Project\VanEngine_SOURCE\vanScript.cpp)
+C:\vero\Team_Project\VanEngine_SOURCE\vanMath.h(21,1): warning C4005: 'XM_CONSTEXPR': 매크로 재정의 (소스 파일 컴파일 중 C:\vero\Team_Project\VanEngine_SOURCE\vanTime.cpp)
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\DirectXMath.h(37,1): message : 'XM_CONSTEXPR'의 이전 정의를 참조하십시오. (소스 파일 컴파일 중 C:\vero\Team_Project\VanEngine_SOURCE\vanTime.cpp)
+C:\vero\Team_Project\VanEngine_SOURCE\vanMath.h(21,1): warning C4005: 'XM_CONSTEXPR': 매크로 재정의 (소스 파일 컴파일 중 C:\vero\Team_Project\VanEngine_SOURCE\vanTransform.cpp)
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\DirectXMath.h(37,1): message : 'XM_CONSTEXPR'의 이전 정의를 참조하십시오. (소스 파일 컴파일 중 C:\vero\Team_Project\VanEngine_SOURCE\vanTransform.cpp)
+C:\vero\Team_Project\VanEngine_SOURCE\vanTime.cpp(52,22): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  VanEngine_Windows.vcxproj -> C:\vero\Team_Project\x64\Debug\VanEngine_Windows.lib

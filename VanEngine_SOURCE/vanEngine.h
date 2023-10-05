@@ -7,3 +7,4 @@
 
 
 #include "vanMath.h"
+#include <bitset>

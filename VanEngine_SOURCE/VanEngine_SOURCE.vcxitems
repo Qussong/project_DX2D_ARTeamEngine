@@ -17,6 +17,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)vanApplication.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)vanCollider.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)vanCollisionManager.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)vanComponent.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)vanConstantBuffer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)vanEntity.h" />
@@ -47,6 +48,7 @@
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)vanApplication.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)vanCollider.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)vanCollisionManager.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)vanComponent.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)vanConstantBuffer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)vanEntity.cpp" />

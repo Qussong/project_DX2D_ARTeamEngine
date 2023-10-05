@@ -147,6 +147,9 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)vanCollider.h">
       <Filter>Engine\Component\Collider</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)vanCollisionManager.h">
+      <Filter>Engine\Component\Collider</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)vanInput.cpp">
@@ -216,6 +219,9 @@
       <Filter>Engine\Component\Rigidbody</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)vanCollider.cpp">
+      <Filter>Engine\Component\Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)vanCollisionManager.cpp">
       <Filter>Engine\Component\Collider</Filter>
     </ClCompile>
   </ItemGroup>

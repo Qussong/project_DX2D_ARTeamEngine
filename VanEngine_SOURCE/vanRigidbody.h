@@ -13,13 +13,14 @@ namespace van
 
 		virtual void Initialize() override;
 		virtual void Update() override;
+		virtual void LateUpdate()override;
 		virtual void Render() override;
 
-		void AddForce(Vector2 force) { mForce += force; }
+		void AddForce(Vector3 force) { mForce += force; }
 		void SetMass(float mass) { mMass = mass; }
 		void SetGround(bool ground) { mbGround = ground; }
-		Vector2 GetVelocity() { return mVelocity; }
-		void SetVelocity(Vector2 velocity) { mVelocity = velocity; }
+		Vector3 GetVelocity() { return mVelocity; }
+		void SetVelocity(Vector3 velocity) { mVelocity = velocity; }
 
 	private:
 		float mMass;
@@ -29,11 +30,11 @@ namespace van
 		float mKineticFrction;
 		float mCoefficentFrction;
 
-		Vector2 mForce;
-		Vector2 mAccelation;
-		Vector2 mVelocity;
-		Vector2 mGravity;
-		Vector2 mLimitedVelocty;
+		Vector3 mForce;
+		Vector3 mAccelation;
+		Vector3 mVelocity;
+		Vector3 mGravity;
+		Vector3 mLimitedVelocty;
 
 		bool mbGround;
 	};

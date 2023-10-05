@@ -12,10 +12,12 @@ namespace van
 
     void Scene::Initialize()
     {
-        for (Layer& layer : mLayers)
-        {
-            layer.Initialize();
-        }
+		for (Layer& layer : mLayers)
+		{
+		    layer.Initialize();
+		}
+        //mLayers.resize((UINT)LAYER::MAX);
+
     }
 
     void Scene::Update()

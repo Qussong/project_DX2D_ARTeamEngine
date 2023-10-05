@@ -5,7 +5,8 @@ namespace van::enums
 	enum LAYER
 	{
 		NONE = 0,
-
+		PLAYER ,
+		FLOOR ,
 		MAX = 16,
 	};
 

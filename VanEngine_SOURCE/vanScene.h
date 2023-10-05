@@ -18,10 +18,13 @@ namespace van
 		virtual void LateUpdate();
 		virtual void Render();
 
-		Layer* GetLayer(UINT index) { return&mLayers[index]; }
+		//Layer* GetLayer(UINT index) { return&mLayers[index]; }
+		Layer& GetLayer(UINT index) { return mLayers[index]; }
 		void AddGameObject(GameObject* gameObject, UINT layerIndex);
 
 	private:
 		Layer mLayers[LAYER::MAX];
+		//std::vector<Layer> mLayers;
+
 	};
 }

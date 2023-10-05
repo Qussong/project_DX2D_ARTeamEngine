@@ -90,4 +90,14 @@ namespace van
 			script->Render();
 		}
 	}
+	void GameObject::OnCollisionEnter(Collider* other)
+	{
+		int a = 0;
+	}
+	void GameObject::OnCollisionStay(Collider* other)
+	{
+	}
+	void GameObject::OnCollisionExit(Collider* other)
+	{
+	}
 }

@@ -30,7 +30,8 @@ namespace van::renderer
 		int padd2;
 	};
 
-	extern Mesh* mesh;
+	extern Mesh* mesh;	// Circle
+	extern Mesh* mesh2;	// Rectangle
 	extern Shader* shader;
 	extern ConstantBuffer* constantBuffers[];
 

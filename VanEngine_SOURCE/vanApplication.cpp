@@ -5,6 +5,7 @@
 #include "vanTime.h"
 #include "vanRenderer.h"
 #include "vanSceneManager.h"
+#include "vanCollisionManager.h"
 
 using namespace van::graphics;
 
@@ -28,6 +29,7 @@ namespace van
 		Input::Initialize();
 
 		renderer::Initialize();
+		CollisionManager::Initialize();
 		SceneManager::Initialize();
 	}
 
@@ -35,6 +37,7 @@ namespace van
 	{
 		Time::Update();
 		Input::Update();
+		CollisionManager::Update();
 		SceneManager::Update();
 	}
 

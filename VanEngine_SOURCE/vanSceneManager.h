@@ -27,6 +27,7 @@ namespace van
 			return true;
 		}
 		static Scene* LoadScene(const std::wstring name);
+		static Scene* GetActiveScene() { return mActiveScene; }
 
 	private:
 		//static Scene* mPlayScene;

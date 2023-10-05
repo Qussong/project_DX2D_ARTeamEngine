@@ -373,6 +373,7 @@ namespace van::graphics
 
         //// Input Assembeler 단계에 버텍스버퍼 정보 지정
         renderer::mesh->BindBuffer();
+        renderer::mesh2->BindBuffer();
         Vector4 pos(0.0f, 0.0f, 0.0f, 0.0f);
         renderer::constantBuffers[(UINT)graphics::eCBType::Transform]->SetData(&pos);
 

@@ -28,7 +28,7 @@ namespace van
 	void MeshRenderer::Render()
 	{
 		GetOwner()->GetComponent<Transform>()->SetConstantBuffer();
-
+		
 		mShader->Update();
 		mMesh->Render();
 	}

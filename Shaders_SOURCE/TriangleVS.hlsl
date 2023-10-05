@@ -13,10 +13,10 @@ struct VTX_OUT
 
 cbuffer TRANSFORM : register(b0)
 {
-    float3 cbPos;
-    int padd1;
-    float3 cbScale;
-    int padd2;
+    float4 cbPos;
+    //int padd1;
+    float4 cbScale;
+    //int padd2;
 };
 
 VTX_OUT VS_Test(VTX_IN _in)
