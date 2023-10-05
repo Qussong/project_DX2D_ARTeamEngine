@@ -11,8 +11,8 @@ namespace van
 		, mFriction(1.0f)
 		, mbGround(false)
 	{
-		mLimitedVelocty.x = 2.0f;
-		mLimitedVelocty.y = 100.0f;
+		mLimitedVelocty.x = 4.0f;
+		mLimitedVelocty.y = 50.0f;
 		mGravity = Vector3(0.0f, 20.0f, 0.0f);
 	}
 

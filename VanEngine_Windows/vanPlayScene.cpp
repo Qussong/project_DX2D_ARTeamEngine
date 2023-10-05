@@ -71,7 +71,7 @@ namespace van
 			meshRenderer1->SetShader(Resources::Find<Shader>(L"TriangleShader"));
 
 			Collider* col1 = floor->AddComponent<Collider>();
-			col1->SetSize(Vector3(0.5f, 0.25f, 0.0f));
+			col1->SetSize(Vector3(50.0f, 0.25f, 0.0f));
 			col1->SetPosition(tr1->GetPosition());
 
 			AddGameObject(floor, LAYER::FLOOR);
