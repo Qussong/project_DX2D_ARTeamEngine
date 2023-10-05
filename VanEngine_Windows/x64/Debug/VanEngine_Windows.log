@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿  vanPlayerScript.cpp
   vanPlayScene.cpp
   vanApplication.cpp
@@ -89,3 +90,8 @@ C:\vero\Team_Project\VanEngine_SOURCE\vanMath.h(21,1): warning C4005: 'XM_CONSTE
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\DirectXMath.h(37,1): message : 'XM_CONSTEXPR'의 이전 정의를 참조하십시오. (소스 파일 컴파일 중 C:\vero\Team_Project\VanEngine_SOURCE\vanTransform.cpp)
 C:\vero\Team_Project\VanEngine_SOURCE\vanTime.cpp(52,22): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   VanEngine_Windows.vcxproj -> C:\vero\Team_Project\x64\Debug\VanEngine_Windows.lib
+=======
+﻿  vanRenderer.cpp
+E:\TeamEngine\VanEngine_SOURCE\vanRenderer.cpp(55,55): warning C4267: '인수': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  VanEngine_Windows.vcxproj -> E:\TeamEngine\x64\Debug\VanEngine_Windows.lib
+>>>>>>> 2ad420218440a37858c13dae73273eb15b291ffe
