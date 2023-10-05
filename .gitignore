@@ -23,6 +23,7 @@ mono_crash.*
 [Rr]eleases/
 x64/
 x86/
+x64/Debug/
 VanEngine_Windows/x64/
 VanEngine/x64/
 [Ww][Ii][Nn]32/
