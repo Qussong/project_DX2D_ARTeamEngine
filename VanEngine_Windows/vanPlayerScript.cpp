@@ -30,12 +30,7 @@ namespace van
 		Vector3 pos = tr->GetPosition();
 		Collider* col = player->GetComponent<Collider>();
 
-		//if (Input::GetKeyState(KEY_CODE::W) == KEY_STATE::PRESSED)
-		//{
-		//}
-		//if (Input::GetKeyState(KEY_CODE::S) == KEY_STATE::PRESSED)
-		//{
-		//}
+
 
 		if (Input::GetKeyState(KEY_CODE::A) == KEY_STATE::PRESSED
 			|| Input::GetKeyState(KEY_CODE::LEFT) == KEY_STATE::PRESSED)

@@ -1,6 +1,7 @@
 #pragma once
 #include "..\\VanEngine_SOURCE\\vanSceneManager.h"
 #include "vanPlayScene.h"
+#include "vanStage1.h"
 
 
 //#ifdef  _DEBUG

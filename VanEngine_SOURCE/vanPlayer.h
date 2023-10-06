@@ -1,5 +1,6 @@
 #pragma once
 #include "vanGameObject.h"
+#include "..//VanEngine_SOURCE//vanScene.h"
 
 namespace van
 {

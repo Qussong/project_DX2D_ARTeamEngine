@@ -8,6 +8,9 @@
     <ClInclude Include="vanPlayScene.h">
       <Filter>Scenes\Sample</Filter>
     </ClInclude>
+    <ClInclude Include="vanStage1.h">
+      <Filter>Scenes\Stage1</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="vanPlayerScript.cpp">
@@ -15,6 +18,9 @@
     </ClCompile>
     <ClCompile Include="vanPlayScene.cpp">
       <Filter>Scenes\Sample</Filter>
+    </ClCompile>
+    <ClCompile Include="vanStage1.cpp">
+      <Filter>Scenes\Stage1</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

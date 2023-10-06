@@ -22,10 +22,12 @@
     <ClInclude Include="vanLoadScene.h" />
     <ClInclude Include="vanPlayerScript.h" />
     <ClInclude Include="vanPlayScene.h" />
+    <ClInclude Include="vanStage1.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="vanPlayerScript.cpp" />
     <ClCompile Include="vanPlayScene.cpp" />
+    <ClCompile Include="vanStage1.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

@@ -4,6 +4,8 @@
 #include "vanTransform.h"
 #include "vanMeshRenderer.h"
 #include "vanPlayer.h"
+#include "vanInput.h"
+#include "..//VanEngine_Windows//vanStage1.h"
 
 #include "vanRigidbody.h"
 #include "vanCollider.h"
@@ -18,23 +20,16 @@ namespace van
 
 	void SceneManager::Initialize()
 	{
-		Transform* tr = mPlayer->AddComponent<Transform>();
-		tr->SetPosition(Vector3(0.0f, 0.5f, 0.0f));
-		tr->SetScale(Vector3(0.1f, 0.1f, 0.0f));
-
-		MeshRenderer* meshRenderer = mPlayer->AddComponent<MeshRenderer>();
-		meshRenderer->SetMesh(ResourceManager::Find<Mesh>(L"CircleMesh"));
-		meshRenderer->SetShader(ResourceManager::Find<Shader>(L"PlayerShader"));
-		Rigidbody* rb = mPlayer->AddComponent<Rigidbody>();
-
-		Collider* col = mPlayer->AddComponent<Collider>();
-		col->SetScale(Vector3(0.056f, 0.1f, 0.0f));
-		col->SetPosition(tr->GetPosition());
-		col->SetMesh(ResourceManager::Find<Mesh>(L"RectangleColliderMeesh"));
+		mPlayer->Initialize();
 	}
 
 	void SceneManager::Update()
 	{
+		if (Input::GetKeyState(KEY_CODE::Q) == KEY_STATE::DOWN)
+		{
+			SceneManager::CreateScene<Stage1>(L"Stage1");
+			LoadScene(L"Stage1");
+		}
 		mActiveScene->Update();
 	}
 
@@ -57,6 +52,11 @@ namespace van
 			return nullptr;
 
 		mActiveScene = iter->second;
+
+		if (mActiveScene != nullptr)
+		{
+			mActiveScene->AddGameObject(mPlayer, LAYER::PLAYER);
+		}
 		return iter->second;
 	}
 }

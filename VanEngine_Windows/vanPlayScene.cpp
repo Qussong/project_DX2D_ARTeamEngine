@@ -30,8 +30,6 @@ namespace van
 		// Player
 		Player* player = SceneManager::GetPlayer();
 		player->GetComponent<Transform>()->SetPosition(Vector3(0.0f, -0.6f, 0.0f));
-		player->AddComponent<PlayerScript>();
-		AddGameObject(player, LAYER::PLAYER);
 
 		// Floor1
 		for (size_t i = 0; i < 5; ++i)
@@ -72,6 +70,7 @@ namespace van
 
 	void PlayScene::Update()
 	{
+		
 		Scene::Update();
 	}
 
