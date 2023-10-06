@@ -32,6 +32,8 @@ namespace van
 
 		UINT GetCollisionNumber() { return mCollisionNumber; }
 
+		void SetMesh(Mesh* mesh) { mMesh = mesh; }
+
 	private:
 		static UINT mCollisionCount;
 

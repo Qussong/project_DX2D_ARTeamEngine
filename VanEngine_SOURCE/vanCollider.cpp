@@ -59,6 +59,8 @@ namespace van
 
 		cb->Bind(graphics::eShaderStage::VS);
 
+		
+
 		mShader->SetToplogy(D3D11_PRIMITIVE_TOPOLOGY_LINELIST);
 
 		mShader->Update();
