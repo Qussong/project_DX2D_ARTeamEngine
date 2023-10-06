@@ -2,19 +2,19 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClInclude Include="vanLoadScene.h" />
-    <ClInclude Include="vanPlayScene.h">
-      <Filter>Scenes</Filter>
-    </ClInclude>
     <ClInclude Include="vanPlayerScript.h">
       <Filter>Scripts</Filter>
     </ClInclude>
+    <ClInclude Include="vanPlayScene.h">
+      <Filter>Scenes\Sample</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="vanPlayScene.cpp">
-      <Filter>Scenes</Filter>
-    </ClCompile>
     <ClCompile Include="vanPlayerScript.cpp">
       <Filter>Scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="vanPlayScene.cpp">
+      <Filter>Scenes\Sample</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -23,6 +23,12 @@
     </Filter>
     <Filter Include="Scripts">
       <UniqueIdentifier>{3324b828-11bc-4677-baa1-176d3509a04e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scenes\Sample">
+      <UniqueIdentifier>{2bbbe8f0-3342-48e3-8a14-49d7dfeecf87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scenes\Stage1">
+      <UniqueIdentifier>{76adea32-be68-4191-b73e-c0dd9109d3f3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

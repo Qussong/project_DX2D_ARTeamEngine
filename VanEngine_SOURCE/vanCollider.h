@@ -23,7 +23,7 @@ namespace van
 		void OnCollisionExit(Collider* other);
 
 		Vector3 GetSize() { return mSize; }
-		void SetSize(Vector3 size) { mSize = size; }
+		void SetScale(Vector3 size) { mSize = size; }
 		Vector3 GetOffset() { return mOffset; }
 		void SetOffset(Vector3 offset) { mOffset = offset; }
 		Vector3 GetPosition() { return mPosition; }
@@ -34,12 +34,17 @@ namespace van
 
 		void SetMesh(Mesh* mesh) { mMesh = mesh; }
 
+		void SmoothDecreaseColor();
+
 	private:
 		static UINT mCollisionCount;
 
 		Vector3 mSize;
 		Vector3 mOffset;
 		Vector3 mPosition;
+
+		Vector4 mColor;
+		bool mbColorFlag;
 
 		Mesh* mMesh;
 		Shader* mShader;

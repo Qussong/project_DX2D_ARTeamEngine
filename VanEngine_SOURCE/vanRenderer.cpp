@@ -1,6 +1,6 @@
 #include "vanRenderer.h"
 #include "vanApplication.h"
-#include "vanResources.h"
+#include "vanResourceManager.h"
 
 extern van::Application application;
 
@@ -10,12 +10,13 @@ namespace van::renderer
 {
 
 	D3D11_INPUT_ELEMENT_DESC InputLayouts[2];
-	Mesh* mesh = nullptr;
-	Mesh* mesh2 = nullptr;
-	Mesh* mesh3 = nullptr;
-	Mesh* mesh4 = nullptr;
-	Shader* shader = nullptr;
-	Shader* shader2 = nullptr;
+	Mesh* meshCircle = nullptr;
+	Mesh* meshRectangle = nullptr;
+	Mesh* meshColRectangle = nullptr;
+	Mesh* meshColCircle = nullptr;
+	Shader* shaderPlayer = nullptr;
+	Shader* shaderCollider = nullptr;
+	Shader* shaderFloor = nullptr;
 	ConstantBuffer* constantBuffers[(UINT)graphics::eCBType::End];
 
 	void SetUpStates()
@@ -35,7 +36,7 @@ namespace van::renderer
 			for (int i = 0; i < 361; i++)
 			{
 				vertexes[i + 1].pos = Vector3(r * cos(Radian(i)) * 9 / 16 /*화면비*/, r * sin(Radian(i)), 0.f);
-				vertexes[i + 1].color = Vector4(0.f, 0.f, 1.f, 1.f);
+				vertexes[i + 1].color = Vector4(0.5f, 0.f, 1.f, 1.f);
 			}
 
 			std::vector<UINT> indexes;
@@ -47,10 +48,10 @@ namespace van::renderer
 			}
 
 			// Circle Vertex Buffer
-			mesh->CreateVertexBuffer(vertexes.data(), 362);						// 수정
-			mesh->CreateIndexBuffer(indexes.data(), indexes.size());
+			meshCircle->CreateVertexBuffer(vertexes.data(), 362);						// 수정
+			meshCircle->CreateIndexBuffer(indexes.data(), indexes.size());
 			// 원 Mesh 생성후 삽입
-			Resources::Insert(L"CircleMesh", mesh);
+			ResourceManager::Insert(L"CircleMesh", meshCircle);
 		}
 
 		// Rectangle
@@ -59,16 +60,16 @@ namespace van::renderer
 			vertexes.resize(4);
 
 			vertexes[0].pos = Vector3(-0.5f, 0.5f, 0.f);
-			vertexes[0].color = Vector4(0.f, 1.f, 0.f, 1.f);
+			vertexes[0].color = Vector4(0.f, 0.f, 0.f, 1.f);
 
 			vertexes[1].pos = Vector3(0.5f, 0.5f, 0.f);
-			vertexes[1].color = Vector4(1.f, 0.f, 0.f, 1.f);
+			vertexes[1].color = Vector4(0.f, 0.f, 0.f, 1.f);
 
 			vertexes[2].pos = Vector3(0.5f, -0.5f, 0.f);
-			vertexes[2].color = Vector4(0.f, 0.f, 1.f, 1.f);
+			vertexes[2].color = Vector4(0.f, 0.f, 0.f, 1.f);
 
 			vertexes[3].pos = Vector3(-0.5f, -0.5f, 0.f);
-			vertexes[3].color = Vector4(0.f, 0.f, 1.f, 1.f);
+			vertexes[3].color = Vector4(0.f, 0.f, 0.f, 1.f);
 
 			std::vector<UINT> indexes;
 			indexes.push_back(0);
@@ -80,10 +81,10 @@ namespace van::renderer
 			indexes.push_back(3);
 
 			// Rectangle Vertex Buffer
-			mesh2->CreateVertexBuffer(vertexes.data(), 4);						// 수정
-			mesh2->CreateIndexBuffer(indexes.data(), indexes.size());
+			meshRectangle->CreateVertexBuffer(vertexes.data(), 4);						// 수정
+			meshRectangle->CreateIndexBuffer(indexes.data(), indexes.size());
 			// 사각형 Mesh 생성후 삽입
-			Resources::Insert(L"RectangleMesh", mesh2);
+			ResourceManager::Insert(L"RectangleMesh", meshRectangle);
 		}
 
 		// Collider Rectangle
@@ -114,10 +115,10 @@ namespace van::renderer
 			indexes.push_back(1);
 
 			// Collider Vertex Buffer
-			mesh3->CreateVertexBuffer(vertexes.data(), 4);						// 수정
-			mesh3->CreateIndexBuffer(indexes.data(), indexes.size());
+			meshColRectangle->CreateVertexBuffer(vertexes.data(), 4);						// 수정
+			meshColRectangle->CreateIndexBuffer(indexes.data(), indexes.size());
 			// 사각형 Mesh 생성후 삽입
-			Resources::Insert(L"ColliderMesh", mesh3);
+			ResourceManager::Insert(L"RectangleColliderMeesh", meshColRectangle);
 		}
 
 		// Collider Circle
@@ -141,10 +142,10 @@ namespace van::renderer
 				indexes.push_back(1); // 원점
 
 			// Circle Vertex Buffer
-			mesh4->CreateVertexBuffer(vertexes.data(), 362);						// 수정
-			mesh4->CreateIndexBuffer(indexes.data(), indexes.size());
+			meshColCircle->CreateVertexBuffer(vertexes.data(), 362);						// 수정
+			meshColCircle->CreateIndexBuffer(indexes.data(), indexes.size());
 			// 원 Mesh 생성후 삽입
-			Resources::Insert(L"CircleColliderMesh", mesh4);
+			ResourceManager::Insert(L"CircleColliderMesh", meshColCircle);
 		}
 
 		constantBuffers[(UINT)graphics::eCBType::Transform] = new ConstantBuffer();
@@ -154,17 +155,24 @@ namespace van::renderer
 
 	void LoadShader()
 	{
-		shader->Create(eShaderStage::VS, L"TriangleVS.hlsl", "VS_Test");
-		shader->Create(eShaderStage::PS, L"TrianglePS.hlsl", "PS_Test");
-		Resources::Insert(L"TriangleShader", shader);
+		// player
+		shaderPlayer->Create(eShaderStage::VS, L"TriangleVS.hlsl", "VS_Player");
+		shaderPlayer->Create(eShaderStage::PS, L"TrianglePS.hlsl", "PS_Test");
+		ResourceManager::Insert(L"PlayerShader", shaderPlayer);
+
+		// floor
+		shaderFloor->Create(eShaderStage::VS, L"TriangleVS.hlsl", "VS_Test");
+		shaderFloor->Create(eShaderStage::PS, L"TrianglePS.hlsl", "PS_Test");
+		ResourceManager::Insert(L"FloorShader", shaderFloor);
 
 		// collider
-		shader2->Create(eShaderStage::VS, L"TriangleVS.hlsl", "VS_Test");
-		shader2->Create(eShaderStage::PS, L"TrianglePS.hlsl", "PS_Test");
-		Resources::Insert(L"TriangleShader2", shader2);
+		shaderCollider->Create(eShaderStage::VS, L"TriangleVS.hlsl", "VS_Test");
+		shaderCollider->Create(eShaderStage::PS, L"TrianglePS.hlsl", "PS_Test");
+		ResourceManager::Insert(L"TriangleColShader", shaderCollider);
 		//GetDevice()->CreateShader(eShaderStage::NONE);
-		//GetDevice()->CreateVertexShader();`
-				// Input layout 정점 구조 정보
+		//GetDevice()->CreateVertexShader();
+		
+		// Input layout 정점 구조 정보
 		InputLayouts[0].AlignedByteOffset = 0;
 		InputLayouts[0].Format = DXGI_FORMAT_R32G32B32_FLOAT;
 		InputLayouts[0].InputSlot = 0;
@@ -179,26 +187,34 @@ namespace van::renderer
 		InputLayouts[1].SemanticName = "COLOR";
 		InputLayouts[1].SemanticIndex = 0;
 
+		// Player
 		GetDevice()->CreateInputLayout(InputLayouts, 2,
-			shader->GetVSCode()->GetBufferPointer()
-			, shader->GetVSCode()->GetBufferSize()
-			, shader->GetInputLayoutAddressOf());
+			shaderPlayer->GetVSCode()->GetBufferPointer()
+			, shaderPlayer->GetVSCode()->GetBufferSize()
+			, shaderPlayer->GetInputLayoutAddressOf());
+
+		// Floor
+		GetDevice()->CreateInputLayout(InputLayouts, 2,
+			shaderFloor->GetVSCode()->GetBufferPointer()
+			, shaderFloor->GetVSCode()->GetBufferSize()
+			, shaderFloor->GetInputLayoutAddressOf());
 
 		// collider
 		GetDevice()->CreateInputLayout(InputLayouts, 2,
-			shader2->GetVSCode()->GetBufferPointer()
-			, shader2->GetVSCode()->GetBufferSize()
-			, shader2->GetInputLayoutAddressOf());
+			shaderCollider->GetVSCode()->GetBufferPointer()
+			, shaderCollider->GetVSCode()->GetBufferSize()
+			, shaderCollider->GetInputLayoutAddressOf());
 	}
 
 	void Initialize()
 	{
-		mesh = new Mesh();
-		mesh2 = new Mesh();
-		mesh3 = new Mesh();
-		mesh4 = new Mesh();
-		shader = new Shader();
-		shader2 = new Shader();
+		meshCircle = new Mesh();
+		meshRectangle = new Mesh();
+		meshColRectangle = new Mesh();
+		meshColCircle = new Mesh();
+		shaderPlayer = new Shader();
+		shaderCollider = new Shader();
+		shaderFloor = new Shader();
 
 		LoadShader();
 		SetUpStates();
@@ -207,10 +223,10 @@ namespace van::renderer
 
 	void Release()
 	{
-		delete mesh;
-		delete mesh2;
-		delete mesh3;
-		delete shader;
+		delete meshCircle;
+		delete meshRectangle;
+		delete meshColRectangle;
+		delete shaderPlayer;
 
 		delete constantBuffers[(UINT)graphics::eCBType::Transform];
 		//triangleVertexBuffer->Release();

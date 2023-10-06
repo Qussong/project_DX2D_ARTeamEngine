@@ -335,7 +335,7 @@ namespace van::graphics
 
     void GraphicsDevice_DX11::Clear()
     {
-        FLOAT backgroundColor[4] = { 0.2f, 0.2f, 0.2f, 1.0f };
+        FLOAT backgroundColor[4] = { 0.9f, 0.9f, 0.9f, 1.0f };
         mContext->ClearRenderTargetView(mRenderTargetView.Get(), backgroundColor);
         mContext->ClearDepthStencilView(mDepthStencilView.Get(), D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL, 1.f, 0);
     }
@@ -372,13 +372,13 @@ namespace van::graphics
         renderer::constantBuffers[(UINT)graphics::eCBType::Transform]->Bind(eShaderStage::VS);
 
         //// Input Assembeler 단계에 버텍스버퍼 정보 지정
-        renderer::mesh->BindBuffer();
-        renderer::mesh2->BindBuffer();
+        renderer::meshCircle->BindBuffer();
+        renderer::meshRectangle->BindBuffer();
         Vector4 pos(0.0f, 0.0f, 0.0f, 0.0f);
         renderer::constantBuffers[(UINT)graphics::eCBType::Transform]->SetData(&pos);
 
         // Set Inputlayout, shader
-        renderer::shader->Update();
+        renderer::shaderPlayer->Update();
 
 
         DrawIndexed(6, 0, 0);

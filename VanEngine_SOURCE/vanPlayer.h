@@ -19,7 +19,7 @@ namespace van
 		virtual void OnCollisionExit(class Collider* other);
 
 	private:
-
+		Player* mPlayer;
 	};
 }
 

@@ -120,7 +120,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)vanResource.h">
       <Filter>Engine\Resource</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)vanResources.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)vanResourceManager.h">
       <Filter>Engine\Resource\Manager</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)vanMesh.h">
@@ -203,7 +203,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)vanResource.cpp">
       <Filter>Engine\Resource</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)vanResources.cpp">
+    <ClCompile Include="$(MSBuildThisFileDirectory)vanResourceManager.cpp">
       <Filter>Engine\Resource\Manager</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)vanMesh.cpp">

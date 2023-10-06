@@ -4,8 +4,9 @@
 #include "vanConstantBuffer.h"
 #include "vanRenderer.h"
 #include "vanMeshRenderer.h"
-#include "vanResources.h"
+#include "vanResourceManager.h"
 
+#include "vanTime.h"
 
 namespace van
 {
@@ -17,16 +18,14 @@ namespace van
 		, mOffset(Vector3::Zero)
 		, mCollisionNumber(-1)
 		, mbIsCollision(false)
+		, mColor(Vector4(0.0f, 0.0f, 0.0f, 0.0f))
+		, mbColorFlag(false)
 	{
 		mCollisionNumber = mCollisionCount;
 		mCollisionCount++;
 
-		mMesh = Resources::Find<Mesh>(L"CircleColliderMesh");
-		mShader = Resources::Find<Shader>(L"TriangleShader2");
-
-		//MeshRenderer* meshRenderer = new MeshRenderer;
-		//meshRenderer->SetMesh(mMesh);
-		//meshRenderer->SetShader(mShader);
+		mMesh = ResourceManager::Find<Mesh>(L"RectangleColliderMeesh");
+		mShader = ResourceManager::Find<Shader>(L"TriangleColShader");
 	}
 
 	Collider::~Collider()
@@ -39,7 +38,9 @@ namespace van
 
 	void Collider::Update()
 	{
-
+		// Collider Color Change
+		if (mbColorFlag)
+			SmoothDecreaseColor();
 	}
 
 	void Collider::LateUpdate()
@@ -53,13 +54,11 @@ namespace van
 
 		renderer::TransformCB data = {};
 		data.pos = mPosition;
-		//data.scale = mScale;
+		data.color = mColor;
 		data.scale = mSize;
 		cb->SetData(&data);
 
 		cb->Bind(graphics::eShaderStage::VS);
-
-		
 
 		mShader->SetToplogy(D3D11_PRIMITIVE_TOPOLOGY_LINELIST);
 
@@ -72,6 +71,8 @@ namespace van
 	{
 		mbIsCollision = true;
 		GetOwner()->OnCollisionEnter(other);
+
+		mColor = Vector4(0.0f, 1.0f, 0.0f, 0.0f);
 	}
 
 	void Collider::OnCollisionStay(Collider* other)
@@ -83,5 +84,14 @@ namespace van
 	{
 		mbIsCollision = false;
 		GetOwner()->OnCollisionExit(other);
+
+		mbColorFlag = true;
+	}
+
+	void Collider::SmoothDecreaseColor()
+	{
+		mColor -= (Vector4(0.0f, 0.9f, 0.0f, 0.0f) * Time::DeltaTime());
+		if (mColor == Vector4::Zero)
+			mbColorFlag = false;
 	}
 }

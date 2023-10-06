@@ -36,7 +36,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)vanPlayer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)vanRenderer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)vanResource.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)vanResources.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)vanResourceManager.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)vanRigidbody.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)vanScene.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)vanSceneManager.h" />
@@ -66,7 +66,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)vanPlayer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)vanRenderer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)vanResource.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)vanResources.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)vanResourceManager.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)vanRigidbody.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)vanScene.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)vanSceneManager.cpp" />

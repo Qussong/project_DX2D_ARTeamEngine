@@ -28,14 +28,18 @@ namespace van::renderer
 
 		Vector3 scale;
 		int padd2;
+
+		Vector4 color;
 	};
 
-	extern Mesh* mesh;	// Circle
-	extern Mesh* mesh2;	// Rectangle
-	extern Mesh* mesh3;	// collider
-	extern Mesh* mesh4;	// collider
-	extern Shader* shader;
-	extern Shader* shader2; // collider
+	extern Mesh* meshCircle;		// Circle
+	extern Mesh* meshRectangle;		// Rectangle
+	extern Mesh* meshColRectangle;	// collider
+	extern Mesh* meshColCircle;		// collider
+
+	extern Shader* shaderPlayer;	// player
+	extern Shader* shaderCollider;	// collider
+	extern Shader* shaderFloor;		// floor
 	extern ConstantBuffer* constantBuffers[];
 
 	// Initialize the renderer

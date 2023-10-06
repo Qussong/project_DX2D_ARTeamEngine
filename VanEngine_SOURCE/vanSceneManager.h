@@ -3,6 +3,9 @@
 
 namespace van
 {
+
+	class Player;
+
 	class SceneManager
 	{
 	public:
@@ -29,9 +32,13 @@ namespace van
 		static Scene* LoadScene(const std::wstring name);
 		static Scene* GetActiveScene() { return mActiveScene; }
 
+		static Player* GetPlayer() { return mPlayer; }
+
 	private:
 		//static Scene* mPlayScene;
 		static Scene* mActiveScene;
 		static std::map<std::wstring, Scene*> mScenes;
+		static Player* mPlayer;
+
 	};
 }
