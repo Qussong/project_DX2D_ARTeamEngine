@@ -11,7 +11,8 @@
 #include "vanPlayer.h"
 #include "vanFloor.h"
 
-#define GAP 0.142f
+#define GAP_X 0.142f
+#define GAP_Y 0.252f
 
 namespace van
 {
@@ -31,38 +32,37 @@ namespace van
 		Player* player = SceneManager::GetPlayer();
 		player->GetComponent<Transform>()->SetPosition(Vector3(0.0f, -0.6f, 0.0f));
 
-		// Floor1
+		// FloorH1
 		for (size_t i = 0; i < 5; ++i)
 		{
 			Floor* floor = new Floor();
-			floor->GetComponent<Transform>()->SetPosition(Vector3(i * GAP - 0.4f, -0.8f, 0.0f));
+			floor->GetComponent<Transform>()->SetPosition(Vector3(i * GAP_X - 0.4f, -0.8f, 0.0f));
 			AddGameObject(floor, LAYER::FLOOR);
 		}
 
-		// Floor2L
+		// FloorV
+		for (size_t i = 0; i < 4; ++i)
+		{
+			Floor* floor = new Floor();
+			floor->GetComponent<Transform>()->SetPosition(Vector3(0.35f, i * GAP_Y - 0.8f, 0.0f));
+			AddGameObject(floor, LAYER::FLOOR);
+		}
+
+		// FloorH2
 		for (size_t i = 0; i < 3; ++i)
 		{
 			Floor* floor = new Floor();
-			floor->GetComponent<Transform>()->SetPosition(Vector3(i * GAP - 0.8f, -0.3f, 0.0f));
+			floor->GetComponent<Transform>()->SetPosition(Vector3(i * GAP_X - 0.8f, -0.3f, 0.0f));
 			AddGameObject(floor, LAYER::FLOOR);
 		}
 
-		// Floor2R
+		// FloorH3
 		for (size_t i = 0; i < 3; ++i)
 		{
 			Floor* floor = new Floor();
-			floor->GetComponent<Transform>()->SetPosition(Vector3(i * GAP + 0.4f, -0.3f, 0.0f));
+			floor->GetComponent<Transform>()->SetPosition(Vector3(i * GAP_X - 0.3f, 0.2f, 0.0f));
 			AddGameObject(floor, LAYER::FLOOR);
 		}
-
-		// Floor3
-		for (size_t i = 0; i < 3; ++i)
-		{
-			Floor* floor = new Floor();
-			floor->GetComponent<Transform>()->SetPosition(Vector3(i * GAP - 0.2f, 0.2f, 0.0f));
-			AddGameObject(floor, LAYER::FLOOR);
-		}
-
 
 		// Collision Setting
 		CollisionManager::CollisionLayerCheck(LAYER::PLAYER, LAYER::FLOOR, true);

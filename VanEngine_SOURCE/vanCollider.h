@@ -36,6 +36,9 @@ namespace van
 
 		void SmoothDecreaseColor();
 
+		void SetVisible(bool _flag) { mbVisible = _flag; }
+		bool GetVisible() { return mbVisible; }
+
 	private:
 		static UINT mCollisionCount;
 
@@ -51,5 +54,7 @@ namespace van
 
 		UINT mCollisionNumber;
 		bool mbIsCollision;
+
+		bool mbVisible;	// 화면상 콜라이더 출력여부
 	};
 }

@@ -20,6 +20,7 @@ namespace van
 		, mbIsCollision(false)
 		, mColor(Vector4(0.0f, 0.0f, 0.0f, 0.0f))
 		, mbColorFlag(false)
+		, mbVisible(true)
 	{
 		mCollisionNumber = mCollisionCount;
 		mCollisionCount++;
@@ -60,10 +61,13 @@ namespace van
 
 		cb->Bind(graphics::eShaderStage::VS);
 
-		mShader->SetToplogy(D3D11_PRIMITIVE_TOPOLOGY_LINELIST);
+		if (mbVisible)
+		{
+			mShader->SetToplogy(D3D11_PRIMITIVE_TOPOLOGY_LINELIST);
 
-		mShader->Update();
-		mMesh->Render();
+			mShader->Update();
+			mMesh->Render();
+		}
 
 	}
 

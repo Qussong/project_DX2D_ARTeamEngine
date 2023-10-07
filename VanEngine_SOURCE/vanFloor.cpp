@@ -7,7 +7,7 @@
 #include "vanResourceManager.h"
 
 #define RATIO       0.5625f
-#define ERRORVALUE  0.05f
+#define ERRORVALUE  0.005f
 namespace van
 {
     Floor::Floor()
@@ -65,30 +65,57 @@ namespace van
         // Floor 객체와 충돌한 객체가 Playe 인 경우
         if (player != nullptr)
         {
-            Collider* colPlayer = player->GetComponent<Collider>();
-            Vector3 playerSize = colPlayer->GetSize();
-            Vector3 playerPos = colPlayer->GetPosition();
+            Rigidbody* rb = player->GetComponent<Rigidbody>();
 
-            Collider* colFloor = GetComponent<Collider>();
-            Vector3 floorSize = colFloor->GetSize();
-            Vector3 floorPos = colFloor->GetPosition();
+            Collider* colPlayer = player->GetComponent<Collider>(); // Player의 콜라이더
+            Vector3 playerSize = colPlayer->GetSize();              // Player의 콜라이더의 사이즈
+            Vector3 playerPos = colPlayer->GetPosition();           // Player의 콜라이더의 위치
 
-            // Player와 Floor 의 위치값 비교
-            bool collisionFlag = (playerPos.y - playerSize.y / 2) >= (floorPos.y + floorSize.y / 2) - ERRORVALUE;
+            Collider* colFloor = GetComponent<Collider>();          // Floor 의 콜라이더
+            Vector3 floorSize = colFloor->GetSize();                // Floor 의 콜라이더의 사이즈
+            Vector3 floorPos = colFloor->GetPosition();             // Floor 의 콜라이더의 위치
 
-            // Player의 아랫면이 Floor 의 윗면보다 위에 있을경우(오차값 = 0.05)
-            if (collisionFlag)
+            // Player와 Floor 의 위치값 비교 - 윗면 충돌
+            bool collisionFlagX = (playerPos.y - playerSize.y / 2) >= (floorPos.y + floorSize.y / 2) - ERRORVALUE;
+            // Player와 Floor 의 위치값 비교 - 옆면 충돌
+            bool collisionFlagY = false;
+
+            // Y축 충돌(오차값 = 0.05)
+            if (collisionFlagX)
             {
-                Rigidbody* rb = player->GetComponent<Rigidbody>();
                 Vector3 temp = Vector3(rb->GetVelocity().x, 0.0f, rb->GetVelocity().z);
                 rb->SetVelocity(temp + Vector3(0.0f, 3.5f, 0.0f));
             }
-
+            // X축 충돌
+            else
+            {
+                // Player 가 Floor 보다 오른쪽에 있을 때 (Right)
+                if (playerPos.x > floorPos.x)
+                {
+                    collisionFlagY = (floorPos.x + floorSize.x / 2) > (playerPos.x - playerSize.x / 2);
+                    if (collisionFlagY)
+                    {
+                        Vector3 temp = Vector3(0.0f, rb->GetVelocity().y, rb->GetVelocity().z);
+                        rb->SetVelocity(temp + Vector3(1.5f, 0.0f, 0.0f));
+                    }
+                }
+                // Player 가 Floor 보다 왼쪽에 있을 때 (Left)
+                else
+                {
+                    collisionFlagY = (floorPos.x - floorSize.x / 2) < (playerPos.x + playerSize.x / 2);
+                    if (collisionFlagY)
+                    {
+                        Vector3 temp = Vector3(0.0f, rb->GetVelocity().y, rb->GetVelocity().z);
+                        rb->SetVelocity(temp + Vector3(-1.5f, 0.0f, 0.0f));
+                    }
+                }
+            }
         }
     }
 
     void Floor::OnCollisionStay(Collider* other)
     {
+
     }
 
     void Floor::OnCollisionExit(Collider* other)
