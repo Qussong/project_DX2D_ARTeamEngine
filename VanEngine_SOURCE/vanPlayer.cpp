@@ -34,7 +34,7 @@ void van::Player::Initialize()
 	col->SetScale(Vector3(0.028f, 0.05f, 0.0f));
 	col->SetPosition(tr->GetPosition());
 	col->SetMesh(ResourceManager::Find<Mesh>(L"RectangleColliderMeesh"));
-	col->SetVisible(true);
+	col->SetVisible(false);
 
 	PlayerScript* playerScript = AddComponent<PlayerScript>();
 	GameObject::Initialize();

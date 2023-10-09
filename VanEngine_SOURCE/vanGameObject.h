@@ -30,6 +30,7 @@ namespace van
 				int myOrder = comp->GetUpdateOrder();
 				mComponents[myOrder] = comp;
 				mComponents[myOrder]->mOwner = this;
+
 			}
 
 			Script* script = dynamic_cast<Script*>(component);
@@ -37,8 +38,10 @@ namespace van
 			{
 				mScripts.push_back(script);
 				script->SetOwner(this);
-			}
+				script->Initialize();
 
+			}
+		
 			return component;
 		}
 

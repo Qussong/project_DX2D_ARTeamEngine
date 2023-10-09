@@ -7,12 +7,21 @@
 
 #include "vanCollider.h"
 #include "vanRigidbody.h"
+#include "vanMeshRenderer.h"
+#include "vanResourceManager.h"
+#include "vanConstantBuffer.h"
+#include "vanRenderer.h"
+#include "vanSceneManager.h"
+#include "vanPlayer.h"
 
 #define VELOCITY_X	3.f
 
 namespace van
 {
 	PlayerScript::PlayerScript()
+		: mSize(Vector3::Zero),
+		mPosition(Vector3::Zero),
+		mColor(Vector4::Zero)
 	{
 	}
 
@@ -22,6 +31,7 @@ namespace van
 
 	void PlayerScript::Initialize()
 	{
+
 	}
 
 	void PlayerScript::Update()
@@ -60,6 +70,7 @@ namespace van
 
 	void PlayerScript::LateUpdate()
 	{
+		int a = 0;
 	}
 
 	void PlayerScript::Render()

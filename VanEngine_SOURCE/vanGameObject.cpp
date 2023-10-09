@@ -74,6 +74,14 @@ namespace van
 
 	void GameObject::Render()
 	{
+		for (Script* script : mScripts)
+		{
+			if (script == nullptr)
+				continue;
+
+			script->Render();
+		}
+
 		for (Component* comp : mComponents)
 		{
 			if (comp == nullptr)
@@ -82,13 +90,8 @@ namespace van
 			comp->Render();
 		}
 
-		for (Script* script : mScripts)
-		{
-			if (script == nullptr)
-				continue;
-
-			script->Render();
-		}
+	
+	
 	}
 	void GameObject::OnCollisionEnter(Collider* other)
 	{

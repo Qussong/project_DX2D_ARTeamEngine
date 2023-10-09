@@ -55,6 +55,7 @@ namespace van
 		{
 			Floor* floor = new Floor();
 			floor->GetComponent<Transform>()->SetPosition(Vector3(i * GAP_X - 0.8f, -0.3f, 0.0f));
+
 			AddGameObject(floor, LAYER::FLOOR);
 		}
 

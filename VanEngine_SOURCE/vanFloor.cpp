@@ -5,6 +5,7 @@
 #include "vanTransform.h"
 #include "vanMeshRenderer.h"
 #include "vanResourceManager.h"
+#include "..//VanEngine_Windows//vanFloorScript.h"
 
 #define RATIO       0.5625f
 #define ERRPRVALUE  0.05f
@@ -27,6 +28,8 @@ namespace van
         col1->SetScale(tr->GetScale());
         col1->SetPosition(tr->GetPosition());
         col1->SetMesh(ResourceManager::Find<Mesh>(L"RectangleColliderMeesh"));
+        FloorScript* floorScript = AddComponent<FloorScript>();
+    
     }
 
     Floor::~Floor()
