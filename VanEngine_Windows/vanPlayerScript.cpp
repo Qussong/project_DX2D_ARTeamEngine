@@ -8,6 +8,8 @@
 #include "vanCollider.h"
 #include "vanRigidbody.h"
 
+#define VELOCITY_X	3.f
+
 namespace van
 {
 	PlayerScript::PlayerScript()
@@ -36,14 +38,14 @@ namespace van
 			|| Input::GetKeyState(KEY_CODE::LEFT) == KEY_STATE::PRESSED)
 		{
 			rb->SetFriction(1.0f);
-			rb->AddVelocity(Vector3(-2.f, 0.0f, 0.0f) * Time::DeltaTime());
+			rb->AddVelocity(Vector3(-VELOCITY_X, 0.0f, 0.0f) * Time::DeltaTime());
 		}
 
 		if (Input::GetKeyState(KEY_CODE::D) == KEY_STATE::PRESSED
 			|| Input::GetKeyState(KEY_CODE::RIGHT) == KEY_STATE::PRESSED)
 		{
 			rb->SetFriction(1.0f);
-			rb->AddVelocity(Vector3(2.f, 0.0f, 0.0f) * Time::DeltaTime());
+			rb->AddVelocity(Vector3(VELOCITY_X, 0.0f, 0.0f) * Time::DeltaTime());
 		}
 
 		if (Input::GetKeyState(KEY_CODE::A) == KEY_STATE::UP

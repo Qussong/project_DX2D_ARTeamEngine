@@ -7,6 +7,9 @@
 #include "vanResourceManager.h"
 
 #define RATIO       0.5625f
+#define ERRPRVALUE  0.05f
+#define FORCE_X     1.5f
+#define FORCE_Y     2.5f
 
 namespace van
 {
@@ -76,7 +79,7 @@ namespace van
             Vector3 floorPos = colFloor->GetPosition();             // Floor 의 콜라이더의 위치
 
             // Player와 Floor 의 위치값 비교 - 윗면 충돌
-            bool collisionFlagX = (playerPos.y - playerSize.y / 2) <= (floorPos.y + floorSize.y / 2);
+            bool collisionFlagX = (playerPos.y - playerSize.y / 2) >= (floorPos.y + floorSize.y / 2) - ERRPRVALUE;
             // Player와 Floor 의 위치값 비교 - 옆면 충돌
             bool collisionFlagY = false;
 
@@ -84,7 +87,7 @@ namespace van
             if (collisionFlagX)
             {
                 Vector3 temp = Vector3(rb->GetVelocity().x, 0.0f, rb->GetVelocity().z);
-                rb->SetVelocity(temp + Vector3(0.0f, 3.5f, 0.0f));
+                rb->SetVelocity(temp + Vector3(0.0f, FORCE_Y, 0.0f));
             }
             // X축 충돌
             else
@@ -96,7 +99,7 @@ namespace van
                     if (collisionFlagY)
                     {
                         Vector3 temp = Vector3(0.0f, rb->GetVelocity().y, rb->GetVelocity().z);
-                        rb->SetVelocity(temp + Vector3(1.5f, 0.0f, 0.0f));
+                        rb->SetVelocity(temp + Vector3(FORCE_X, 0.0f, 0.0f));
                     }
                 }
                 // Player 가 Floor 보다 왼쪽에 있을 때 (Left)
@@ -106,7 +109,7 @@ namespace van
                     if (collisionFlagY)
                     {
                         Vector3 temp = Vector3(0.0f, rb->GetVelocity().y, rb->GetVelocity().z);
-                        rb->SetVelocity(temp + Vector3(-1.5f, 0.0f, 0.0f));
+                        rb->SetVelocity(temp + Vector3(-FORCE_X, 0.0f, 0.0f));
                     }
                 }
             }

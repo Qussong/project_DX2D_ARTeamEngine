@@ -35,7 +35,7 @@ namespace van
 
 
 		// FloorH1
-		for (size_t i = 0; i < 5; ++i)
+		for (size_t i = 0; i < 10; ++i)
 		{
 			Floor* floor = new Floor();
 			floor->GetComponent<Transform>()->SetPosition(Vector3(i * GAP_X - 0.4f, -0.8f, 0.0f));
@@ -51,7 +51,7 @@ namespace van
 		}
 
 		// FloorH2
-		for (size_t i = 0; i < 3; ++i)
+		for (size_t i = 0; i < 5; ++i)
 		{
 			Floor* floor = new Floor();
 			floor->GetComponent<Transform>()->SetPosition(Vector3(i * GAP_X - 0.8f, -0.3f, 0.0f));
