@@ -16,6 +16,7 @@ namespace van
 		virtual void Render();
 
 		void AddGameObject(GameObject* gameObject);
+		void RemoveGameObjects();
 
 		std::vector<GameObject*>& GetGameObjects() { return mGameObjects; }
 

@@ -25,8 +25,28 @@ namespace van
 				return false;
 
 			T* scene = new T();
+			scene->SetName(name);
 			mScenes.insert(std::make_pair(name, scene));
 			scene->Initialize();
+
+			return true;
+		}
+
+		template <typename T>
+		static bool DeleteScene(const std::wstring name)
+		{
+			std::map<std::wstring, Scene*>::iterator iter
+				= mScenes.find(name);
+
+			if (iter == mScenes.end())
+				return false;
+
+
+			delete iter->second;
+			iter->second = nullptr;
+
+			mScenes.erase(iter);
+
 
 			return true;
 		}

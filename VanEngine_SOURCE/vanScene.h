@@ -21,7 +21,8 @@ namespace van
 		//Layer* GetLayer(UINT index) { return&mLayers[index]; }
 		Layer& GetLayer(UINT index) { return mLayers[index]; }
 		void AddGameObject(GameObject* gameObject, UINT layerIndex);
-
+		void RemoveLayer(enums::LAYER type);
+		
 	private:
 		Layer mLayers[LAYER::MAX];
 		//std::vector<Layer> mLayers;

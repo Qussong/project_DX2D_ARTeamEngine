@@ -50,4 +50,9 @@ namespace van
 	{
 		mGameObjects.push_back(gameObject);
 	}
+
+	void Layer::RemoveGameObjects()
+	{
+		mGameObjects.clear();
+	}
 }

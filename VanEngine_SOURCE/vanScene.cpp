@@ -48,4 +48,10 @@ namespace van
 	{
 		mLayers[layerIndex].AddGameObject(gameObject);
 	}
+
+	void  Scene::RemoveLayer(enums::LAYER type)
+	{
+		// 해당 레이어 안의 오브젝트를 삭제
+		mLayers[(int)type].RemoveGameObjects();
+	}
 }

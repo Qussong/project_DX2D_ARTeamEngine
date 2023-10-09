@@ -9,7 +9,7 @@
 
 #include "vanRigidbody.h"
 #include "vanCollider.h"
-
+#include "..//VanEngine_Windows//vanPlayScene.h"
 namespace van
 {
 	//Scene* SceneManager::mPlayScene = nullptr;
@@ -25,10 +25,23 @@ namespace van
 
 	void SceneManager::Update()
 	{
-		if (Input::GetKeyState(KEY_CODE::Q) == KEY_STATE::DOWN)
+		if (mPlayer->GetBool())
 		{
-			SceneManager::CreateScene<Stage1>(L"Stage1");
-			LoadScene(L"Stage1");
+			if (mActiveScene->GetName() == L"PlayScene")
+			{
+				mActiveScene->RemoveLayer(enums::LAYER::PLAYER);
+				mActiveScene->RemoveLayer(enums::LAYER::FLOOR);
+				SceneManager::DeleteScene<PlayScene>(L"PlayScene");
+
+				SceneManager::CreateScene<PlayScene>(L"PlayScene");
+				LoadScene(L"PlayScene");
+				mPlayer->SetBool(false);
+			}
+			else if (mActiveScene->GetName() == L"")
+			{
+				//
+			}
+			
 		}
 		mActiveScene->Update();
 	}

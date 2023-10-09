@@ -10,7 +10,8 @@
 
 
 
-van::Player::Player()
+van::Player::Player() :
+	mbDead(false)
 {
 }
 
@@ -41,6 +42,12 @@ void van::Player::Initialize()
 
 void van::Player::Update()
 {
+	Transform* tr = GetComponent<Transform>();
+	Vector3 pos = tr->GetPosition();
+	if (pos.y < -1.0f)
+	{
+		mbDead = true;
+	}
 	GameObject::Update();
 }
 
