@@ -11,8 +11,8 @@
 #include "vanPlayer.h"
 #include "vanFloor.h"
 
-#define GAP_X 0.142f
-#define GAP_Y 0.252f
+#define GAP_X 0.0715f
+#define GAP_Y 0.125f
 
 namespace van
 {
@@ -31,6 +31,8 @@ namespace van
 		// Player
 		Player* player = SceneManager::GetPlayer();
 		player->GetComponent<Transform>()->SetPosition(Vector3(0.0f, -0.6f, 0.0f));
+
+
 
 		// FloorH1
 		for (size_t i = 0; i < 5; ++i)

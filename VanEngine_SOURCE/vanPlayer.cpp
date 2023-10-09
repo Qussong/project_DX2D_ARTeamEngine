@@ -23,7 +23,7 @@ void van::Player::Initialize()
 {
 	Transform* tr = AddComponent<Transform>();
 	tr->SetPosition(Vector3(0.0f, 0.0f, 0.0f));
-	tr->SetScale(Vector3(0.1f, 0.1f, 0.0f));
+	tr->SetScale(Vector3(0.05f, 0.05f, 0.0f));
 
 	MeshRenderer* meshRenderer = AddComponent<MeshRenderer>();
 	meshRenderer->SetMesh(ResourceManager::Find<Mesh>(L"CircleMesh"));
@@ -31,10 +31,10 @@ void van::Player::Initialize()
 	Rigidbody* rb = AddComponent<Rigidbody>();
 
 	Collider* col = AddComponent<Collider>();
-	col->SetScale(Vector3(0.056f, 0.1f, 0.0f));
+	col->SetScale(Vector3(0.028f, 0.05f, 0.0f));
 	col->SetPosition(tr->GetPosition());
 	col->SetMesh(ResourceManager::Find<Mesh>(L"RectangleColliderMeesh"));
-	col->SetVisible(false);
+	col->SetVisible(true);
 
 	PlayerScript* playerScript = AddComponent<PlayerScript>();
 	GameObject::Initialize();

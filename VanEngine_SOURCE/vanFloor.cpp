@@ -7,14 +7,14 @@
 #include "vanResourceManager.h"
 
 #define RATIO       0.5625f
-#define ERRORVALUE  0.005f
+
 namespace van
 {
     Floor::Floor()
     {
         Transform* tr = AddComponent<Transform>();
         tr->SetPosition(Vector3(0.0f, 0.0f, 0.0f));
-        tr->SetScale(Vector3(0.25f * RATIO, 0.25f, 1.f));
+        tr->SetScale(Vector3(0.125f * RATIO, 0.125f, 1.f));
 
         MeshRenderer* meshRenderer1 = AddComponent<MeshRenderer>();
         meshRenderer1->SetMesh(ResourceManager::Find<Mesh>(L"RectangleMesh"));
@@ -76,7 +76,7 @@ namespace van
             Vector3 floorPos = colFloor->GetPosition();             // Floor 의 콜라이더의 위치
 
             // Player와 Floor 의 위치값 비교 - 윗면 충돌
-            bool collisionFlagX = (playerPos.y - playerSize.y / 2) >= (floorPos.y + floorSize.y / 2) - ERRORVALUE;
+            bool collisionFlagX = (playerPos.y - playerSize.y / 2) <= (floorPos.y + floorSize.y / 2);
             // Player와 Floor 의 위치값 비교 - 옆면 충돌
             bool collisionFlagY = false;
 
