@@ -7,7 +7,6 @@
 #include "vanResourceManager.h"
 
 #define RATIO       0.5625f
-#define ERRORVALUE  0.05f
 
 namespace van
 {
@@ -77,7 +76,7 @@ namespace van
             Vector3 floorPos = colFloor->GetPosition();             // Floor 의 콜라이더의 위치
 
             // Player와 Floor 의 위치값 비교 - 윗면 충돌
-            bool collisionFlagX = (playerPos.y - playerSize.y / 2) >= (floorPos.y + floorSize.y / 2) - ERRORVALUE;
+            bool collisionFlagX = (playerPos.y - playerSize.y / 2) <= (floorPos.y + floorSize.y / 2);
             // Player와 Floor 의 위치값 비교 - 옆면 충돌
             bool collisionFlagY = false;
 
