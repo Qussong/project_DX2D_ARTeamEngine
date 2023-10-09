@@ -1,6 +1,8 @@
 #pragma once
 #include "vanGameObject.h"
 
+
+
 namespace van
 {
 	class Floor : public GameObject

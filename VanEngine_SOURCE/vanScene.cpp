@@ -48,4 +48,5 @@ namespace van
 	{
 		mLayers[layerIndex].AddGameObject(gameObject);
 	}
+
 }

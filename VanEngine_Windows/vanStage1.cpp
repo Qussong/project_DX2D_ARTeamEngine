@@ -11,7 +11,7 @@
 #include "vanPlayer.h"
 #include "vanFloor.h"
 
-#define GAP 0.142f
+#define GAP 0.0715f
 
 namespace van
 {

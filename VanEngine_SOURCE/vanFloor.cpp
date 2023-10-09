@@ -7,14 +7,15 @@
 #include "vanResourceManager.h"
 
 #define RATIO       0.5625f
-#define ERRORVALUE  0.005f
+#define ERRORVALUE  0.05f
+
 namespace van
 {
     Floor::Floor()
     {
         Transform* tr = AddComponent<Transform>();
         tr->SetPosition(Vector3(0.0f, 0.0f, 0.0f));
-        tr->SetScale(Vector3(0.25f * RATIO, 0.25f, 1.f));
+        tr->SetScale(Vector3(0.125f * RATIO, 0.125f, 1.f));
 
         MeshRenderer* meshRenderer1 = AddComponent<MeshRenderer>();
         meshRenderer1->SetMesh(ResourceManager::Find<Mesh>(L"RectangleMesh"));
