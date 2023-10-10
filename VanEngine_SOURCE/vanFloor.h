@@ -20,8 +20,10 @@ namespace van
 		virtual void OnCollisionStay(class  Collider* other);
 		virtual void OnCollisionExit(class Collider* other);
 
-	private:
+		bool GetCollisionEnter() { return mbCollisionEnterFlag; }
 
+	private:
+		bool mbCollisionEnterFlag;
 	};
 }
 

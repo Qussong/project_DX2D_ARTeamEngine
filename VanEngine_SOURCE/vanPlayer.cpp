@@ -11,7 +11,8 @@
 
 
 van::Player::Player() :
-	mbDead(false)
+	mbDead(false),
+	mbCollisionCheck(false)
 {
 }
 
