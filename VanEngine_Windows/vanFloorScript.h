@@ -9,6 +9,7 @@
 namespace van
 {
 	class Transform;
+	class Collider;
 
 	using namespace math;
 	using namespace graphics;
@@ -36,6 +37,7 @@ namespace van
 
 
 		Transform* mTransform;
+		Collider* mCollider;
 
 	};
 }

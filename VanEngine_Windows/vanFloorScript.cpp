@@ -21,7 +21,7 @@ namespace van
 	FloorScript::FloorScript()
 		: mSize(0.1f * 0.5625f, 0.1f, 1.f),
 		mPosition(Vector3::Zero),
-		mColor(Vector4(1.0f, 1.0f, 1.0f, 0.0f))
+		mColor(Vector4(0.5f, 0.5f, 0.5f, 0.5f))
 	{
 	}
 
@@ -32,15 +32,17 @@ namespace van
 	void FloorScript::Initialize()
 	{
 		mTransform = GetOwner()->GetComponent<Transform>();
+		mCollider = GetOwner()->GetComponent<Collider>();
 
-
+		mSize = mTransform->GetScale();
+		mSize = Vector3(mSize.x - 0.001f, mSize.y - 0.005f, 0.0f);
 		mMesh = ResourceManager::Find<Mesh>(L"RectangleMesh");
 		mShader = ResourceManager::Find<Shader>(L"FloorShader");
+
 	}
 
 	void FloorScript::Update()
 	{
-		
 	}
 
 	void FloorScript::LateUpdate()
@@ -49,6 +51,7 @@ namespace van
 
 	void FloorScript::Render()
 	{
+	
 		ConstantBuffer* cb = renderer::constantBuffers[(UINT)graphics::eCBType::Transform];
 
 		renderer::TransformCB data = {};
@@ -57,7 +60,7 @@ namespace van
 		data.scale = mSize;
 		cb->SetData(&data);
 
-		
+
 
 		cb->Bind(graphics::eShaderStage::VS);
 
@@ -65,6 +68,5 @@ namespace van
 
 		mShader->Update();
 		mMesh->Render();
-
 	}
 }
