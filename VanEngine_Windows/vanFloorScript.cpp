@@ -34,7 +34,7 @@ namespace van
 		mTransform = GetOwner()->GetComponent<Transform>();
 
 
-		mMesh = ResourceManager::Find<Mesh>(L"CircleMesh");
+		mMesh = ResourceManager::Find<Mesh>(L"RectangleMesh");
 		mShader = ResourceManager::Find<Shader>(L"FloorShader");
 	}
 

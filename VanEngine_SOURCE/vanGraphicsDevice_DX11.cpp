@@ -366,14 +366,16 @@ namespace van::graphics
         mSwapChain->Present(0, 0);
     }
 
+    // 사용되지 않음
     void GraphicsDevice_DX11::Render()
     {
         //set costant buffer 
         renderer::constantBuffers[(UINT)graphics::eCBType::Transform]->Bind(eShaderStage::VS);
 
         //// Input Assembeler 단계에 버텍스버퍼 정보 지정
-        renderer::meshCircle->BindBuffer();
-        renderer::meshRectangle->BindBuffer();
+        //renderer::meshCircle->BindBuffer();
+        //renderer::meshRectangle->BindBuffer();
+        //renderer::meshTriangle->BindBuffer();
         Vector4 pos(0.0f, 0.0f, 0.0f, 0.0f);
         renderer::constantBuffers[(UINT)graphics::eCBType::Transform]->SetData(&pos);
 

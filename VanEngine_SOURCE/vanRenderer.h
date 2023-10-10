@@ -34,6 +34,9 @@ namespace van::renderer
 
 	extern Mesh* meshCircle;		// Circle
 	extern Mesh* meshRectangle;		// Rectangle
+	extern Mesh* meshTriangle;
+	extern Mesh* meshTriangleR;
+	extern Mesh* meshTriangleL;
 	extern Mesh* meshColRectangle;	// collider
 	extern Mesh* meshColCircle;		// collider
 

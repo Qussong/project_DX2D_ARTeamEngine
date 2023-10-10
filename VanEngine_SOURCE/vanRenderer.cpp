@@ -12,6 +12,9 @@ namespace van::renderer
 	D3D11_INPUT_ELEMENT_DESC InputLayouts[2];
 	Mesh* meshCircle = nullptr;
 	Mesh* meshRectangle = nullptr;
+	Mesh* meshTriangle = nullptr;
+	Mesh* meshTriangleR = nullptr;
+	Mesh* meshTriangleL = nullptr;
 	Mesh* meshColRectangle = nullptr;
 	Mesh* meshColCircle = nullptr;
 	Shader* shaderPlayer = nullptr;
@@ -85,6 +88,97 @@ namespace van::renderer
 			meshRectangle->CreateIndexBuffer(indexes.data(), indexes.size());
 			// 사각형 Mesh 생성후 삽입
 			ResourceManager::Insert(L"RectangleMesh", meshRectangle);
+		}
+
+		// Triangle
+		{
+			std::vector<Vertex> vertexes;
+			vertexes.resize(3);
+
+			vertexes[0].pos = Vector3(-0.5f, -0.5f, 0.f);
+			vertexes[0].color = Vector4(0.f, 0.f, 0.f, 1.f);
+
+			vertexes[1].pos = Vector3(0.0f, 0.5f * 9 / 16, 0.0f);
+			vertexes[1].color = Vector4(0.f, 0.f, 0.f, 1.f);
+
+			vertexes[2].pos = Vector3(0.5f, -0.5f, 0.f);
+			vertexes[2].color = Vector4(0.f, 0.f, 0.f, 1.f);
+
+			std::vector<UINT> indexes;
+			indexes.push_back(0);
+			indexes.push_back(1);
+			indexes.push_back(2);
+
+			indexes.push_back(0);
+			indexes.push_back(2);
+			indexes.push_back(3);
+
+			// Triangle Vertex Buffer
+			meshTriangle->CreateVertexBuffer(vertexes.data(), 3);						// 수정
+			meshTriangle->CreateIndexBuffer(indexes.data(), indexes.size());
+			// 삼각형 Mesh 생성후 삽입
+			ResourceManager::Insert(L"TriangleMesh", meshTriangle);
+		}
+
+		// Triangle_Right
+		{
+			std::vector<Vertex> vertexes;
+			vertexes.resize(3);
+
+			vertexes[0].pos = Vector3(-0.5f, -0.5f, 0.f);
+			vertexes[0].color = Vector4(0.f, 0.f, 0.f, 1.f);
+
+			vertexes[1].pos = Vector3(-0.5f, 0.5f, 0.0f);
+			vertexes[1].color = Vector4(0.f, 0.f, 0.f, 1.f);
+
+			vertexes[2].pos = Vector3(0.5f, 0.0f,  0.f);
+			vertexes[2].color = Vector4(0.f, 0.f, 0.f, 1.f);
+
+			std::vector<UINT> indexes;
+			indexes.push_back(0);
+			indexes.push_back(2);
+			indexes.push_back(3);
+
+			indexes.push_back(0);
+			indexes.push_back(1);
+			indexes.push_back(2);
+
+
+			// Triangle Vertex Buffer
+			meshTriangleR->CreateVertexBuffer(vertexes.data(), 3);						// 수정
+			meshTriangleR->CreateIndexBuffer(indexes.data(), indexes.size());
+			// 삼각형 Mesh 생성후 삽입
+			ResourceManager::Insert(L"TriangleMeshR", meshTriangleR);
+		}
+
+		// Triangle_Left
+		{
+			std::vector<Vertex> vertexes;
+			vertexes.resize(3);
+
+			vertexes[0].pos = Vector3(0.5f, 0.5f, 0.f);
+			vertexes[0].color = Vector4(0.f, 0.f, 0.f, 1.f);
+
+			vertexes[1].pos = Vector3(0.5f, -0.5f, 0.0f);
+			vertexes[1].color = Vector4(0.f, 0.f, 0.f, 1.f);
+
+			vertexes[2].pos = Vector3(-0.5f, 0.0f, 0.f);
+			vertexes[2].color = Vector4(0.f, 0.f, 0.f, 1.f);
+
+			std::vector<UINT> indexes;
+			indexes.push_back(0);
+			indexes.push_back(1);
+			indexes.push_back(2);
+
+			indexes.push_back(0);
+			indexes.push_back(2);
+			indexes.push_back(3);
+
+			// Triangle Vertex Buffer
+			meshTriangleL->CreateVertexBuffer(vertexes.data(), 3);						// 수정
+			meshTriangleL->CreateIndexBuffer(indexes.data(), indexes.size());
+			// 삼각형 Mesh 생성후 삽입
+			ResourceManager::Insert(L"TriangleMeshL", meshTriangleL);
 		}
 
 		// Collider Rectangle
@@ -210,6 +304,9 @@ namespace van::renderer
 	{
 		meshCircle = new Mesh();
 		meshRectangle = new Mesh();
+		meshTriangle = new Mesh();
+		meshTriangleR = new Mesh();
+		meshTriangleL = new Mesh();
 		meshColRectangle = new Mesh();
 		meshColCircle = new Mesh();
 		shaderPlayer = new Shader();
