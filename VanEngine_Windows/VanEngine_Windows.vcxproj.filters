@@ -2,25 +2,37 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClInclude Include="vanLoadScene.h" />
-    <ClInclude Include="vanPlayerScript.h">
-      <Filter>Scripts</Filter>
-    </ClInclude>
     <ClInclude Include="vanPlayScene.h">
       <Filter>Scenes\Sample</Filter>
     </ClInclude>
     <ClInclude Include="vanStage1.h">
       <Filter>Scenes\Stage1</Filter>
     </ClInclude>
+    <ClInclude Include="vanPlayerScript.h">
+      <Filter>Scripts\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="vanFloorScript.h">
+      <Filter>Scripts\Floor\Basic</Filter>
+    </ClInclude>
+    <ClInclude Include="vanSpikeScript.h">
+      <Filter>Scripts\Floor\Spike</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="vanPlayerScript.cpp">
-      <Filter>Scripts</Filter>
-    </ClCompile>
     <ClCompile Include="vanPlayScene.cpp">
       <Filter>Scenes\Sample</Filter>
     </ClCompile>
     <ClCompile Include="vanStage1.cpp">
       <Filter>Scenes\Stage1</Filter>
+    </ClCompile>
+    <ClCompile Include="vanPlayerScript.cpp">
+      <Filter>Scripts\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="vanFloorScript.cpp">
+      <Filter>Scripts\Floor\Basic</Filter>
+    </ClCompile>
+    <ClCompile Include="vanSpikeScript.cpp">
+      <Filter>Scripts\Floor\Spike</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -35,6 +47,18 @@
     </Filter>
     <Filter Include="Scenes\Stage1">
       <UniqueIdentifier>{76adea32-be68-4191-b73e-c0dd9109d3f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts\Player">
+      <UniqueIdentifier>{37b2effd-dde7-44f8-bfd1-5e5a2e38000b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts\Floor">
+      <UniqueIdentifier>{b63543ca-1fe0-4e1c-9025-dcf31efee2cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts\Floor\Spike">
+      <UniqueIdentifier>{a6121d9c-8637-4872-8e65-2328cf3aad96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts\Floor\Basic">
+      <UniqueIdentifier>{f5c65fb0-53dd-4746-b13e-5931edf0e9a6}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

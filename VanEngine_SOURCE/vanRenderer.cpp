@@ -10,6 +10,7 @@ namespace van::renderer
 {
 
 	D3D11_INPUT_ELEMENT_DESC InputLayouts[2];
+	Mesh* meshDeathBlock = nullptr;
 	Mesh* meshCircle = nullptr;
 	Mesh* meshRectangle = nullptr;
 	Mesh* meshColRectangle = nullptr;
@@ -26,6 +27,76 @@ namespace van::renderer
 
 	void LoadBuffer()
 	{
+		{
+			std::vector<Vertex> vertexes;
+			vertexes.resize(9);
+
+			vertexes[0].pos = Vector3(-0.6f, -0.3f, 0.f);
+			vertexes[0].color = Vector4(0.f, 0.f, 0.f, 1.f);
+
+			vertexes[1].pos = Vector3(-0.4f, 0.2f, 0.f);
+			vertexes[1].color = Vector4(0.f, 0.f, 0.f, 1.f);
+
+			vertexes[2].pos = Vector3(-0.2f, -0.3f, 0.f);
+			vertexes[2].color = Vector4(0.f, 0.f, 0.f, 1.f);
+
+			vertexes[3].pos = Vector3(0.f, 0.2f, 0.f);
+			vertexes[3].color = Vector4(0.f, 0.f, 0.f, 1.f);
+
+			vertexes[4].pos = Vector3(0.2f, -0.3f, 0.f);
+			vertexes[4].color = Vector4(0.f, 0.f, 0.f, 1.f);
+
+			vertexes[5].pos = Vector3(0.4f, 0.2f, 0.f);
+			vertexes[5].color = Vector4(0.f, 0.f, 0.f, 1.f);
+
+			vertexes[6].pos = Vector3(0.6f, -0.3f, 0.f);
+			vertexes[6].color = Vector4(0.f, 0.f, 0.f, 1.f);
+
+			vertexes[7].pos = Vector3(0.6f, -0.6f, 0.f);
+			vertexes[7].color = Vector4(0.f, 0.f, 0.f, 1.f);
+
+			vertexes[8].pos = Vector3(-0.6f, -0.6f, 0.f);
+			vertexes[8].color = Vector4(0.f, 0.f, 0.f, 1.f);
+
+			std::vector<UINT> indexes;
+			indexes.push_back(0);
+			indexes.push_back(1);
+			indexes.push_back(2);
+			indexes.push_back(0);
+			indexes.push_back(2);
+
+			indexes.push_back(3);
+			indexes.push_back(4);
+			indexes.push_back(2);
+			indexes.push_back(3);
+
+			indexes.push_back(4);
+			indexes.push_back(5);
+			indexes.push_back(6);
+			indexes.push_back(4);
+
+			indexes.push_back(6);
+			indexes.push_back(7);
+			indexes.push_back(0);
+			indexes.push_back(6);
+			indexes.push_back(0);
+
+			indexes.push_back(7);
+			indexes.push_back(8);
+			indexes.push_back(0);
+
+			indexes.push_back(6);
+			indexes.push_back(7);
+			indexes.push_back(0);
+
+			// Rectangle Vertex Buffer
+			meshDeathBlock->CreateVertexBuffer(vertexes.data(), 9);						// 수정
+			meshDeathBlock->CreateIndexBuffer(indexes.data(), indexes.size());
+			// 사각형 Mesh 생성후 삽입
+			ResourceManager::Insert(L"DeathBlockMesh", meshDeathBlock);
+		}
+
+
 		// Circle
 		{
 			std::vector<Vertex> vertexes;
@@ -208,6 +279,7 @@ namespace van::renderer
 
 	void Initialize()
 	{
+		meshDeathBlock = new Mesh();
 		meshCircle = new Mesh();
 		meshRectangle = new Mesh();
 		meshColRectangle = new Mesh();
@@ -223,6 +295,7 @@ namespace van::renderer
 
 	void Release()
 	{
+		delete meshDeathBlock;
 		delete meshCircle;
 		delete meshRectangle;
 		delete meshColRectangle;

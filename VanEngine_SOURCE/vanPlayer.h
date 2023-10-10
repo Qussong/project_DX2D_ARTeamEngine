@@ -21,9 +21,15 @@ namespace van
 
 		bool GetBool() { return mbDead; }
 		void SetBool(bool set) { mbDead = set; }
+
+		bool IsCollisionCheck() { return mbCollisionCheck; }
+		void SetCollisionCheck(bool value) { mbCollisionCheck = value; }
+
 	private:
+
 		Player* mPlayer;
 		bool mbDead;
+		bool mbCollisionCheck;
 	};
 }
 

@@ -32,10 +32,12 @@ namespace van::renderer
 		Vector4 color;
 	};
 
+	extern Mesh* meshDeathBlock;
 	extern Mesh* meshCircle;		// Circle
 	extern Mesh* meshRectangle;		// Rectangle
 	extern Mesh* meshColRectangle;	// collider
 	extern Mesh* meshColCircle;		// collider
+
 
 	extern Shader* shaderPlayer;	// player
 	extern Shader* shaderCollider;	// collider
