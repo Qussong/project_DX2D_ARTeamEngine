@@ -34,7 +34,7 @@ void van::Player::Initialize()
 	Collider* col = AddComponent<Collider>();
 	col->SetScale(Vector3(0.028f, 0.05f, 0.0f));
 	col->SetPosition(tr->GetPosition());
-	col->SetMesh(ResourceManager::Find<Mesh>(L"RectangleColliderMeesh"));
+	col->SetMesh(ResourceManager::Find<Mesh>(L"RectangleColliderMesh"));
 	col->SetVisible(false);
 
 	PlayerScript* playerScript = AddComponent<PlayerScript>();

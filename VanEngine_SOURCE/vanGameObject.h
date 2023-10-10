@@ -45,6 +45,8 @@ namespace van
 			return component;
 		}
 
+
+
 		template <typename T>
 		T* GetComponent()
 		{

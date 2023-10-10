@@ -17,6 +17,21 @@
     <ClInclude Include="vanSpikeScript.h">
       <Filter>Scripts\Floor\Spike</Filter>
     </ClInclude>
+    <ClInclude Include="vanJumpScript.h">
+      <Filter>Scripts\Floor\Jump</Filter>
+    </ClInclude>
+    <ClInclude Include="vanStraightScript.h">
+      <Filter>Scripts\Floor\Straight</Filter>
+    </ClInclude>
+    <ClInclude Include="vanDoubleJumpScript.h">
+      <Filter>Scripts\Floor\DoubleJump</Filter>
+    </ClInclude>
+    <ClInclude Include="vanPortalInScript.h">
+      <Filter>Scripts\Floor\Portal_In</Filter>
+    </ClInclude>
+    <ClInclude Include="vanPortalOutScript.h">
+      <Filter>Scripts\Floor\Portal_Out</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="vanPlayScene.cpp">
@@ -33,6 +48,21 @@
     </ClCompile>
     <ClCompile Include="vanSpikeScript.cpp">
       <Filter>Scripts\Floor\Spike</Filter>
+    </ClCompile>
+    <ClCompile Include="vanJumpScript.cpp">
+      <Filter>Scripts\Floor\Jump</Filter>
+    </ClCompile>
+    <ClCompile Include="vanStraightScript.cpp">
+      <Filter>Scripts\Floor\Straight</Filter>
+    </ClCompile>
+    <ClCompile Include="vanPortalInScript.cpp">
+      <Filter>Scripts\Floor\Portal_In</Filter>
+    </ClCompile>
+    <ClCompile Include="vanPortalOutScript.cpp">
+      <Filter>Scripts\Floor\Portal_Out</Filter>
+    </ClCompile>
+    <ClCompile Include="vanDoubleJumpScript.cpp">
+      <Filter>Scripts\Floor\DoubleJump</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -59,6 +89,21 @@
     </Filter>
     <Filter Include="Scripts\Floor\Basic">
       <UniqueIdentifier>{f5c65fb0-53dd-4746-b13e-5931edf0e9a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts\Floor\Jump">
+      <UniqueIdentifier>{ebdd3b50-efe9-4635-9a7a-1bbee0059eb2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts\Floor\Straight">
+      <UniqueIdentifier>{230e5c79-5280-4053-8b9c-0921a23f8d2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts\Floor\DoubleJump">
+      <UniqueIdentifier>{1a3bc18c-e5f7-41eb-a039-d2a04949cffe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts\Floor\Portal_In">
+      <UniqueIdentifier>{8523c7ed-46dd-41e6-9e34-ebe900594610}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts\Floor\Portal_Out">
+      <UniqueIdentifier>{2d8ea867-048d-435c-a240-81d631b6d1e7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

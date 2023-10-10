@@ -7,6 +7,8 @@
 namespace van
 {
 	class GameObject;
+
+
 	class Script : public Entity
 	{
 	public:
@@ -25,5 +27,7 @@ namespace van
 
 	private:
 		GameObject* mOwner;
+
+		StraightDir mDir;
 	};
 }

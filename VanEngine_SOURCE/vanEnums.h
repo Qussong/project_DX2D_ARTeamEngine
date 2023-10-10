@@ -10,6 +10,13 @@ namespace van::enums
 		MAX = 16,
 	};
 
+	enum class StraightDir
+	{
+		Left,
+		Right,
+		None,
+	};
+
 	// Common blendmodes used across multiple systems
 	enum BLENDMODE
 	{

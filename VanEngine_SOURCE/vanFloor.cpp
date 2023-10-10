@@ -29,7 +29,7 @@ namespace van
 		Collider* col1 = AddComponent<Collider>();
 		col1->SetScale(tr->GetScale());
 		col1->SetPosition(tr->GetPosition());
-		col1->SetMesh(ResourceManager::Find<Mesh>(L"RectangleColliderMeesh"));
+		col1->SetMesh(ResourceManager::Find<Mesh>(L"RectangleColliderMesh"));
 
 
 	}

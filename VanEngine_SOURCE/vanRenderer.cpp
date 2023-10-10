@@ -283,7 +283,7 @@ namespace van::renderer
 			meshColRectangle->CreateVertexBuffer(vertexes.data(), 4);						// 수정
 			meshColRectangle->CreateIndexBuffer(indexes.data(), indexes.size());
 			// 사각형 Mesh 생성후 삽입
-			ResourceManager::Insert(L"RectangleColliderMeesh", meshColRectangle);
+			ResourceManager::Insert(L"RectangleColliderMesh", meshColRectangle);
 		}
 
 		// Collider Circle

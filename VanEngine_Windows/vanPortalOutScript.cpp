@@ -1,4 +1,4 @@
-#include "vanJumpScript.h"
+#include "vanPortalOutScript.h"
 #include "vanTransform.h"
 #include "vanGameObject.h"
 #include "vanTransform.h"
@@ -18,38 +18,38 @@
 
 namespace van
 {
-	JumpScript::JumpScript()
+	PortalOutScript::PortalOutScript()
 		: mSize(0.1f * 0.5625f, 0.1f, 1.f),
 		mPosition(Vector3::Zero),
-		mColor(Vector4(0.5f, 0.5f, 0.5f, 0.5f))
+		mColor(Vector4(2.0f, 2.0f, 0.0f, 0.0f))
 	{
 	}
 
-	JumpScript::~JumpScript()
+	PortalOutScript::~PortalOutScript()
 	{
 	}
 
-	void JumpScript::Initialize()
+	void PortalOutScript::Initialize()
 	{
 		mTransform = GetOwner()->GetComponent<Transform>();
 		mCollider = GetOwner()->GetComponent<Collider>();
 
 		mSize = mTransform->GetScale();
 		mSize = Vector3(mSize.x - 0.001f, mSize.y - 0.005f, 0.0f);
-		mMesh = ResourceManager::Find<Mesh>(L"TriangleMesh");
+		mMesh = ResourceManager::Find<Mesh>(L"CircleMesh");
 		mShader = ResourceManager::Find<Shader>(L"FloorShader");
 
 	}
 
-	void JumpScript::Update()
+	void PortalOutScript::Update()
 	{
 	}
 
-	void JumpScript::LateUpdate()
+	void PortalOutScript::LateUpdate()
 	{
 	}
 
-	void JumpScript::Render()
+	void PortalOutScript::Render()
 	{
 
 		ConstantBuffer* cb = renderer::constantBuffers[(UINT)graphics::eCBType::Transform];

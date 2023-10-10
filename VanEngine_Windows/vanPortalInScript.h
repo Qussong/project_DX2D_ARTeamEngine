@@ -14,11 +14,11 @@ namespace van
 	using namespace math;
 	using namespace graphics;
 
-	class JumpScript : public Script
+	class PortalInScript : public Script
 	{
 	public:
-		JumpScript();
-		virtual ~JumpScript();
+		PortalInScript();
+		virtual ~PortalInScript();
 
 		void Initialize() override;
 		void Update() override;

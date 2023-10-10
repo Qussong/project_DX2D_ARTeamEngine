@@ -23,7 +23,7 @@ namespace van
 	SpikeScript::SpikeScript()
 		: mSize(0.1f * 0.5625f, 0.1f, 1.f),
 		mPosition(Vector3::Zero),
-		mColor(Vector4(1.0f, 1.0f, 1.0f, 0.0f))
+		mColor(Vector4(1.0f, 0.0f, 0.0f, 0.0f))
 	{
 	}
 
@@ -44,17 +44,12 @@ namespace van
 
 	void SpikeScript::Update()
 	{
-
-		//if (player->IsCollisionCheck())
-		//{
-		//	player->SetBool(true);
-		//}
-
 		Player* player = SceneManager::GetPlayer();
 		Floor* owner = dynamic_cast<Floor*>(GetOwner());
+
 		if (owner->GetCollisionEnter())
 		{
-			player->SetBool(true);
+			player->SetPlayerDeadCheck(true);
 		}
 		
 		

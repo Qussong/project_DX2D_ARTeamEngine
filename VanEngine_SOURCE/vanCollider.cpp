@@ -25,7 +25,7 @@ namespace van
 		mCollisionNumber = mCollisionCount;
 		mCollisionCount++;
 
-		mMesh = ResourceManager::Find<Mesh>(L"RectangleColliderMeesh");
+		mMesh = ResourceManager::Find<Mesh>(L"RectangleColliderMesh");
 		mShader = ResourceManager::Find<Shader>(L"TriangleColShader");
 	}
 

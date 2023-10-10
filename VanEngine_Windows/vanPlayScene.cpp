@@ -12,6 +12,11 @@
 #include "vanPlayer.h"
 #include "vanFloor.h"
 #include "vanFloorScript.h"
+#include "vanJumpScript.h"
+#include "vanDoubleJumpScript.h"
+#include "vanPortalOutScript.h"
+#include "vanPortalInScript.h"
+#include "vanStraightScript.h"
 #include "vanSpikeScript.h"
 
 
@@ -43,7 +48,7 @@ namespace van
 		{
 			Floor* floor = new Floor();
 			floor->GetComponent<Transform>()->SetPosition(Vector3(i * GAP_X - 0.4f, -0.8f, 0.0f));
-			FloorScript* floorScript = floor->AddComponent<FloorScript>();
+			FloorScript* straightScript = floor->AddComponent<FloorScript>();
 			AddGameObject(floor, LAYER::FLOOR);
 		}
 
@@ -52,26 +57,45 @@ namespace van
 		{
 			Floor* floor = new Floor();
 			floor->GetComponent<Transform>()->SetPosition(Vector3(0.35f, i * GAP_Y - 0.8f, 0.0f));
-			SpikeScript* spikeScript = floor->AddComponent<SpikeScript>();
+			StraightScript* straightScript = floor->AddComponent<StraightScript>();
+			straightScript->SetDirection(StraightDir::Right);
 			AddGameObject(floor, LAYER::FLOOR);
 		}
 
-		//// FloorH2
-		//for (size_t i = 0; i < 5; ++i)
-		//{
-		//	Floor* floor = new Floor();
-		//	floor->GetComponent<Transform>()->SetPosition(Vector3(i * GAP_X - 0.8f, -0.3f, 0.0f));
+		// FloorH2
+		for (size_t i = 0; i < 5; ++i)
+		{
+			Floor* floor = new Floor();
+			floor->GetComponent<Transform>()->SetPosition(Vector3(i * GAP_X - 0.8f, -0.3f, 0.0f));
+			StraightScript* straightScript = floor->AddComponent<StraightScript>();
+			straightScript->SetDirection(StraightDir::Left);
+			AddGameObject(floor, LAYER::FLOOR);
+		}
 
-		//	AddGameObject(floor, LAYER::FLOOR);
-		//}
+		// FloorH3
+		for (size_t i = 0; i < 3; ++i)
+		{
+			Floor* floor = new Floor();
+			floor->GetComponent<Transform>()->SetPosition(Vector3(i * GAP_X - 0.5f, -0.5f, 0.0f));
+			SpikeScript* straightScript = floor->AddComponent<SpikeScript>();
+			AddGameObject(floor, LAYER::FLOOR);
+		}
 
-		//// FloorH3
-		//for (size_t i = 0; i < 3; ++i)
-		//{
-		//	Floor* floor = new Floor();
-		//	floor->GetComponent<Transform>()->SetPosition(Vector3(i * GAP_X - 0.3f, 0.2f, 0.0f));
-		//	AddGameObject(floor, LAYER::FLOOR);
-		//}
+		for (size_t i = 0; i < 4; ++i)
+		{
+			Floor* floor = new Floor();
+			floor->GetComponent<Transform>()->SetPosition(Vector3(0.15f, i * GAP_Y - 0.8f, 0.0f));
+			PortalInScript* straightScript = floor->AddComponent<PortalInScript>();
+			AddGameObject(floor, LAYER::FLOOR);
+		}
+
+		for (size_t i = 0; i < 4; ++i)
+		{
+			Floor* floor = new Floor();
+			floor->GetComponent<Transform>()->SetPosition(Vector3(0.55f, i * GAP_Y - 0.8f, 0.0f));
+			PortalOutScript* straightScript = floor->AddComponent<PortalOutScript>();
+			AddGameObject(floor, LAYER::FLOOR);
+		}
 
 		// Collision Setting
 		CollisionManager::CollisionLayerCheck(LAYER::PLAYER, LAYER::FLOOR, true);
@@ -79,7 +103,7 @@ namespace van
 
 	void PlayScene::Update()
 	{
-		
+
 		Scene::Update();
 	}
 

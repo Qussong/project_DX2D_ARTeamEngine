@@ -14,16 +14,18 @@ namespace van
 	using namespace math;
 	using namespace graphics;
 
-	class JumpScript : public Script
+	class StraightScript : public Script
 	{
 	public:
-		JumpScript();
-		virtual ~JumpScript();
+		StraightScript();
+		virtual ~StraightScript();
 
 		void Initialize() override;
 		void Update() override;
 		void LateUpdate() override;
 		void Render() override;
+
+		void SetDirection(StraightDir _dir) { mDir = _dir; }
 
 	private:
 
@@ -39,5 +41,7 @@ namespace van
 		Transform* mTransform;
 		Collider* mCollider;
 
+		StraightDir mDir;
+		bool isSetDir;
 	};
 }

@@ -19,19 +19,29 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="vanDoubleJumpScript.h" />
     <ClInclude Include="vanFloorScript.h" />
+    <ClInclude Include="vanJumpScript.h" />
     <ClInclude Include="vanLoadScene.h" />
     <ClInclude Include="vanPlayerScript.h" />
     <ClInclude Include="vanPlayScene.h" />
+    <ClInclude Include="vanPortalInScript.h" />
+    <ClInclude Include="vanPortalOutScript.h" />
     <ClInclude Include="vanSpikeScript.h" />
     <ClInclude Include="vanStage1.h" />
+    <ClInclude Include="vanStraightScript.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="vanDoubleJumpScript.cpp" />
     <ClCompile Include="vanFloorScript.cpp" />
+    <ClCompile Include="vanJumpScript.cpp" />
     <ClCompile Include="vanPlayerScript.cpp" />
     <ClCompile Include="vanPlayScene.cpp" />
+    <ClCompile Include="vanPortalInScript.cpp" />
+    <ClCompile Include="vanPortalOutScript.cpp" />
     <ClCompile Include="vanSpikeScript.cpp" />
     <ClCompile Include="vanStage1.cpp" />
+    <ClCompile Include="vanStraightScript.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

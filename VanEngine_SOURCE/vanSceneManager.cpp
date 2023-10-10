@@ -25,7 +25,7 @@ namespace van
 
 	void SceneManager::Update()
 	{
-		if (mPlayer->GetBool())
+		if (mPlayer->GetPlayerDeadCheck())
 		{
 			if (mActiveScene->GetName() == L"PlayScene")
 			{
@@ -35,7 +35,7 @@ namespace van
 
 				SceneManager::CreateScene<PlayScene>(L"PlayScene");
 				LoadScene(L"PlayScene");
-				mPlayer->SetBool(false);
+				mPlayer->SetPlayerDeadCheck(false);
 			}
 			else if (mActiveScene->GetName() == L"")
 			{

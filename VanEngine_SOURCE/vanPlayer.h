@@ -19,8 +19,8 @@ namespace van
 		virtual void OnCollisionStay(class  Collider* other);
 		virtual void OnCollisionExit(class Collider* other);
 
-		bool GetBool() { return mbDead; }
-		void SetBool(bool set) { mbDead = set; }
+		bool GetPlayerDeadCheck() { return mbDead; }
+		void SetPlayerDeadCheck(bool set) { mbDead = set; }
 
 		bool IsCollisionCheck() { return mbCollisionCheck; }
 		void SetCollisionCheck(bool value) { mbCollisionCheck = value; }
