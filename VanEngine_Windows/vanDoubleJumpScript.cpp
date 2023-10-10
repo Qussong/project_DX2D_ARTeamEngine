@@ -19,9 +19,9 @@
 namespace van
 {
 	DoubleJumpScript::DoubleJumpScript()
-		: mSize(0.1f * 0.5625f, 0.1f, 1.f),
+		: mSize(0.05f, 0.05f, 0.0f),
 		mPosition(Vector3::Zero),
-		mColor(Vector4(0.5f, 0.5f, 0.5f, 0.5f))
+		mColor(Vector4(1.0f, 0.5f, 0.2f, 0.0f))
 	{
 	}
 
@@ -33,10 +33,11 @@ namespace van
 	{
 		mTransform = GetOwner()->GetComponent<Transform>();
 		mCollider = GetOwner()->GetComponent<Collider>();
-		mCollider->SetVisible(false);
+		mCollider->SetVisible(true);
 
 		mSize = mTransform->GetScale();
-		mSize = Vector3(mSize.x - 0.001f, mSize.y - 0.005f, 0.0f);
+		mSize += Vector3(0.02f, -0.05f, 0.0f); // GetOwner()의 사이즈 수정
+
 		mMesh = ResourceManager::Find<Mesh>(L"CircleMesh");
 		mShader = ResourceManager::Find<Shader>(L"FloorShader");
 	}

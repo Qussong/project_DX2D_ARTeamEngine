@@ -97,6 +97,15 @@ namespace van
 			AddGameObject(floor, LAYER::FLOOR);
 		}
 
+
+		for (size_t i = 0; i < 4; ++i)
+		{
+			Floor* floor = new Floor();
+			floor->GetComponent<Transform>()->SetPosition(Vector3(0.75f, i * GAP_Y - 0.8f, 0.0f));
+			DoubleJumpScript* straightScript = floor->AddComponent<DoubleJumpScript>();
+			AddGameObject(floor, LAYER::FLOOR);
+		}
+
 		// Collision Setting
 		CollisionManager::CollisionLayerCheck(LAYER::PLAYER, LAYER::FLOOR, true);
 	}
