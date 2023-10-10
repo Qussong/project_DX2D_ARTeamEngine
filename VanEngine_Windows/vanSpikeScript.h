@@ -36,7 +36,7 @@ namespace van
 		Vector3 mPosition;
 		Vector4 mColor;
 
-
+		// ¤¾¤¾
 		Transform* mTransform;
 		Collider* mCollider;
 
