@@ -13,8 +13,8 @@
 #include "vanRenderer.h"
 #include "vanSceneManager.h"
 
-#include "..\\VanEngine_SOURCE\\vanPlayer.h"
-#include "..\\VanEngine_SOURCE\\vanFloor.h"
+#include "vanPlayer.h"
+#include "vanFloor.h"
 
 #define VELOCITY_X	3.f
 

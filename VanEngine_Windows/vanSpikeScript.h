@@ -1,8 +1,8 @@
 #pragma once
-#include "..\\VanEngine_SOURCE\\vanScript.h"
-#include "..\\VanEngine_SOURCE\\vanShader.h"
-#include "..\\VanEngine_SOURCE\\vanMesh.h"
-#include "..\\VanEngine_SOURCE\\vanMeshRenderer.h"
+#include "vanScript.h"
+#include "vanShader.h"
+#include "vanMesh.h"
+#include "vanMeshRenderer.h"
 
 
 

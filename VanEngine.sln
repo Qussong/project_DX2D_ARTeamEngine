@@ -45,6 +45,7 @@ Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Shaders_SOURCE\Shaders_SOURCE.vcxitems*{6cbc3a74-d075-4f83-bbba-1d06381ad935}*SharedItemsImports = 9
 		VanEngine_SOURCE\VanEngine_SOURCE.vcxitems*{c7dcb966-ae65-469e-9b7d-60befcc4c016}*SharedItemsImports = 9
+		VanEngine_SOURCE\VanEngine_SOURCE.vcxitems*{d0193fc9-3340-484d-9cd3-12138444aed4}*SharedItemsImports = 4
 		VanEngine_SOURCE\VanEngine_SOURCE.vcxitems*{d77cdb0f-3598-4951-8221-3b197248a5cd}*SharedItemsImports = 4
 	EndGlobalSection
 EndGlobal
