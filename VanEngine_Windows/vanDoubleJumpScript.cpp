@@ -48,6 +48,8 @@ namespace van
 
 	void DoubleJumpScript::Update()
 	{
+
+
 	}
 
 	void DoubleJumpScript::LateUpdate()

@@ -72,14 +72,14 @@ namespace van
 			AddGameObject(floor, LAYER::FLOOR);
 		}
 
-		// FloorH3
-		for (size_t i = 0; i < 3; ++i)
-		{
-			Floor* floor = new Floor();
-			floor->GetComponent<Transform>()->SetPosition(Vector3(i * GAP_X - 0.5f, -0.5f, 0.0f));
-			SpikeScript* straightScript = floor->AddComponent<SpikeScript>();
-			AddGameObject(floor, LAYER::FLOOR);
-		}
+		//// FloorH3
+		//for (size_t i = 0; i < 3; ++i)
+		//{
+		//	Floor* floor = new Floor();
+		//	floor->GetComponent<Transform>()->SetPosition(Vector3(i * GAP_X - 0.5f, -0.5f, 0.0f));
+		//	SpikeScript* straightScript = floor->AddComponent<SpikeScript>();
+		//	AddGameObject(floor, LAYER::FLOOR);
+		//}
 
 		for (size_t i = 0; i < 4; ++i)
 		{
@@ -89,13 +89,12 @@ namespace van
 			AddGameObject(floor, LAYER::FLOOR);
 		}
 
-		for (size_t i = 0; i < 4; ++i)
-		{
-			Floor* floor = new Floor();
-			floor->GetComponent<Transform>()->SetPosition(Vector3(0.0f, i * GAP_Y, 0.0f));
-			JumpScript* jumpScript = floor->AddComponent<JumpScript>();
-			AddGameObject(floor, LAYER::FLOOR);
-		}
+		
+		Floor* floor = new Floor();
+		floor->GetComponent<Transform>()->SetPosition(Vector3(-0.5f, -0.8f, 0.0f));
+		JumpScript* jumpScript = floor->AddComponent<JumpScript>();
+		AddGameObject(floor, LAYER::FLOOR);
+		
 
 		//for (size_t i = 0; i < 4; ++i)
 		//{
