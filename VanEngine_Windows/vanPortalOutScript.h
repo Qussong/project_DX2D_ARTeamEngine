@@ -25,6 +25,8 @@ namespace van
 		void Update() override;
 		void LateUpdate() override;
 		void Render() override;
+		
+		void DecreaseColor();
 
 	private:
 
