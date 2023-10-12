@@ -12,6 +12,7 @@
 #include "vanRenderer.h"
 #include "vanSceneManager.h"
 #include "vanPlayer.h"
+#include "vanFloor.h"
 
 #define VELOCITY_X	3.f
 
@@ -47,8 +48,6 @@ namespace van
 
 	void PortalOutScript::Update()
 	{
-		
-
 	}
 
 	void PortalOutScript::LateUpdate()
@@ -57,7 +56,6 @@ namespace van
 
 	void PortalOutScript::Render()
 	{
-
 		ConstantBuffer* cb = renderer::constantBuffers[(UINT)graphics::eCBType::Transform];
 
 		renderer::TransformCB data = {};
@@ -65,8 +63,6 @@ namespace van
 		data.color = mColor;
 		data.scale = mSize;
 		cb->SetData(&data);
-
-
 
 		cb->Bind(graphics::eShaderStage::VS);
 
