@@ -80,7 +80,7 @@ namespace van
 		if (owner->GetCollisionEnter())
 		{
 			owner->SetCollisionEnter(false);
-			player->GetComponent<Transform>()->SetPosition(mOutPortalPos);
+			mPlayerTransform->SetPosition(mOutPortalPos);
 			player->SetCollisionCheck(false);
 		}
 	}

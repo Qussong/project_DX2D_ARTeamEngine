@@ -18,9 +18,10 @@
 namespace van
 {
 	StarScript::StarScript()
-		: mSize(0.1f * 0.5625f, 0.1f, 1.f),
+		: mSize(0.1f, 0.1f, 1.f),
 		mPosition(Vector3::Zero),
-		mColor(Vector4(0.0f, 0.0f, 1.0f, 0.0f))
+		mColor(Vector4(1.0f, 1.0f, 0.0f, 0.0f)),
+		mStarCount(NULL)
 	{
 	}
 	StarScript::~StarScript()
@@ -41,21 +42,22 @@ namespace van
 		mMesh = ResourceManager::Find<Mesh>(L"TriangleMesh");
 		mShader = ResourceManager::Find<Shader>(L"FloorShader");
 
-		int StarCount = SceneManager::GetActiveScene()->GetStarCount();
-		SceneManager::GetActiveScene()->SetStarCount(StarCount++);
+		mStarCount = SceneManager::GetActiveScene()->GetStarCount();
+		SceneManager::GetActiveScene()->SetStarCount(++mStarCount);
 	}
 	void StarScript::Update()
 	{
 		Player* player = SceneManager::GetPlayer();
 		Item* owner = dynamic_cast<Item*>(GetOwner());
-
+		int StarCount = SceneManager::GetActiveScene()->GetStarCount();
 		
 		if (owner->GetCollisionEnter())
 		{
-			int StarCount = SceneManager::GetActiveScene()->GetStarCount();
-			SceneManager::GetActiveScene()->SetStarCount(StarCount--);
+			mStarCount = SceneManager::GetActiveScene()->GetStarCount();
+			SceneManager::GetActiveScene()->SetStarCount(--mStarCount);
 
 			// ªË¡¶
+			Destroy(owner);
 		}
 	}
 	void StarScript::LateUpdate()

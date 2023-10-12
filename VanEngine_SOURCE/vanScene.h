@@ -23,12 +23,11 @@ namespace van
 		void AddGameObject(GameObject* gameObject, UINT layerIndex);
 		void RemoveLayer(enums::LAYER type);
 
-		int GetStarCount() { return StarCount; }
-		void SetStarCount(int _StarCount) { StarCount = _StarCount; }
+		int GetStarCount() { return mStarCount; }
+		void SetStarCount(int value) { mStarCount = value; }
 		
 	private:
 		Layer mLayers[LAYER::MAX];
-		//std::vector<Layer> mLayers;
-		int StarCount;
+		int mStarCount;
 	};
 }

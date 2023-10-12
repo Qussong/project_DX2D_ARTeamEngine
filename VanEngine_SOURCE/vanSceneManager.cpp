@@ -38,15 +38,23 @@ namespace van
 				LoadScene(L"PlayScene");
 				mPlayer->SetPlayerDeadCheck(false);
 			}
-			else if (mActiveScene->GetName() == L"")
+			else if (mActiveScene->GetName() == L"Stage1")
 			{
-				//
+				mActiveScene->RemoveLayer(enums::LAYER::PLAYER);
+				mActiveScene->RemoveLayer(enums::LAYER::FLOOR);
+				SceneManager::DeleteScene<Stage1>(L"Stage1");
+
+				SceneManager::CreateScene<Stage1>(L"Stage1");
+
+				LoadScene(L"Stage1");
+				mPlayer->SetPlayerDeadCheck(false);
 			}
 			
 		}
 
 		if (mActiveScene->GetStarCount() <= 0)
 		{
+
 			if (mActiveScene->GetName() == L"PlayScene")
 			{
 				LoadScene(L"Stage1");

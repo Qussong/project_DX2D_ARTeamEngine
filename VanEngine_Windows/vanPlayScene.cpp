@@ -13,6 +13,7 @@
 #include "vanFloor.h"
 #include "vanFloorScript.h"
 #include "vanJumpScript.h"
+#include "vanDisappearScript.h"
 #include "vanDoubleJumpScript.h"
 #include "vanPortalOutScript.h"
 #include "vanPortalInScript.h"
@@ -28,7 +29,7 @@ namespace van
 {
 	PlayScene::PlayScene()
 	{
-		
+
 		// nothing
 	}
 
@@ -102,9 +103,9 @@ namespace van
 
 		{
 			Floor* floor = new Floor();
-			floor->GetComponent<Transform>()->SetPosition(Vector3(0.15f, - 0.5f, 0.0f));
+			floor->GetComponent<Transform>()->SetPosition(Vector3(0.15f, -0.5f, 0.0f));
 			PortalInScript* portalinScript = floor->AddComponent<PortalInScript>();
-			portalinScript->SetOutPortalPos(Vector3(-0.5f,  0.5f, 0.f));
+			portalinScript->SetOutPortalPos(Vector3(-0.5f, 0.5f, 0.f));
 			AddGameObject(floor, LAYER::FLOOR);
 		}
 
@@ -133,11 +134,22 @@ namespace van
 			AddGameObject(floor, LAYER::FLOOR);
 		}
 
-		Item* item = new Item();
-		item->GetComponent<Transform>()->SetPosition(Vector3(0.f, -.5f, 0.0f));
-		StarScript* Script = item->AddComponent<StarScript>();
-		AddGameObject(item, LAYER::ITEM);
-		
+		// Star1
+		{
+			Item* item = new Item();
+			item->GetComponent<Transform>()->SetPosition(Vector3(0.f, -0.5f, 0.0f));
+			StarScript* Script = item->AddComponent<StarScript>();
+			AddGameObject(item, LAYER::ITEM);
+		}
+
+		// Star2
+		{
+			Item* item = new Item();
+			item->GetComponent<Transform>()->SetPosition(Vector3(-0.3f, -0.5f, 0.0f));
+			StarScript* Script = item->AddComponent<StarScript>();
+			AddGameObject(item, LAYER::ITEM);
+		}
+
 
 
 
@@ -148,7 +160,7 @@ namespace van
 
 	void PlayScene::Update()
 	{
-
+		int test = SceneManager::GetActiveScene()->GetStarCount();
 		Scene::Update();
 	}
 

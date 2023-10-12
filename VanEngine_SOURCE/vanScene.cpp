@@ -4,7 +4,7 @@ namespace van
 {
 
 	Scene::Scene()
-		: StarCount(NULL)
+		: mStarCount(NULL)
 	{
 	}
 

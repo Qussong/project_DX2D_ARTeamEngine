@@ -44,5 +44,7 @@ namespace van
 		Collider* mPlayerCollider;
 		Rigidbody* mPlayerRigidbody;
 
+		int mStarCount;
+
 	};
 }

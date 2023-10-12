@@ -28,9 +28,9 @@ namespace van
 
 
 			T* scene = new T();
+			mActiveScene = scene;
 			scene->SetName(name);
 			mScenes.insert(std::make_pair(name, scene));
-			mActiveScene = scene;
 			scene->Initialize();
 
 			int tmep = mActiveScene->GetStarCount();
@@ -67,5 +67,6 @@ namespace van
 		static Scene* mActiveScene;
 		static std::map<std::wstring, Scene*> mScenes;
 		static Player* mPlayer;
+		//static int 
 	};
 }
