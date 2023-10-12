@@ -21,14 +21,19 @@ namespace van
 			std::map<std::wstring, Scene*>::iterator iter
 				= mScenes.find(name);
 
+
+
 			if (iter != mScenes.end())
 				return false;
+
 
 			T* scene = new T();
 			scene->SetName(name);
 			mScenes.insert(std::make_pair(name, scene));
+			mActiveScene = scene;
 			scene->Initialize();
 
+			int tmep = mActiveScene->GetStarCount();
 			return true;
 		}
 
@@ -47,6 +52,8 @@ namespace van
 
 			mScenes.erase(iter);
 
+			
+
 
 			return true;
 		}
@@ -60,6 +67,5 @@ namespace van
 		static Scene* mActiveScene;
 		static std::map<std::wstring, Scene*> mScenes;
 		static Player* mPlayer;
-
 	};
 }

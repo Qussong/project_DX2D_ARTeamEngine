@@ -14,7 +14,9 @@ namespace van
 		void LateUpdate() override;
 		void Render() override;
 
-	private:
+		
 
+	private:
+		
 	};
 }

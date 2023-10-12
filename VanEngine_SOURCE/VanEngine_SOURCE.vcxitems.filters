@@ -64,6 +64,9 @@
     <Filter Include="Engine\GameObject\Floor">
       <UniqueIdentifier>{c2fb4ddf-79dd-4253-b4d4-86e7c80071ed}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\GameObject\Item">
+      <UniqueIdentifier>{cdab6d45-9951-450b-9000-577f9654bcf4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h">
@@ -162,6 +165,9 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)vanPlayer.h">
       <Filter>Engine\GameObject\Player</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)vanItem.h">
+      <Filter>Engine\GameObject\Item</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)vanInput.cpp">
@@ -241,6 +247,9 @@
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)vanPlayer.cpp">
       <Filter>Engine\GameObject\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)vanItem.cpp">
+      <Filter>Engine\GameObject\Item</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

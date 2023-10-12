@@ -2,9 +2,13 @@
 
 namespace van
 {
+
 	Scene::Scene()
+		: StarCount(NULL)
 	{
 	}
+
+	
 
 	Scene::~Scene()
 	{

@@ -34,6 +34,7 @@ namespace van
 				SceneManager::DeleteScene<PlayScene>(L"PlayScene");
 
 				SceneManager::CreateScene<PlayScene>(L"PlayScene");
+
 				LoadScene(L"PlayScene");
 				mPlayer->SetPlayerDeadCheck(false);
 			}
@@ -43,6 +44,15 @@ namespace van
 			}
 			
 		}
+
+		if (mActiveScene->GetStarCount() <= 0)
+		{
+			if (mActiveScene->GetName() == L"PlayScene")
+			{
+				LoadScene(L"Stage1");
+			}
+		}
+
 		mActiveScene->Update();
 	}
 
@@ -72,4 +82,6 @@ namespace van
 		}
 		return iter->second;
 	}
+
+
 }

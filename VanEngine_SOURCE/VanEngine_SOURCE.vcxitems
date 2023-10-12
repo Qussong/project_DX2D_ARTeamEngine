@@ -28,6 +28,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)vanGraphics.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)vanGraphicsDevice_DX11.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)vanInput.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)vanItem.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)vanLayer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)vanMaterial.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)vanMath.h" />
@@ -58,6 +59,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)vanGameObject.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)vanGraphicsDevice_DX11.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)vanInput.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)vanItem.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)vanLayer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)vanMaterial.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)vanMath.cpp" />

@@ -10,6 +10,7 @@ namespace van::renderer
 {
 
 	D3D11_INPUT_ELEMENT_DESC InputLayouts[2];
+	Mesh* meshStar = nullptr;
 	Mesh* meshDeathBlock = nullptr;
 	Mesh* meshCircle = nullptr;
 	Mesh* meshRectangle = nullptr;
@@ -30,6 +31,37 @@ namespace van::renderer
 
 	void LoadBuffer()
 	{
+		// star
+		{
+			std::vector<Vertex> vertexes;
+			vertexes.resize(5);
+
+			vertexes[0].pos = Vector3(-0.5f, 0.3f, 0.f);
+			vertexes[0].color = Vector4(1.f, 1.f, 0.f, 1.f);
+
+			vertexes[1].pos = Vector3(0.f, 0.3f, 0.f);
+			vertexes[1].color = Vector4(1.f, 1.f, 0.f, 1.f);
+
+			vertexes[2].pos = Vector3(0.5f, 0.3f, 0.f);
+			vertexes[2].color = Vector4(1.f, 1.f, 0.f, 1.f);
+
+			vertexes[3].pos = Vector3(-0.3f, -0.3f, 0.f);
+			vertexes[3].color = Vector4(1.f, 1.f, 0.f, 1.f);
+
+			vertexes[4].pos = Vector3(0.3f, -0.3f, 0.f);
+			vertexes[4].color = Vector4(1.f, 1.f, 0.f, 1.f);
+
+			std::vector<UINT> indexes;
+			indexes.push_back(0);
+		
+
+			// star vertex buffer
+			meshStar->CreateVertexBuffer(vertexes.data(), 5);
+			meshStar->CreateIndexBuffer(indexes.data(), indexes.size());
+			ResourceManager::Insert(L"StarMesh", meshStar);
+
+		}
+
 		// Spike
 		{
 			std::vector<Vertex> vertexes;
@@ -373,6 +405,7 @@ namespace van::renderer
 
 	void Initialize()
 	{
+		meshStar = new Mesh();
 		meshDeathBlock = new Mesh();
 		meshCircle = new Mesh();
 		meshRectangle = new Mesh();
@@ -392,6 +425,7 @@ namespace van::renderer
 
 	void Release()
 	{
+		delete meshStar;
 		delete meshDeathBlock;
 		delete meshCircle;
 		delete meshRectangle;

@@ -35,6 +35,9 @@
     <ClInclude Include="vanDisappearScript.h">
       <Filter>Scripts\Floor\Disappear</Filter>
     </ClInclude>
+    <ClInclude Include="vanStarScript.h">
+      <Filter>Scripts\Item\Star</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="vanPlayScene.cpp">
@@ -69,6 +72,9 @@
     </ClCompile>
     <ClCompile Include="vanDisappearScript.cpp">
       <Filter>Scripts\Floor\Disappear</Filter>
+    </ClCompile>
+    <ClCompile Include="vanStarScript.cpp">
+      <Filter>Scripts\Item\Star</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -113,6 +119,15 @@
     </Filter>
     <Filter Include="Scripts\Floor\Disappear">
       <UniqueIdentifier>{07bba810-c882-4645-9162-1959c0d5bb98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts\Item">
+      <UniqueIdentifier>{846d7525-ae26-4323-a336-e010d67f85d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts\Item\Star">
+      <UniqueIdentifier>{58bf0e03-1b97-4836-a059-0c803f4bf9e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts\Item\DoubleJump">
+      <UniqueIdentifier>{cffb7f58-162b-45f8-931f-40f3d5575a04}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

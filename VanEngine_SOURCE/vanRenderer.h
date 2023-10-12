@@ -32,6 +32,7 @@ namespace van::renderer
 		Vector4 color;
 	};
 
+	extern Mesh* meshStar;
 	extern Mesh* meshDeathBlock;
 	extern Mesh* meshCircle;		// Circle
 	extern Mesh* meshRectangle;		// Rectangle

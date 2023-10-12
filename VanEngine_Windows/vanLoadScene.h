@@ -15,6 +15,7 @@ namespace van
 	void InitializeScenes()
 	{
 		SceneManager::CreateScene<PlayScene>(L"PlayScene");
+		SceneManager::CreateScene<Stage1>(L"stage1");
 
 		SceneManager::LoadScene(L"PlayScene");
 	}

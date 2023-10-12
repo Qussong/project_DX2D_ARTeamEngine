@@ -30,6 +30,7 @@
     <ClInclude Include="vanPortalOutScript.h" />
     <ClInclude Include="vanSpikeScript.h" />
     <ClInclude Include="vanStage1.h" />
+    <ClInclude Include="vanStarScript.h" />
     <ClInclude Include="vanStraightScript.h" />
   </ItemGroup>
   <ItemGroup>
@@ -43,6 +44,7 @@
     <ClCompile Include="vanPortalOutScript.cpp" />
     <ClCompile Include="vanSpikeScript.cpp" />
     <ClCompile Include="vanStage1.cpp" />
+    <ClCompile Include="vanStarScript.cpp" />
     <ClCompile Include="vanStraightScript.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

@@ -18,6 +18,8 @@
 #include "vanPortalInScript.h"
 #include "vanStraightScript.h"
 #include "vanSpikeScript.h"
+#include "vanStarScript.h"
+#include "vanItem.h"
 
 
 #define GAP_X 0.0715f
@@ -27,6 +29,7 @@ namespace van
 {
 	PlayScene::PlayScene()
 	{
+		
 		// nothing
 	}
 
@@ -114,8 +117,17 @@ namespace van
 			AddGameObject(floor, LAYER::FLOOR);
 		}
 
+		Item* item = new Item();
+		item->GetComponent<Transform>()->SetPosition(Vector3(0.f, -.5f, 0.0f));
+		StarScript* Script = item->AddComponent<StarScript>();
+		AddGameObject(item, LAYER::ITEM);
+		
+
+
+
 		// Collision Setting
 		CollisionManager::CollisionLayerCheck(LAYER::PLAYER, LAYER::FLOOR, true);
+		CollisionManager::CollisionLayerCheck(LAYER::PLAYER, LAYER::ITEM, true);
 	}
 
 	void PlayScene::Update()
