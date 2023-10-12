@@ -57,7 +57,7 @@ namespace van
 		{
 			Rigidbody* rb = player->GetComponent<Rigidbody>();
 			mbStraight = false;
-			rb->SetStraight(false);
+			rb->SetGround(false);
 		}
 
 
@@ -71,13 +71,11 @@ namespace van
 			case van::enums::StraightDir::Left:
 				tr->SetPosition(Vector3(mTransform->GetPosition().x - 0.07f, mTransform->GetPosition().y, 0.0f));
 				rb->SetVelocity(Vector3(0.f));
-				rb->SetStraight(true);
 				mbStraight = true;
 				break;
 			case van::enums::StraightDir::Right:
 				tr->SetPosition(Vector3(mTransform->GetPosition().x + 0.07f, mTransform->GetPosition().y, 0.0f));
 				rb->SetVelocity(Vector3(0.f));
-				rb->SetStraight(true);
 				mbStraight = true;
 				break;
 			case van::enums::StraightDir::None:
@@ -96,9 +94,11 @@ namespace van
 			{
 			case van::enums::StraightDir::Left:
 				rb->AddVelocity(Vector3(-3.0f, 0.f, 0.f));
+				rb->SetGround(true);
 				break;
 			case van::enums::StraightDir::Right:
 				rb->AddVelocity(Vector3(3.0f, 0.f, 0.f));
+				rb->SetGround(true);
 				break;
 			case van::enums::StraightDir::None:
 				break;
@@ -107,12 +107,10 @@ namespace van
 			}
 		}
 
-
 		if (Input::GetKeyState(KEY_CODE::A) == KEY_STATE::DOWN
 			|| Input::GetKeyState(KEY_CODE::LEFT) == KEY_STATE::DOWN)
 		{
 			Rigidbody* rb = player->GetComponent<Rigidbody>();
-			rb->SetStraight(false); 
 			mbStraight = false;
 		}
 
@@ -120,7 +118,6 @@ namespace van
 			|| Input::GetKeyState(KEY_CODE::RIGHT) == KEY_STATE::DOWN)
 		{
 			Rigidbody* rb = player->GetComponent<Rigidbody>();
-			rb->SetStraight(false);
 			mbStraight = false;
 		}
 
@@ -137,9 +134,6 @@ namespace van
 		// 스크립트는 충돌이벤트가 아닌 update에서 할 수 밖에 없으니 이런것
 		// 
 		// 2. Movement와 control가 분리되지않음 -> 이동과 입력이 합쳐져있어 이동& 입력 관련 작업을 할때 난감하다.
-		// 
-		// 
-		// 
 			
 
 		if (isSetDir == false)

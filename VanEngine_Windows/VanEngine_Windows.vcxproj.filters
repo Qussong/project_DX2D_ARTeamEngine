@@ -32,6 +32,9 @@
     <ClInclude Include="vanPortalOutScript.h">
       <Filter>Scripts\Floor\Portal_Out</Filter>
     </ClInclude>
+    <ClInclude Include="vanDisappearScript.h">
+      <Filter>Scripts\Floor\Disappear</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="vanPlayScene.cpp">
@@ -63,6 +66,9 @@
     </ClCompile>
     <ClCompile Include="vanDoubleJumpScript.cpp">
       <Filter>Scripts\Floor\DoubleJump</Filter>
+    </ClCompile>
+    <ClCompile Include="vanDisappearScript.cpp">
+      <Filter>Scripts\Floor\Disappear</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -104,6 +110,9 @@
     </Filter>
     <Filter Include="Scripts\Floor\Portal_Out">
       <UniqueIdentifier>{2d8ea867-048d-435c-a240-81d631b6d1e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts\Floor\Disappear">
+      <UniqueIdentifier>{07bba810-c882-4645-9162-1959c0d5bb98}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

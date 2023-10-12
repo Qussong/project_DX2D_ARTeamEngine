@@ -35,21 +35,18 @@ namespace van
         // 속도에 가속도를 더한다
         mVelocity += mAccelation * Time::DeltaTime();
 
-        if (!mbStraight)
+        if (mbGround)
         {
-            if (mbGround)
-            {
-                // 땅위에 있을때
-                Vector3 gravity = mGravity;
-                gravity.Normalize();
-                float dot = mVelocity.Dot(gravity);
-                mVelocity += gravity * dot;
-            }
-            else
-            {
-                // 공중에 있을 때
-                mVelocity -= mGravity * Time::DeltaTime();
-            }
+            // 땅위에 있을때
+            Vector3 gravity = mGravity;
+            gravity.Normalize();
+            float dot = mVelocity.Dot(gravity);
+            mVelocity += gravity * dot;
+        }
+        else
+        {
+            // 공중에 있을 때
+            mVelocity -= mGravity * Time::DeltaTime();
         }
 
 

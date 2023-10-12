@@ -30,6 +30,7 @@ namespace van::renderer
 
 	void LoadBuffer()
 	{
+		// Spike
 		{
 			std::vector<Vertex> vertexes;
 			vertexes.resize(9);
@@ -98,7 +99,6 @@ namespace van::renderer
 			// 사각형 Mesh 생성후 삽입
 			ResourceManager::Insert(L"DeathBlockMesh", meshDeathBlock);
 		}
-
 
 		// Circle
 		{
@@ -364,7 +364,7 @@ namespace van::renderer
 			, shaderFloor->GetVSCode()->GetBufferSize()
 			, shaderFloor->GetInputLayoutAddressOf());
 
-		// collider
+		// Collider
 		GetDevice()->CreateInputLayout(InputLayouts, 2,
 			shaderCollider->GetVSCode()->GetBufferPointer()
 			, shaderCollider->GetVSCode()->GetBufferSize()
