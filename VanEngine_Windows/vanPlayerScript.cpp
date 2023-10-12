@@ -41,22 +41,26 @@ namespace van
 
 	void PlayerScript::Update()
 	{
-		GameObject* player = GetOwner();
+		Player* player = SceneManager::GetPlayer();
 
 		Vector3 pos = mTransform->GetPosition();
+		Vector3 playerVelocty = player->GetComponent<Rigidbody>()->GetVelocity();
 
 
 
 		if (Input::GetKeyState(KEY_CODE::A) == KEY_STATE::PRESSED
 			|| Input::GetKeyState(KEY_CODE::LEFT) == KEY_STATE::PRESSED)
 		{
+			player->SetPlayerDir(PlayerDir::Left);
 			mRigidbody->SetFriction(1.0f);
 			mRigidbody->AddVelocity(Vector3(-VELOCITY_X, 0.0f, 0.0f) * Time::DeltaTime());
+			
 		}
 
 		if (Input::GetKeyState(KEY_CODE::D) == KEY_STATE::PRESSED
 			|| Input::GetKeyState(KEY_CODE::RIGHT) == KEY_STATE::PRESSED)
 		{
+			player->SetPlayerDir(PlayerDir::Right);
 			mRigidbody->SetFriction(1.0f);
 			mRigidbody->AddVelocity(Vector3(VELOCITY_X, 0.0f, 0.0f) * Time::DeltaTime());
 		}
@@ -67,6 +71,23 @@ namespace van
 			mRigidbody->SetFriction(10.0f);
 		}
 
+		bool bCheck = player->GetDoubleJumpCheck();
+		if (Input::GetKeyState(KEY_CODE::SPACE) == KEY_STATE::DOWN && bCheck)
+		{
+			mRigidbody->SetLimitedVeloctyX(0.85f);
+			if (player->GetPlayerDir() == PlayerDir::Left)
+			{
+				mRigidbody->SetVelocity(Vector3(-0.85f, 1.1f, 0.0f));
+			}
+			else
+			{
+				mRigidbody->SetVelocity(Vector3(0.85f, 1.1f, 0.0f));
+			}
+
+			player->SetDoubleJumpCheck(false);
+		}
+
+		
 		mCollider->SetPosition(pos);
 	}
 

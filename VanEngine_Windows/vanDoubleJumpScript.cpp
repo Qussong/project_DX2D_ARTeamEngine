@@ -12,6 +12,7 @@
 #include "vanRenderer.h"
 #include "vanSceneManager.h"
 #include "vanPlayer.h"
+#include "vanFloor.h"
 
 #define VELOCITY_X	3.f
 
@@ -33,7 +34,7 @@ namespace van
 		mFloorTransform = GetOwner()->GetComponent<Transform>();
 		mFloorCollider = GetOwner()->GetComponent<Collider>();
 		mFloorRigidbody = GetOwner()->GetComponent<Rigidbody>();
-		mFloorCollider->SetVisible(true);
+		mFloorCollider->SetVisible(false);
 
 		mPlayerTransform = SceneManager::GetPlayer()->GetComponent<Transform>();
 		mPlayerCollider = SceneManager::GetPlayer()->GetComponent<Collider>();
@@ -48,7 +49,16 @@ namespace van
 
 	void DoubleJumpScript::Update()
 	{
+		Player* player = SceneManager::GetPlayer();
+		Floor* owner = dynamic_cast<Floor*>(GetOwner());
 
+		// 플레이어 외에 다른 충돌가능한 객체 존재시 조건문 변경 필요
+		// 조건문 변경하지 않으면 플레이어가 충돌하지 않아도 플레이어가 사망판정된다.
+		if (owner->GetCollisionEnter())
+		{
+			player->SetDoubleJumpCheck(true);
+			mFloorTransform->SetPosition(Vector3(10.0f, 10.0f, 0.0f));
+		}
 
 	}
 

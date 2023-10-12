@@ -47,6 +47,7 @@ namespace van
 		mMesh = ResourceManager::Find<Mesh>(L"CircleMesh");
 		mShader = ResourceManager::Find<Shader>(L"FloorShader");
 
+		mFloorCollider->SetVisible(false);
 	}
 
 	void PortalInScript::Update()
@@ -59,6 +60,7 @@ namespace van
 			mbCreateOutPortal = false;
 			Floor* Outfloor = new Floor();										// 아웃포탈 스크립트 사용에 필요한 기본바닥생성
 			mPotalOutTransform = Outfloor->GetComponent<Transform>();
+			Outfloor->GetComponent<Collider>()->SetVisible(false);
 			mPotalOutTransform->SetPosition(owner->GetComponent<Transform>()->GetPosition());	// Out/In floor 위치일치
 
 			if (mOutPortalPos == Vector3::Zero)					// OutPortal 위치 미지정

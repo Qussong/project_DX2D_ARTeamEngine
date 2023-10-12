@@ -23,8 +23,12 @@ namespace van
 		bool GetCollisionEnter() { return mbCollisionEnterFlag; }
 		void SetCollisionEnter(bool flag) { mbCollisionEnterFlag = flag; }
 
+		bool GetDoubleJumpFlag() { return mbDoubleJumpFlag; }
+		void SetDoubleJumpFlag(bool flag) { mbDoubleJumpFlag = flag; }
+
 	private:
 		bool mbCollisionEnterFlag;
+		bool mbDoubleJumpFlag;
 	};
 }
 

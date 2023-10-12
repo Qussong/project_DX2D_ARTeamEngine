@@ -25,6 +25,8 @@ namespace van
 		void Update() override;
 		void LateUpdate() override;
 		void Render() override;
+		
+		void DecreaseColor();
 
 	private:
 
@@ -43,6 +45,9 @@ namespace van
 		Transform* mPlayerTransform;
 		Collider* mPlayerCollider;
 		Rigidbody* mPlayerRigidbody;
+
+		float mTime;
+		bool mbDead;
 
 	};
 }

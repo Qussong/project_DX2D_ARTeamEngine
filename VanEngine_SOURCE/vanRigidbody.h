@@ -24,6 +24,9 @@ namespace van
 		void SetVelocity(Vector3 velocity) { mVelocity = velocity; }
 		void SetFriction(float friction) { mFriction = friction; }
 
+		void SetLimitedVeloctyX(float velocityX) { mLimitedVelocty.x = velocityX; }
+		void SetLimitedVeloctyY(float velocityY) { mLimitedVelocty.y = velocityY; }
+
 	private:
 		float mMass;
 

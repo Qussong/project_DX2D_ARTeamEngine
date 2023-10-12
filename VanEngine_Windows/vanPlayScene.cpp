@@ -21,7 +21,6 @@
 #include "vanStarScript.h"
 #include "vanItem.h"
 
-
 #define GAP_X 0.0715f
 #define GAP_Y 0.125f
 
@@ -52,6 +51,23 @@ namespace van
 			Floor* floor = new Floor();
 			floor->GetComponent<Transform>()->SetPosition(Vector3(i * GAP_X - 0.4f, -0.8f, 0.0f));
 			FloorScript* straightScript = floor->AddComponent<FloorScript>();
+			AddGameObject(floor, LAYER::FLOOR);
+		}
+
+		// Disappear
+		for (size_t i = 0; i < 3; ++i)
+		{
+			Floor* floor = new Floor();
+			floor->GetComponent<Transform>()->SetPosition(Vector3(i * GAP_X - 0.6f, -0.6f, 0.0f));
+			FloorScript* basic = floor->AddComponent<FloorScript>();
+			DisappearScript* disappear = floor->AddComponent<DisappearScript>();
+			AddGameObject(floor, LAYER::FLOOR);
+		}
+
+		{
+			Floor* floor = new Floor();
+			floor->GetComponent<Transform>()->SetPosition(Vector3(-0.1f, -0.6f, 0.0f));
+			DoubleJumpScript* disappear = floor->AddComponent<DoubleJumpScript>();
 			AddGameObject(floor, LAYER::FLOOR);
 		}
 

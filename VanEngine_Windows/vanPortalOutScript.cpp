@@ -13,6 +13,7 @@
 #include "vanSceneManager.h"
 #include "vanPlayer.h"
 #include "vanFloor.h"
+#include "vanTime.h"
 
 #define VELOCITY_X	3.f
 
@@ -21,7 +22,9 @@ namespace van
 	PortalOutScript::PortalOutScript()
 		: mSize(0.1f * 0.5625f, 0.1f, 1.f),
 		mPosition(Vector3::Zero),
-		mColor(Vector4(2.0f, 2.0f, 0.0f, 0.0f))
+		mColor(Vector4(1.0f, 1.0f, 0.0f, 0.0f)),
+		mTime(0.0f),
+		mbDead(false)
 	{
 	}
 
@@ -48,6 +51,23 @@ namespace van
 
 	void PortalOutScript::Update()
 	{
+		Floor* owner = dynamic_cast<Floor*>(GetOwner());
+
+		if (mFloorTransform->GetPosition() == mPlayerTransform->GetPosition())
+		{
+			mbDead = true;
+		}
+
+		if (mbDead)
+		{
+			DecreaseColor();
+
+			if (mColor.x <= 0.0f && mColor.y <= 0.0f)
+			{
+				Destroy(owner);
+			}
+		}
+
 	}
 
 	void PortalOutScript::LateUpdate()
@@ -70,5 +90,21 @@ namespace van
 
 		mShader->Update();
 		mMesh->Render();
+	}
+
+	void PortalOutScript::DecreaseColor()
+	{
+		mColor -= (Vector4(3.0f, 3.0f, 0.0f, 0.0f) * Time::DeltaTime());
+		if (mColor.x <=  0.0f)
+		{
+			mColor.x = 0.0f;
+			mColor.z = 0.0f;
+		}
+
+		if (mColor.y <= 0.0f)
+		{
+			mColor.y = 0.0f;
+			mColor.z = 0.0f;
+		}
 	}
 }

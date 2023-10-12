@@ -14,7 +14,8 @@
 namespace van
 {
 	Floor::Floor()
-		: mbCollisionEnterFlag(false)
+		: mbCollisionEnterFlag(false),
+		mbDoubleJumpFlag(false)
 	{
 		Transform* tr = AddComponent<Transform>();
 		tr->SetPosition(Vector3(0.0f, 0.0f, 0.0f));
@@ -65,7 +66,9 @@ namespace van
 		// Floor 객체와 충돌한 객체가 Playe 인 경우
 		if (player != nullptr)
 		{
+			player->GetComponent<Rigidbody>()->SetLimitedVeloctyX(0.5f);
 			mbCollisionEnterFlag = true;
+			mbDoubleJumpFlag = true;
 		}
 	}
 

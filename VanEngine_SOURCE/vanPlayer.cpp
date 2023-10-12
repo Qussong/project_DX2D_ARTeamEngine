@@ -9,11 +9,14 @@
 #include "..//VanEngine_Windows//vanPlayerScript.h"
 
 
-
 van::Player::Player() :
 	mbDead(false),
 	mbCollisionCheck(false),
-	mCollisionOther(nullptr)
+	mCollisionOther(nullptr),
+	mPlayerDir(PlayerDir::Left),
+	mbDoubleJumpCheck(false)
+
+
 {
 }
 

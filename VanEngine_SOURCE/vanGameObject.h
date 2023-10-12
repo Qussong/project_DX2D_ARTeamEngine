@@ -14,7 +14,10 @@ namespace van
 			Active,
 			Paused,
 			Dead,
+			End,
 		};
+
+		friend static __forceinline void Destroy(GameObject* gameObject);
 
 		GameObject();
 		virtual ~GameObject();
@@ -71,9 +74,21 @@ namespace van
 		virtual void OnCollisionStay(class  Collider* other);
 		virtual void OnCollisionExit(class Collider* other);
 
+		eState GetGameObjState() { return mState; }
+		//void Pause() { mState = eState::Paused; }
+		//void Active() { mState = eState::Active; }
+
+	private:
+		void death() { mState = eState::Dead; }
+
 	private:
 		eState mState;
 		std::vector<Component*> mComponents;
 		std::vector<Script*> mScripts;
 	};
+
+	static __forceinline void Destroy(GameObject* gameObject)
+	{
+		gameObject->death();
+	}
 }
