@@ -53,6 +53,13 @@ namespace van
 		Player* player = SceneManager::GetPlayer();
 		Floor* owner = dynamic_cast<Floor*>(GetOwner());
 	
+		if (player->IsCollisionCheck() && mbStraight)
+		{
+			Rigidbody* rb = player->GetComponent<Rigidbody>();
+			mbStraight = false;
+			rb->SetStraight(false);
+		}
+
 
 		if (owner->GetCollisionEnter())
 		{
@@ -84,6 +91,7 @@ namespace van
 		if (mbStraight)
 		{
 			Rigidbody* rb = player->GetComponent<Rigidbody>();
+
 			switch (mDir)
 			{
 			case van::enums::StraightDir::Left:

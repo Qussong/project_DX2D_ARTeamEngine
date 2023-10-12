@@ -89,13 +89,13 @@ namespace van
 			AddGameObject(floor, LAYER::FLOOR);
 		}
 
-		for (size_t i = 0; i < 4; ++i)
-		{
-			Floor* floor = new Floor();
-			floor->GetComponent<Transform>()->SetPosition(Vector3(0.55f, i * GAP_Y - 0.8f, 0.0f));
-			PortalOutScript* straightScript = floor->AddComponent<PortalOutScript>();
-			AddGameObject(floor, LAYER::FLOOR);
-		}
+		//for (size_t i = 0; i < 4; ++i)
+		//{
+		//	Floor* floor = new Floor();
+		//	floor->GetComponent<Transform>()->SetPosition(Vector3(0.55f, i * GAP_Y - 0.8f, 0.0f));
+		//	PortalOutScript* straightScript = floor->AddComponent<PortalOutScript>();
+		//	AddGameObject(floor, LAYER::FLOOR);
+		//}
 
 
 		for (size_t i = 0; i < 4; ++i)
