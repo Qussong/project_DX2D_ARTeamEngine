@@ -9,7 +9,6 @@
 #include "..//VanEngine_Windows//vanPlayerScript.h"
 
 
-
 van::Player::Player() :
 	mbDead(false),
 	mbCollisionCheck(false),
