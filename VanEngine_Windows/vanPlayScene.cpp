@@ -21,6 +21,7 @@
 #include "vanSpikeScript.h"
 #include "vanStarScript.h"
 #include "vanItem.h"
+#include "vanDisappearScript.h"
 
 #define GAP_X 0.0715f
 #define GAP_Y 0.125f
