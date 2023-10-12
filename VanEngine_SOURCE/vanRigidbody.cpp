@@ -26,6 +26,7 @@ namespace van
 
     void Rigidbody::Update()
     {
+ 
         //이동
         // F = M x A
         // A = F / M
@@ -98,6 +99,7 @@ namespace van
         tr->SetPosition(pos);
         //mForce.Clear();
         mForce = Vector3::Zero; // .clear
+
     }
 
     void Rigidbody::LateUpdate()

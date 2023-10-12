@@ -27,7 +27,6 @@ namespace van
 		void Render() override;
 
 	private:
-
 		Mesh* mMesh;
 		Shader* mShader;
 		MeshRenderer* mMeshRenderer;
