@@ -57,8 +57,6 @@ namespace van
 		Player* player = SceneManager::GetPlayer();
 		Floor* owner = dynamic_cast<Floor*>(GetOwner());
 
-		
-
 
 		if (owner->GetCollisionEnter())
 		{

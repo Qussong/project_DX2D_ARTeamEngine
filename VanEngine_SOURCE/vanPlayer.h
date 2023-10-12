@@ -25,11 +25,19 @@ namespace van
 		bool IsCollisionCheck() { return mbCollisionCheck; }
 		void SetCollisionCheck(bool value) { mbCollisionCheck = value; }
 
+		PlayerDir GetPlayerDir() { return mPlayerDir; }
+		void SetPlayerDir(PlayerDir dir) { mPlayerDir = dir; }
+
+		bool GetDoubleJumpCheck() { return mbDoubleJumpCheck; }
+		void SetDoubleJumpCheck(bool value) { mbDoubleJumpCheck = value; }
 	private:
 
 		Player* mPlayer;
 		bool mbDead;
 		bool mbCollisionCheck;
+		bool mbDoubleJumpCheck;
+
+		PlayerDir mPlayerDir;
 
 		Collider* mCollisionOther;
 	};

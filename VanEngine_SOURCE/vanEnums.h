@@ -17,6 +17,12 @@ namespace van::enums
 		Right,
 		None,
 	};
+	enum class PlayerDir
+	{
+		Left,
+		Right,
+		None,
+	};
 
 	// Common blendmodes used across multiple systems
 	enum BLENDMODE

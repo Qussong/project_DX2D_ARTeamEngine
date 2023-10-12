@@ -62,6 +62,13 @@ namespace van
 			AddGameObject(floor, LAYER::FLOOR);
 		}
 
+		{
+			Floor* floor = new Floor();
+			floor->GetComponent<Transform>()->SetPosition(Vector3(-0.1f, -0.6f, 0.0f));
+			DoubleJumpScript* disappear = floor->AddComponent<DoubleJumpScript>();
+			AddGameObject(floor, LAYER::FLOOR);
+		}
+
 		// FloorV
 		for (size_t i = 0; i < 4; ++i)
 		{

@@ -37,7 +37,7 @@ namespace van
 		Transform* mTransform;
 		Collider* mCollider;
 		Rigidbody* mRigidbody;
-	
+
 
 	};
 }
