@@ -30,6 +30,8 @@ namespace van
 		Player* mPlayer;
 		bool mbDead;
 		bool mbCollisionCheck;
+
+		Collider* mCollisionOther;
 	};
 }
 

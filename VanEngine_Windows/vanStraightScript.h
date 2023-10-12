@@ -10,6 +10,7 @@ namespace van
 {
 	class Transform;
 	class Collider;
+	class Floor;
 
 	using namespace math;
 	using namespace graphics;
@@ -24,6 +25,8 @@ namespace van
 		void Update() override;
 		void LateUpdate() override;
 		void Render() override;
+
+		void Straight();
 
 		void SetDirection(StraightDir _dir) { mDir = _dir; }
 
@@ -43,5 +46,7 @@ namespace van
 
 		StraightDir mDir;
 		bool isSetDir;
+
+		bool mbStraight;
 	};
 }

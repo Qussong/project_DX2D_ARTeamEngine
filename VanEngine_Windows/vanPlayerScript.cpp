@@ -14,6 +14,8 @@
 #include "vanSceneManager.h"
 #include "vanPlayer.h"
 
+#include "vanStraightScript.h"
+
 #define VELOCITY_X	3.f
 
 namespace van
@@ -42,6 +44,12 @@ namespace van
 		Vector3 pos = tr->GetPosition();
 		Collider* col = player->GetComponent<Collider>();
 
+		
+		//Player* playercast = dynamic_cast<Player*>(GetOwner());
+
+		
+		
+		
 
 
 		if (Input::GetKeyState(KEY_CODE::A) == KEY_STATE::PRESSED
@@ -64,13 +72,17 @@ namespace van
 			rb->SetFriction(10.0f);
 		}
 
+		
+
+		
+
 		//tr->SetPosition(pos);
 		col->SetPosition(pos);
 	}
 
 	void PlayerScript::LateUpdate()
 	{
-		int a = 0;
+		
 	}
 
 	void PlayerScript::Render()

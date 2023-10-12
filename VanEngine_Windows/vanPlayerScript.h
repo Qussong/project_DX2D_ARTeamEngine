@@ -30,5 +30,8 @@ namespace van
 		Vector3 mPosition;
 		Vector4 mColor;
 
+
+	
+
 	};
 }

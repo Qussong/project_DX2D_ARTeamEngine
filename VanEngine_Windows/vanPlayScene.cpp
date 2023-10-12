@@ -39,7 +39,7 @@ namespace van
 	{
 		// Player
 		Player* player = SceneManager::GetPlayer();
-		player->GetComponent<Transform>()->SetPosition(Vector3(0.0f, -0.6f, 0.0f));
+		player->GetComponent<Transform>()->SetPosition(Vector3(-0.3f, 0.6f, 0.0f));
 
 
 
@@ -63,14 +63,14 @@ namespace van
 		}
 
 		// FloorH2
-		for (size_t i = 0; i < 5; ++i)
-		{
+		/*for (size_t i = 0; i < 1; ++i)
+		{*/
 			Floor* floor = new Floor();
-			floor->GetComponent<Transform>()->SetPosition(Vector3(i * GAP_X - 0.8f, -0.3f, 0.0f));
+			floor->GetComponent<Transform>()->SetPosition(Vector3(0.f, -0.3f, 0.0f));
 			StraightScript* straightScript = floor->AddComponent<StraightScript>();
 			straightScript->SetDirection(StraightDir::Left);
 			AddGameObject(floor, LAYER::FLOOR);
-		}
+		//}
 
 		// FloorH3
 		for (size_t i = 0; i < 3; ++i)

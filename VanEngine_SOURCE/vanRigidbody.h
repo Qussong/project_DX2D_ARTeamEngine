@@ -24,6 +24,9 @@ namespace van
 		void SetVelocity(Vector3 velocity) { mVelocity = velocity; }
 		void SetFriction(float friction) { mFriction = friction; }
 
+		void SetStraight(bool straight) { mbStraight = straight; }
+		bool IsStraight() { return mbStraight; }
+
 	private:
 		float mMass;
 
@@ -39,5 +42,6 @@ namespace van
 		Vector3 mLimitedVelocty;
 
 		bool mbGround;
+		bool mbStraight;
 	};
 }

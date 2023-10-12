@@ -41,30 +41,7 @@ namespace van
 			AddGameObject(floor, LAYER::FLOOR);
 		}
 
-		// Floor2L
-		for (size_t i = 0; i < 3; ++i)
-		{
-			Floor* floor = new Floor();
-			floor->GetComponent<Transform>()->SetPosition(Vector3(i * GAP - 0.8f, -0.3f, 0.0f));
-			AddGameObject(floor, LAYER::FLOOR);
-		}
-
-		// Floor2R
-		for (size_t i = 0; i < 3; ++i)
-		{
-			Floor* floor = new Floor();
-			floor->GetComponent<Transform>()->SetPosition(Vector3(i * GAP + 0.4f, -0.3f, 0.0f));
-			AddGameObject(floor, LAYER::FLOOR);
-		}
-
-		// Floor3
-		for (size_t i = 0; i < 3; ++i)
-		{
-			Floor* floor = new Floor();
-			floor->GetComponent<Transform>()->SetPosition(Vector3(i * GAP - 0.2f, 0.2f, 0.0f));
-			AddGameObject(floor, LAYER::FLOOR);
-		}
-
+		
 
 		// Collision Setting
 		CollisionManager::CollisionLayerCheck(LAYER::PLAYER, LAYER::FLOOR, true);

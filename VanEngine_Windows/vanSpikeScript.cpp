@@ -57,6 +57,7 @@ namespace van
 
 	void SpikeScript::LateUpdate()
 	{
+		
 	}
 
 	void SpikeScript::Render()

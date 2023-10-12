@@ -135,7 +135,7 @@ namespace van
 
 		if (player != nullptr)
 		{
-			mbCollisionEnterFlag = true;
+			mbCollisionEnterFlag = false;
 			player->SetCollisionCheck(false);
 		}
 
