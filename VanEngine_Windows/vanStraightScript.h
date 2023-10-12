@@ -10,7 +10,7 @@ namespace van
 {
 	class Transform;
 	class Collider;
-	class Floor;
+	class Rigidbody;
 
 	using namespace math;
 	using namespace graphics;
@@ -26,8 +26,6 @@ namespace van
 		void LateUpdate() override;
 		void Render() override;
 
-		void Straight();
-
 		void SetDirection(StraightDir _dir) { mDir = _dir; }
 
 	private:
@@ -40,13 +38,17 @@ namespace van
 		Vector3 mPosition;
 		Vector4 mColor;
 
+		Transform* mFloorTransform;
+		Collider* mFloorCollider;
+		Rigidbody* mFloorRigidbody;
 
-		Transform* mTransform;
-		Collider* mCollider;
+		Transform* mPlayerTransform;
+		Collider* mPlayerCollider;
+		Rigidbody* mPlayerRigidbody;
 
 		StraightDir mDir;
-		bool isSetDir;
 
+		bool mbIsSetDir;
 		bool mbStraight;
 	};
 }

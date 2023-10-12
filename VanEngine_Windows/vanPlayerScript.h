@@ -7,6 +7,10 @@
 
 namespace van
 {
+	class Transform;
+	class Rigidbody;
+	class Collider;
+
 	using namespace math;
 	using namespace graphics;
 
@@ -30,7 +34,9 @@ namespace van
 		Vector3 mPosition;
 		Vector4 mColor;
 
-
+		Transform* mTransform;
+		Collider* mCollider;
+		Rigidbody* mRigidbody;
 	
 
 	};
