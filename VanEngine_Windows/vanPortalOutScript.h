@@ -44,5 +44,8 @@ namespace van
 		Collider* mPlayerCollider;
 		Rigidbody* mPlayerRigidbody;
 
+		float mTime;
+		bool mbDead;
+
 	};
 }
