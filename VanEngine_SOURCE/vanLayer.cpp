@@ -40,9 +40,35 @@ namespace van
 
 	void Layer::Render()
 	{
-		for (GameObject* gameObject : mGameObjects)
+		//for (GameObject* gameObject : mGameObjects)
+		//{
+		//	gameObject->Render();
+		//}
+
+		for (GameObject* obj : mGameObjects)
 		{
-			gameObject->Render();
+			if (obj->GetGameObjState() == GameObject::eState::Paused)
+				continue;
+
+			obj->Render();
+		}
+
+		for (std::vector<GameObject*>::iterator iter = mGameObjects.begin()
+			; iter != mGameObjects.end()
+			; )
+		{
+			if ((*iter)->GetGameObjState() == GameObject::eState::Dead)
+			{
+				GameObject* deadObj = *iter;
+				delete deadObj;
+				deadObj = nullptr;
+
+				iter = mGameObjects.erase(iter);
+			}
+			else
+			{
+				iter++;
+			}
 		}
 	}
 
