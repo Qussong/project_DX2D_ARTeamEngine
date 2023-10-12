@@ -26,8 +26,9 @@ namespace van
 		void LateUpdate() override;
 		void Render() override;
 
-	private:
+		void SetOutPortalPos(Vector3 pos) { mOutPortalPos = pos; }
 
+	private:
 		Mesh* mMesh;
 		Shader* mShader;
 		MeshRenderer* mMeshRenderer;
@@ -43,6 +44,9 @@ namespace van
 		Transform* mPlayerTransform;
 		Collider* mPlayerCollider;
 		Rigidbody* mPlayerRigidbody;
+
+		Vector3 mOutPortalPos;
+		bool mbCreateOutPortal;
 
 	};
 }

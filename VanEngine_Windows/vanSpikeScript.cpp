@@ -52,12 +52,12 @@ namespace van
 		Player* player = SceneManager::GetPlayer();
 		Floor* owner = dynamic_cast<Floor*>(GetOwner());
 
+		// 플레이어 외에 다른 충돌가능한 객체 존재시 조건문 변경 필요
+		// 조건문 변경하지 않으면 플레이어가 충돌하지 않아도 플레이어가 사망판정된다.
 		if (owner->GetCollisionEnter())
 		{
 			player->SetPlayerDeadCheck(true);
 		}
-		
-		
 	}
 
 	void SpikeScript::LateUpdate()

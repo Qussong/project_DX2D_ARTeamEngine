@@ -132,7 +132,6 @@ namespace van
 	void Floor::OnCollisionExit(Collider* other)
 	{
 		Player* player = dynamic_cast<Player*>(other->GetOwner());
-
 		if (player != nullptr)
 		{
 			mbCollisionEnterFlag = false;

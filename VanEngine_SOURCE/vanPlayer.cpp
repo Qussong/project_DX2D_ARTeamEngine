@@ -24,7 +24,7 @@ van::Player::~Player()
 void van::Player::Initialize()
 {
 	Transform* tr = AddComponent<Transform>();
-	tr->SetPosition(Vector3(-2.0f, 2.0f, 0.0f));
+	tr->SetPosition(Vector3(-2.0f, -2.0f, 0.0f));
 	tr->SetScale(Vector3(0.05f, 0.05f, 0.0f));
 
 	MeshRenderer* meshRenderer = AddComponent<MeshRenderer>();
