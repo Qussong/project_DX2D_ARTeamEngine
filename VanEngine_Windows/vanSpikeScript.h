@@ -10,7 +10,7 @@ namespace van
 {
 	class Transform;
 	class Collider;
-	class Floor;
+	class Rigidbody;
 
 	using namespace math;
 	using namespace graphics;
@@ -36,10 +36,12 @@ namespace van
 		Vector3 mPosition;
 		Vector4 mColor;
 
-		// ¤¾¤¾
-		Transform* mTransform;
-		Collider* mCollider;
+		Transform* mFloorTransform;
+		Collider* mFloorCollider;
+		Rigidbody* mFloorRigidbody;
 
-		//Floor* mOwner;
+		Transform* mPlayerTransform;
+		Collider* mPlayerCollider;
+		Rigidbody* mPlayerRigidbody;
 	};
 }

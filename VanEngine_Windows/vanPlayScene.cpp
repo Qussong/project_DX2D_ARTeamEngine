@@ -63,14 +63,14 @@ namespace van
 		}
 
 		// FloorH2
-		/*for (size_t i = 0; i < 1; ++i)
-		{*/
+		for (size_t i = 0; i < 1; ++i)
+		{
 			Floor* floor = new Floor();
 			floor->GetComponent<Transform>()->SetPosition(Vector3(0.f, -0.3f, 0.0f));
 			StraightScript* straightScript = floor->AddComponent<StraightScript>();
 			straightScript->SetDirection(StraightDir::Left);
 			AddGameObject(floor, LAYER::FLOOR);
-		//}
+		}
 
 		// FloorH3
 		for (size_t i = 0; i < 3; ++i)
@@ -86,6 +86,14 @@ namespace van
 			Floor* floor = new Floor();
 			floor->GetComponent<Transform>()->SetPosition(Vector3(0.15f, i * GAP_Y - 0.8f, 0.0f));
 			PortalInScript* straightScript = floor->AddComponent<PortalInScript>();
+			AddGameObject(floor, LAYER::FLOOR);
+		}
+
+		for (size_t i = 0; i < 4; ++i)
+		{
+			Floor* floor = new Floor();
+			floor->GetComponent<Transform>()->SetPosition(Vector3(0.0f, i * GAP_Y, 0.0f));
+			JumpScript* jumpScript = floor->AddComponent<JumpScript>();
 			AddGameObject(floor, LAYER::FLOOR);
 		}
 

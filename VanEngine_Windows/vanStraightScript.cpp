@@ -25,7 +25,7 @@ namespace van
 		mPosition(Vector3::Zero),
 		mColor(Vector4(0.5f, 0.5f, 0.5f, 0.5f)),
 		mDir(StraightDir::None),
-		isSetDir(false),
+		mbIsSetDir(false),
 		mbStraight(false)
 	{
 	}
@@ -36,10 +36,15 @@ namespace van
 
 	void StraightScript::Initialize()
 	{
-		mTransform = GetOwner()->GetComponent<Transform>();
-		mCollider = GetOwner()->GetComponent<Collider>();
+		mFloorTransform = GetOwner()->GetComponent<Transform>();
+		mFloorCollider = GetOwner()->GetComponent<Collider>();
+		mFloorRigidbody = GetOwner()->GetComponent<Rigidbody>();
 
-		mSize = mTransform->GetScale();
+		mPlayerTransform = SceneManager::GetPlayer()->GetComponent<Transform>();
+		mPlayerCollider = SceneManager::GetPlayer()->GetComponent<Collider>();
+		mPlayerRigidbody = SceneManager::GetPlayer()->GetComponent<Rigidbody>();
+
+		mSize = mFloorTransform->GetScale();
 		mSize = Vector3(mSize.x - 0.001f, mSize.y - 0.005f, 0.0f);
 		mColor = Vector4(0.0f, 1.0f, 0.0f, 0.0f);
 		mMesh = ResourceManager::Find<Mesh>(L"TriangleMeshL");
@@ -57,25 +62,25 @@ namespace van
 		{
 			Rigidbody* rb = player->GetComponent<Rigidbody>();
 			mbStraight = false;
-			rb->SetGround(false);
+			mPlayerRigidbody->SetStraight(false);
 		}
 
 
 		if (owner->GetCollisionEnter())
 		{
-			Transform* tr = player->GetComponent<Transform>();
-			Rigidbody* rb = player->GetComponent<Rigidbody>();
 
 			switch (mDir)
 			{
 			case van::enums::StraightDir::Left:
-				tr->SetPosition(Vector3(mTransform->GetPosition().x - 0.07f, mTransform->GetPosition().y, 0.0f));
-				rb->SetVelocity(Vector3(0.f));
+				mPlayerTransform->SetPosition(Vector3(mFloorTransform->GetPosition().x - 0.07f, mFloorTransform->GetPosition().y, 0.0f));
+				mPlayerRigidbody->SetVelocity(Vector3(0.f));
+				mPlayerRigidbody->SetStraight(true);
 				mbStraight = true;
 				break;
 			case van::enums::StraightDir::Right:
-				tr->SetPosition(Vector3(mTransform->GetPosition().x + 0.07f, mTransform->GetPosition().y, 0.0f));
-				rb->SetVelocity(Vector3(0.f));
+				mPlayerTransform->SetPosition(Vector3(mFloorTransform->GetPosition().x + 0.07f, mFloorTransform->GetPosition().y, 0.0f));
+				mPlayerRigidbody->SetVelocity(Vector3(0.f));
+				mPlayerRigidbody->SetStraight(true);
 				mbStraight = true;
 				break;
 			case van::enums::StraightDir::None:
@@ -84,21 +89,17 @@ namespace van
 				break;
 			}
 		}
-	
+
 
 		if (mbStraight)
 		{
-			Rigidbody* rb = player->GetComponent<Rigidbody>();
-
 			switch (mDir)
 			{
 			case van::enums::StraightDir::Left:
-				rb->AddVelocity(Vector3(-3.0f, 0.f, 0.f));
-				rb->SetGround(true);
+				mPlayerRigidbody->AddVelocity(Vector3(-3.0f, 0.f, 0.f));
 				break;
 			case van::enums::StraightDir::Right:
-				rb->AddVelocity(Vector3(3.0f, 0.f, 0.f));
-				rb->SetGround(true);
+				mPlayerRigidbody->AddVelocity(Vector3(3.0f, 0.f, 0.f));
 				break;
 			case van::enums::StraightDir::None:
 				break;
@@ -111,6 +112,7 @@ namespace van
 			|| Input::GetKeyState(KEY_CODE::LEFT) == KEY_STATE::DOWN)
 		{
 			Rigidbody* rb = player->GetComponent<Rigidbody>();
+			rb->SetStraight(false);
 			mbStraight = false;
 		}
 
@@ -134,9 +136,12 @@ namespace van
 		// 스크립트는 충돌이벤트가 아닌 update에서 할 수 밖에 없으니 이런것
 		// 
 		// 2. Movement와 control가 분리되지않음 -> 이동과 입력이 합쳐져있어 이동& 입력 관련 작업을 할때 난감하다.
-			
+		// 
+		// 
+		// 
 
-		if (isSetDir == false)
+
+		if (mbIsSetDir == false)
 		{
 			if (mDir == StraightDir::Left)
 			{
@@ -147,7 +152,7 @@ namespace van
 				mMesh = ResourceManager::Find<Mesh>(L"TriangleMeshR");
 			}
 
-			isSetDir = true;
+			mbIsSetDir = true;
 		}
 
 	}
@@ -162,7 +167,7 @@ namespace van
 		ConstantBuffer* cb = renderer::constantBuffers[(UINT)graphics::eCBType::Transform];
 
 		renderer::TransformCB data = {};
-		data.pos = mTransform->GetPosition();
+		data.pos = mFloorTransform->GetPosition();
 		data.color = mColor;
 		data.scale = mSize;
 		cb->SetData(&data);
@@ -176,8 +181,5 @@ namespace van
 		mShader->Update();
 		mMesh->Render();
 	}
-	void StraightScript::Straight()
-	{
-		
-	}
+
 }

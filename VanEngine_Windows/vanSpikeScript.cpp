@@ -33,10 +33,15 @@ namespace van
 
 	void SpikeScript::Initialize()
 	{
-		mTransform = GetOwner()->GetComponent<Transform>();
-		mCollider = GetOwner()->GetComponent<Collider>();
+		mFloorTransform = GetOwner()->GetComponent<Transform>();
+		mFloorCollider = GetOwner()->GetComponent<Collider>();
+		mFloorRigidbody = GetOwner()->GetComponent<Rigidbody>();
 
-		mCollider->SetScale(Vector3(0.125f * 0.5625, 0.05f, 1.f));
+		mPlayerTransform = SceneManager::GetPlayer()->GetComponent<Transform>();
+		mPlayerCollider = SceneManager::GetPlayer()->GetComponent<Collider>();
+		mPlayerRigidbody = SceneManager::GetPlayer()->GetComponent<Rigidbody>();
+
+		mFloorCollider->SetScale(Vector3(0.125f * 0.5625, 0.05f, 1.f));
 
 		mMesh = ResourceManager::Find<Mesh>(L"DeathBlockMesh");
 		mShader = ResourceManager::Find<Shader>(L"FloorShader");
@@ -65,7 +70,7 @@ namespace van
 		ConstantBuffer* cb = renderer::constantBuffers[(UINT)graphics::eCBType::Transform];
 
 		renderer::TransformCB data = {};
-		data.pos = mTransform->GetPosition();
+		data.pos = mFloorTransform->GetPosition();
 		data.color = mColor;
 		data.scale = mSize;
 		cb->SetData(&data);
