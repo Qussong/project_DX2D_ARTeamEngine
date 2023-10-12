@@ -81,12 +81,11 @@ namespace van
 		//	AddGameObject(floor, LAYER::FLOOR);
 		//}
 
-		for (size_t i = 1; i < 3; ++i)
 		{
 			Floor* floor = new Floor();
-			floor->GetComponent<Transform>()->SetPosition(Vector3(0.15f, i * GAP_Y - 0.8f, 0.0f));
+			floor->GetComponent<Transform>()->SetPosition(Vector3(0.15f, - 0.5f, 0.0f));
 			PortalInScript* portalinScript = floor->AddComponent<PortalInScript>();
-			portalinScript->SetOutPortalPos(Vector3(-0.5f, i * GAP_Y - 0.8f, 0.f));
+			portalinScript->SetOutPortalPos(Vector3(-0.5f,  0.5f, 0.f));
 			AddGameObject(floor, LAYER::FLOOR);
 		}
 

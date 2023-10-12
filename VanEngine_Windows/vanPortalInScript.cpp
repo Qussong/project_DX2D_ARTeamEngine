@@ -72,7 +72,7 @@ namespace van
 				mPotalOutTransform->SetPosition(mOutPortalPos);
 			}
 			PortalOutScript* outPortalScript = Outfloor->AddComponent<PortalOutScript>();
-			SceneManager::GetActiveScene()->AddGameObject(Outfloor, LAYER::FLOOR);
+			SceneManager::GetActiveScene()->AddGameObject(Outfloor, LAYER::NONECOLLISION);
 		}
 
 		if (owner->GetCollisionEnter())

@@ -7,6 +7,7 @@ namespace van::enums
 		NONE = 0,
 		PLAYER ,
 		FLOOR ,
+		NONECOLLISION,
 		MAX = 16,
 	};
 
