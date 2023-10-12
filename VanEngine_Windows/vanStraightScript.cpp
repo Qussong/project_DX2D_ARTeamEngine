@@ -13,8 +13,8 @@
 #include "vanRenderer.h"
 #include "vanSceneManager.h"
 
-#include "..\\VanEngine_SOURCE\\vanPlayer.h"
-#include "..\\VanEngine_SOURCE\\vanFloor.h"
+#include "vanPlayer.h"
+#include "vanFloor.h"
 
 #define VELOCITY_X	3.f
 
@@ -50,14 +50,14 @@ namespace van
 		mMesh = ResourceManager::Find<Mesh>(L"TriangleMeshL");
 		mShader = ResourceManager::Find<Shader>(L"FloorShader");
 
-		
+
 	}
 
 	void StraightScript::Update()
 	{
 		Player* player = SceneManager::GetPlayer();
 		Floor* owner = dynamic_cast<Floor*>(GetOwner());
-	
+
 		if (player->IsCollisionCheck() && mbStraight)
 		{
 			mbStraight = false;
