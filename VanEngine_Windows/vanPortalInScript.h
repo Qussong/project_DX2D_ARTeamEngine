@@ -45,6 +45,8 @@ namespace van
 		Collider* mPlayerCollider;
 		Rigidbody* mPlayerRigidbody;
 
+		Transform* mPotalOutTransform;
+
 		Vector3 mOutPortalPos;
 		bool mbCreateOutPortal;
 

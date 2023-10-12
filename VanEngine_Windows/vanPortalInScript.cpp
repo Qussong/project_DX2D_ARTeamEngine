@@ -58,18 +58,18 @@ namespace van
 		{
 			mbCreateOutPortal = false;
 			Floor* Outfloor = new Floor();										// 아웃포탈 스크립트 사용에 필요한 기본바닥생성
-			Transform* tr = Outfloor->GetComponent<Transform>();
-			tr->SetPosition(owner->GetComponent<Transform>()->GetPosition());	// Out/In floor 위치일치
+			mPotalOutTransform = Outfloor->GetComponent<Transform>();
+			mPotalOutTransform->SetPosition(owner->GetComponent<Transform>()->GetPosition());	// Out/In floor 위치일치
 
 			if (mOutPortalPos == Vector3::Zero)					// OutPortal 위치 미지정
 			{
-				mOutPortalPos = tr->GetPosition();
+				mOutPortalPos = mPotalOutTransform->GetPosition();
 				mOutPortalPos += Vector3(-0.25f, 0.f, 0.0f);	// OutPortal 기본위치
-				tr->SetPosition(mOutPortalPos);					// 새로운 out위치에 floor/script 위치 조정
+				mPotalOutTransform->SetPosition(mOutPortalPos);					// 새로운 out위치에 floor/script 위치 조정
 			}
 			else // OutPortal 위치 지정
 			{
-				tr->SetPosition(mOutPortalPos);
+				mPotalOutTransform->SetPosition(mOutPortalPos);
 			}
 			PortalOutScript* outPortalScript = Outfloor->AddComponent<PortalOutScript>();
 			SceneManager::GetActiveScene()->AddGameObject(Outfloor, LAYER::FLOOR);
