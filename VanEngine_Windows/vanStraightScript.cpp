@@ -60,27 +60,23 @@ namespace van
 	
 		if (player->IsCollisionCheck() && mbStraight)
 		{
-			Rigidbody* rb = player->GetComponent<Rigidbody>();
 			mbStraight = false;
-			mPlayerRigidbody->SetStraight(false);
+			mPlayerRigidbody->SetGround(false);
 		}
 
 
 		if (owner->GetCollisionEnter())
 		{
-
 			switch (mDir)
 			{
 			case van::enums::StraightDir::Left:
 				mPlayerTransform->SetPosition(Vector3(mFloorTransform->GetPosition().x - 0.07f, mFloorTransform->GetPosition().y, 0.0f));
 				mPlayerRigidbody->SetVelocity(Vector3(0.f));
-				mPlayerRigidbody->SetStraight(true);
 				mbStraight = true;
 				break;
 			case van::enums::StraightDir::Right:
 				mPlayerTransform->SetPosition(Vector3(mFloorTransform->GetPosition().x + 0.07f, mFloorTransform->GetPosition().y, 0.0f));
 				mPlayerRigidbody->SetVelocity(Vector3(0.f));
-				mPlayerRigidbody->SetStraight(true);
 				mbStraight = true;
 				break;
 			case van::enums::StraightDir::None:
@@ -97,9 +93,11 @@ namespace van
 			{
 			case van::enums::StraightDir::Left:
 				mPlayerRigidbody->AddVelocity(Vector3(-3.0f, 0.f, 0.f));
+				mPlayerRigidbody->SetGround(true);
 				break;
 			case van::enums::StraightDir::Right:
 				mPlayerRigidbody->AddVelocity(Vector3(3.0f, 0.f, 0.f));
+				mPlayerRigidbody->SetGround(true);
 				break;
 			case van::enums::StraightDir::None:
 				break;
@@ -111,15 +109,14 @@ namespace van
 		if (Input::GetKeyState(KEY_CODE::A) == KEY_STATE::DOWN
 			|| Input::GetKeyState(KEY_CODE::LEFT) == KEY_STATE::DOWN)
 		{
-			Rigidbody* rb = player->GetComponent<Rigidbody>();
-			rb->SetStraight(false);
+			mPlayerRigidbody->SetGround(false);
 			mbStraight = false;
 		}
 
 		if (Input::GetKeyState(KEY_CODE::D) == KEY_STATE::DOWN
 			|| Input::GetKeyState(KEY_CODE::RIGHT) == KEY_STATE::DOWN)
 		{
-			Rigidbody* rb = player->GetComponent<Rigidbody>();
+			mPlayerRigidbody->SetGround(false);
 			mbStraight = false;
 		}
 

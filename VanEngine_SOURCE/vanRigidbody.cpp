@@ -10,7 +10,6 @@ namespace van
         , mMass(1.0f)
         , mFriction(1.0f)
         , mbGround(false)
-        , mbStraight(false)
     {
         mLimitedVelocty.x = 0.5f;
         mLimitedVelocty.y = 50.0f;
