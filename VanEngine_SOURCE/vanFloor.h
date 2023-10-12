@@ -21,6 +21,7 @@ namespace van
 		virtual void OnCollisionExit(class Collider* other);
 
 		bool GetCollisionEnter() { return mbCollisionEnterFlag; }
+		void SetCollisionEnter(bool flag) { mbCollisionEnterFlag = flag; }
 
 	private:
 		bool mbCollisionEnterFlag;
