@@ -10,6 +10,7 @@ namespace van
 {
 	class Transform;
 	class Collider;
+	class Rigidbody;
 
 	using namespace math;
 	using namespace graphics;
@@ -36,8 +37,9 @@ namespace van
 		Vector3 mPosition;
 		Vector4 mColor;
 
-		Transform* mTransform;
-		Collider* mCollider;
+		Transform* mPlayerTransform;
+		Collider* mPlayerCollider;
+		Rigidbody* mPlayerRigidbody;
 
 		Vector3 mOutPortalPos;
 		bool mbCreateOutPortal;

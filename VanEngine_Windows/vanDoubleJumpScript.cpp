@@ -1,7 +1,6 @@
 #include "vanDoubleJumpScript.h"
 #include "vanTransform.h"
 #include "vanGameObject.h"
-#include "vanTransform.h"
 #include "vanTime.h"
 #include "vanInput.h"
 
@@ -31,11 +30,16 @@ namespace van
 
 	void DoubleJumpScript::Initialize()
 	{
-		mTransform = GetOwner()->GetComponent<Transform>();
-		mCollider = GetOwner()->GetComponent<Collider>();
-		mCollider->SetVisible(true);
+		mFloorTransform = GetOwner()->GetComponent<Transform>();
+		mFloorCollider = GetOwner()->GetComponent<Collider>();
+		mFloorRigidbody = GetOwner()->GetComponent<Rigidbody>();
+		mFloorCollider->SetVisible(true);
 
-		mSize = mTransform->GetScale();
+		mPlayerTransform = SceneManager::GetPlayer()->GetComponent<Transform>();
+		mPlayerCollider = SceneManager::GetPlayer()->GetComponent<Collider>();
+		mPlayerRigidbody = SceneManager::GetPlayer()->GetComponent<Rigidbody>();
+
+		mSize = mFloorTransform->GetScale();
 		mSize += Vector3(0.02f, -0.05f, 0.0f); // GetOwner()의 사이즈 수정
 
 		mMesh = ResourceManager::Find<Mesh>(L"CircleMesh");
@@ -56,7 +60,7 @@ namespace van
 		ConstantBuffer* cb = renderer::constantBuffers[(UINT)graphics::eCBType::Transform];
 
 		renderer::TransformCB data = {};
-		data.pos = mTransform->GetPosition();
+		data.pos = mFloorTransform->GetPosition();
 		data.color = mColor;
 		data.scale = mSize;
 		cb->SetData(&data);

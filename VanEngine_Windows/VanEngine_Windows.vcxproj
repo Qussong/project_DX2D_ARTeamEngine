@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="vanDisappearScript.h" />
     <ClInclude Include="vanDoubleJumpScript.h" />
     <ClInclude Include="vanFloorScript.h" />
     <ClInclude Include="vanJumpScript.h" />
@@ -32,6 +33,7 @@
     <ClInclude Include="vanStraightScript.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="vanDisappearScript.cpp" />
     <ClCompile Include="vanDoubleJumpScript.cpp" />
     <ClCompile Include="vanFloorScript.cpp" />
     <ClCompile Include="vanJumpScript.cpp" />

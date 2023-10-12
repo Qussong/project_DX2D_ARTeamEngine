@@ -33,10 +33,15 @@ namespace van
 
 	void SpikeScript::Initialize()
 	{
-		mTransform = GetOwner()->GetComponent<Transform>();
-		mCollider = GetOwner()->GetComponent<Collider>();
+		mFloorTransform = GetOwner()->GetComponent<Transform>();
+		mFloorCollider = GetOwner()->GetComponent<Collider>();
+		mFloorRigidbody = GetOwner()->GetComponent<Rigidbody>();
 
-		mCollider->SetScale(Vector3(0.125f * 0.5625, 0.05f, 1.f));
+		mPlayerTransform = SceneManager::GetPlayer()->GetComponent<Transform>();
+		mPlayerCollider = SceneManager::GetPlayer()->GetComponent<Collider>();
+		mPlayerRigidbody = SceneManager::GetPlayer()->GetComponent<Rigidbody>();
+
+		mFloorCollider->SetScale(Vector3(0.125f * 0.5625, 0.05f, 1.f));
 
 		mMesh = ResourceManager::Find<Mesh>(L"DeathBlockMesh");
 		mShader = ResourceManager::Find<Shader>(L"FloorShader");
@@ -47,12 +52,12 @@ namespace van
 		Player* player = SceneManager::GetPlayer();
 		Floor* owner = dynamic_cast<Floor*>(GetOwner());
 
+		// 플레이어 외에 다른 충돌가능한 객체 존재시 조건문 변경 필요
+		// 조건문 변경하지 않으면 플레이어가 충돌하지 않아도 플레이어가 사망판정된다.
 		if (owner->GetCollisionEnter())
 		{
 			player->SetPlayerDeadCheck(true);
 		}
-		
-		
 	}
 
 	void SpikeScript::LateUpdate()
@@ -65,7 +70,7 @@ namespace van
 		ConstantBuffer* cb = renderer::constantBuffers[(UINT)graphics::eCBType::Transform];
 
 		renderer::TransformCB data = {};
-		data.pos = mTransform->GetPosition();
+		data.pos = mFloorTransform->GetPosition();
 		data.color = mColor;
 		data.scale = mSize;
 		cb->SetData(&data);

@@ -90,6 +90,14 @@ namespace van
 			AddGameObject(floor, LAYER::FLOOR);
 		}
 
+		for (size_t i = 0; i < 4; ++i)
+		{
+			Floor* floor = new Floor();
+			floor->GetComponent<Transform>()->SetPosition(Vector3(0.0f, i * GAP_Y, 0.0f));
+			JumpScript* jumpScript = floor->AddComponent<JumpScript>();
+			AddGameObject(floor, LAYER::FLOOR);
+		}
+
 		//for (size_t i = 0; i < 4; ++i)
 		//{
 		//	Floor* floor = new Floor();

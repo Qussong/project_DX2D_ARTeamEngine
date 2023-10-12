@@ -25,6 +25,9 @@ namespace van
 		mPosition(Vector3::Zero),
 		mColor(Vector4::Zero)
 	{
+		mTransform = SceneManager::GetPlayer()->GetComponent<Transform>();
+		mCollider = SceneManager::GetPlayer()->GetComponent<Collider>();;
+		mRigidbody = SceneManager::GetPlayer()->GetComponent<Rigidbody>();;
 	}
 
 	PlayerScript::~PlayerScript()
@@ -39,45 +42,32 @@ namespace van
 	void PlayerScript::Update()
 	{
 		GameObject* player = GetOwner();
-		Transform* tr = player->GetComponent<Transform>();
-		Rigidbody* rb = player->GetComponent<Rigidbody>();
-		Vector3 pos = tr->GetPosition();
-		Collider* col = player->GetComponent<Collider>();
 
-		
-		//Player* playercast = dynamic_cast<Player*>(GetOwner());
+		Vector3 pos = mTransform->GetPosition();
 
-		
-		
-		
 
 
 		if (Input::GetKeyState(KEY_CODE::A) == KEY_STATE::PRESSED
 			|| Input::GetKeyState(KEY_CODE::LEFT) == KEY_STATE::PRESSED)
 		{
-			rb->SetFriction(1.0f);
-			rb->AddVelocity(Vector3(-VELOCITY_X, 0.0f, 0.0f) * Time::DeltaTime());
+			mRigidbody->SetFriction(1.0f);
+			mRigidbody->AddVelocity(Vector3(-VELOCITY_X, 0.0f, 0.0f) * Time::DeltaTime());
 		}
 
 		if (Input::GetKeyState(KEY_CODE::D) == KEY_STATE::PRESSED
 			|| Input::GetKeyState(KEY_CODE::RIGHT) == KEY_STATE::PRESSED)
 		{
-			rb->SetFriction(1.0f);
-			rb->AddVelocity(Vector3(VELOCITY_X, 0.0f, 0.0f) * Time::DeltaTime());
+			mRigidbody->SetFriction(1.0f);
+			mRigidbody->AddVelocity(Vector3(VELOCITY_X, 0.0f, 0.0f) * Time::DeltaTime());
 		}
 
 		if (Input::GetKeyState(KEY_CODE::A) == KEY_STATE::UP
 			|| Input::GetKeyState(KEY_CODE::D) == KEY_STATE::UP)
 		{
-			rb->SetFriction(10.0f);
+			mRigidbody->SetFriction(10.0f);
 		}
 
-		
-
-		
-
-		//tr->SetPosition(pos);
-		col->SetPosition(pos);
+		mCollider->SetPosition(pos);
 	}
 
 	void PlayerScript::LateUpdate()
