@@ -138,7 +138,7 @@ namespace van
 		// Star2
 		{
 			Item* item = new Item();
-			item->GetComponent<Transform>()->SetPosition(Vector3(-0.3f, -0.5f, 0.0f));
+			item->GetComponent<Transform>()->SetPosition(Vector3(-1.0f, -0.5f, 0.0f));
 			StarScript* Script = item->AddComponent<StarScript>();
 			AddGameObject(item, LAYER::ITEM);
 		}

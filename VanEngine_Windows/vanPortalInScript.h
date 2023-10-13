@@ -27,6 +27,7 @@ namespace van
 		void Render() override;
 
 		void SetOutPortalPos(Vector3 pos) { mOutPortalPos = pos; }
+		void SetReCreatePortal(bool can) { mbReCreateOutPortal = can; }
 
 	private:
 		Mesh* mMesh;
@@ -48,7 +49,9 @@ namespace van
 		Transform* mPotalOutTransform;
 
 		Vector3 mOutPortalPos;
+		float mTime;	// 재생성시 딜레이 타임
 		bool mbCreateOutPortal;
+		bool mbReCreateOutPortal;
 
 	};
 }
