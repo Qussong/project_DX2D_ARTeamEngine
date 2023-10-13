@@ -36,9 +36,9 @@ namespace van
 		Vector3 mPosition;
 		Vector4 mColor;
 
-		Transform* mFloorTransform;
-		Collider* mFloorCollider;
-		Rigidbody* mFloorRigidbody;
+		Transform* mItemTransform;
+		Collider* mItemCollider;
+		Rigidbody* mItemRigidbody;
 
 		Transform* mPlayerTransform;
 		Collider* mPlayerCollider;

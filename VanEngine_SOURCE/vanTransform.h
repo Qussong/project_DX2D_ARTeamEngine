@@ -23,14 +23,17 @@ namespace van
 		void SetPosition(float x, float y, float z) { mPosition = Vector3(x, y, z); }
 		void SetRotation(float x, float y, float z) { mRotation = Vector3(x, y, z); }
 		void SetScale(float x, float y, float z) { mScale = Vector3(x, y, z); }
+		void SetColor(float x, float y, float z , float w) { mColor = Vector4(x, y, z, w); }
 
 		Vector3 GetPosition() { return mPosition; }
 		Vector3 GetRotation() { return mRotation; }
 		Vector3 GetScale() { return mScale; }
+		Vector4 GetColor() { return mColor; }
 
 	private:
 		Vector3 mPosition;
 		Vector3 mRotation;
 		Vector3 mScale;
+		Vector4 mColor;
 	};
 }

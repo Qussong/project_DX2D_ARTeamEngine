@@ -6,6 +6,7 @@ namespace van
 {
 	Transform::Transform()
 		: Component(COMPONENTTYPE::TRANSFORM)
+		, mColor(Vector4(0.0f, 0.0f, 0.0f, 0.0f))
 	{
 
 	}
@@ -33,10 +34,10 @@ namespace van
 	void Transform::SetConstantBuffer()
 	{
 		ConstantBuffer* cb = renderer::constantBuffers[(UINT)graphics::eCBType::Transform];
-
 		renderer::TransformCB data = {};
 		data.pos = mPosition;
 		data.scale = mScale;
+		data.color = mColor;
 		cb->SetData(&data);
 
 		cb->Bind(graphics::eShaderStage::VS);

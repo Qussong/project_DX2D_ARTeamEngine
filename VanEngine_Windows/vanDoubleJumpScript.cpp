@@ -12,7 +12,7 @@
 #include "vanRenderer.h"
 #include "vanSceneManager.h"
 #include "vanPlayer.h"
-#include "vanFloor.h"
+#include "vanItem.h"
 
 #define VELOCITY_X	3.f
 
@@ -31,16 +31,16 @@ namespace van
 
 	void DoubleJumpScript::Initialize()
 	{
-		mFloorTransform = GetOwner()->GetComponent<Transform>();
-		mFloorCollider = GetOwner()->GetComponent<Collider>();
-		mFloorRigidbody = GetOwner()->GetComponent<Rigidbody>();
-		mFloorCollider->SetVisible(false);
+		mItemTransform = GetOwner()->GetComponent<Transform>();
+		mItemCollider = GetOwner()->GetComponent<Collider>();
+		mItemRigidbody = GetOwner()->GetComponent<Rigidbody>();
+		mItemCollider->SetVisible(false);
 
 		mPlayerTransform = SceneManager::GetPlayer()->GetComponent<Transform>();
 		mPlayerCollider = SceneManager::GetPlayer()->GetComponent<Collider>();
 		mPlayerRigidbody = SceneManager::GetPlayer()->GetComponent<Rigidbody>();
 
-		mSize = mFloorTransform->GetScale();
+		mSize = mItemTransform->GetScale();
 		mSize += Vector3(0.02f, -0.05f, 0.0f); // GetOwner()의 사이즈 수정
 
 		mMesh = ResourceManager::Find<Mesh>(L"CircleMesh");
@@ -50,12 +50,13 @@ namespace van
 	void DoubleJumpScript::Update()
 	{
 		Player* player = SceneManager::GetPlayer();
-		Floor* owner = dynamic_cast<Floor*>(GetOwner());
+		Item* owner = dynamic_cast<Item*>(GetOwner());
 
 		if (owner->GetCollisionEnter())
 		{
 			player->SetDoubleJumpCheck(true);
-			mFloorTransform->SetPosition(Vector3(10.0f, 10.0f, 0.0f));
+			mPlayerTransform->SetColor(1.0f, 1.0f, 1.0f, 0.0f);		// 아이템 먹을시 플레이어 색변환 현재값 흰색
+			mItemTransform->SetPosition(Vector3(10.0f, 10.0f, 0.0f));
 		}
 	}
 
@@ -68,7 +69,7 @@ namespace van
 		ConstantBuffer* cb = renderer::constantBuffers[(UINT)graphics::eCBType::Transform];
 
 		renderer::TransformCB data = {};
-		data.pos = mFloorTransform->GetPosition();
+		data.pos = mItemTransform->GetPosition();
 		data.color = mColor;
 		data.scale = mSize;
 		cb->SetData(&data);

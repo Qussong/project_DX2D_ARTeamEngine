@@ -73,8 +73,6 @@ namespace van
 		data.scale = mSize;
 		cb->SetData(&data);
 
-
-
 		cb->Bind(graphics::eShaderStage::VS);
 
 		mShader->SetToplogy(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);

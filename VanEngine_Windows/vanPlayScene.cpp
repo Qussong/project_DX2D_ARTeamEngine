@@ -65,13 +65,6 @@ namespace van
 			AddGameObject(floor, LAYER::FLOOR);
 		}
 
-		{
-			Floor* floor = new Floor();
-			floor->GetComponent<Transform>()->SetPosition(Vector3(-0.1f, -0.6f, 0.0f));
-			DoubleJumpScript* disappear = floor->AddComponent<DoubleJumpScript>();
-			AddGameObject(floor, LAYER::FLOOR);
-		}
-
 		// FloorV
 		for (size_t i = 0; i < 4; ++i)
 		{
@@ -126,13 +119,13 @@ namespace van
 		//}
 
 
-		for (size_t i = 0; i < 4; ++i)
-		{
-			Floor* floor = new Floor();
-			floor->GetComponent<Transform>()->SetPosition(Vector3(0.75f, i * GAP_Y - 0.8f, 0.0f));
-			DoubleJumpScript* straightScript = floor->AddComponent<DoubleJumpScript>();
-			AddGameObject(floor, LAYER::FLOOR);
-		}
+		//for (size_t i = 0; i < 4; ++i)
+		//{
+		//	Floor* floor = new Floor();
+		//	floor->GetComponent<Transform>()->SetPosition(Vector3(0.75f, i * GAP_Y - 0.8f, 0.0f));
+		//	DoubleJumpScript* straightScript = floor->AddComponent<DoubleJumpScript>();
+		//	AddGameObject(floor, LAYER::FLOOR);
+		//}
 
 		// Star1
 		{
@@ -150,8 +143,13 @@ namespace van
 			AddGameObject(item, LAYER::ITEM);
 		}
 
-
-
+		// DoubleJump Item
+		{
+			Item* item = new Item();
+			item->GetComponent<Transform>()->SetPosition(Vector3(-0.1f, -0.6f, 0.0f));
+			DoubleJumpScript* Script = item->AddComponent<DoubleJumpScript>();
+			AddGameObject(item, LAYER::ITEM);
+		}
 
 		// Collision Setting
 		CollisionManager::CollisionLayerCheck(LAYER::PLAYER, LAYER::FLOOR, true);

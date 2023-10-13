@@ -28,7 +28,6 @@ namespace van
 
 		mSize = mTransform->GetScale();
 		mPosition = mTransform->GetPosition();
-		mColor = Vector4::Zero;
 	}
 
 	PlayerScript::~PlayerScript()
@@ -76,9 +75,10 @@ namespace van
 			else
 				mRigidbody->SetVelocity(Vector3(0.85f, 1.1f, 0.0f));
 
+			mTransform->SetColor(0.0f,0.0f,0.0f,0.0f);	// 아이템 사용시 원래 색으로
+
 			player->SetDoubleJumpCheck(false);
 		}
-
 		
 		mCollider->SetPosition(pos);
 	}
@@ -89,21 +89,5 @@ namespace van
 
 	void PlayerScript::Render()
 	{
-		//Player* owner = dynamic_cast<Player*>(GetOwner());
-
-		//mColor += Vector4(0.0f, 1.0f, 0.0f, 0.0f);
-
-		//// 상수버퍼설정
-		//ConstantBuffer* cb = renderer::constantBuffers[(UINT)graphics::eCBType::Transform];
-		//renderer::TransformCB data = {};
-		//data.pos = mPosition;
-		//data.color = mColor;
-		//data.scale = mSize;
-
-		//cb->SetData(&data);
-		//cb->Bind(graphics::eShaderStage::VS);
-
-		////owner->GetComponent<Shader>()->Update();
-		//owner->GetComponent<Mesh>()->Render();
 	}
 }

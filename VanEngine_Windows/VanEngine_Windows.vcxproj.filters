@@ -23,9 +23,6 @@
     <ClInclude Include="vanStraightScript.h">
       <Filter>Scripts\Floor\Straight</Filter>
     </ClInclude>
-    <ClInclude Include="vanDoubleJumpScript.h">
-      <Filter>Scripts\Floor\DoubleJump</Filter>
-    </ClInclude>
     <ClInclude Include="vanPortalInScript.h">
       <Filter>Scripts\Floor\Portal_In</Filter>
     </ClInclude>
@@ -37,6 +34,9 @@
     </ClInclude>
     <ClInclude Include="vanStarScript.h">
       <Filter>Scripts\Item\Star</Filter>
+    </ClInclude>
+    <ClInclude Include="vanDoubleJumpScript.h">
+      <Filter>Scripts\Item\DoubleJump</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -67,14 +67,14 @@
     <ClCompile Include="vanPortalOutScript.cpp">
       <Filter>Scripts\Floor\Portal_Out</Filter>
     </ClCompile>
-    <ClCompile Include="vanDoubleJumpScript.cpp">
-      <Filter>Scripts\Floor\DoubleJump</Filter>
-    </ClCompile>
     <ClCompile Include="vanDisappearScript.cpp">
       <Filter>Scripts\Floor\Disappear</Filter>
     </ClCompile>
     <ClCompile Include="vanStarScript.cpp">
       <Filter>Scripts\Item\Star</Filter>
+    </ClCompile>
+    <ClCompile Include="vanDoubleJumpScript.cpp">
+      <Filter>Scripts\Item\DoubleJump</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -107,9 +107,6 @@
     </Filter>
     <Filter Include="Scripts\Floor\Straight">
       <UniqueIdentifier>{230e5c79-5280-4053-8b9c-0921a23f8d2f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Scripts\Floor\DoubleJump">
-      <UniqueIdentifier>{1a3bc18c-e5f7-41eb-a039-d2a04949cffe}</UniqueIdentifier>
     </Filter>
     <Filter Include="Scripts\Floor\Portal_In">
       <UniqueIdentifier>{8523c7ed-46dd-41e6-9e34-ebe900594610}</UniqueIdentifier>
