@@ -27,6 +27,10 @@ namespace van
 		void Render() override;
 		
 		void DecreaseColor();
+		void IncreaseColor();
+		
+		void SetColor(Vector4 color) { mColor = color; }
+		void SetReCreate(bool can) { mbReCreate = can; }
 
 	private:
 
@@ -47,6 +51,7 @@ namespace van
 		Rigidbody* mPlayerRigidbody;
 
 		float mTime;
+		bool mbReCreate;
 		bool mbDead;
 
 	};

@@ -24,6 +24,7 @@ namespace van
 		mPosition(Vector3::Zero),
 		mColor(Vector4(1.0f, 1.0f, 0.0f, 0.0f)),
 		mTime(0.0f),
+		mbReCreate(false),
 		mbDead(false)
 	{
 	}
@@ -56,6 +57,16 @@ namespace van
 		if (mFloorTransform->GetPosition() == mPlayerTransform->GetPosition())
 		{
 			mbDead = true;
+		}
+
+		if (mbReCreate)
+		{
+			IncreaseColor();
+
+			if (mColor.x >= 1.0f && mColor.y >= 1.0f)
+			{
+				mbReCreate = false;
+			}
 		}
 
 		if (mbDead)
@@ -105,6 +116,20 @@ namespace van
 		{
 			mColor.y = 0.0f;
 			mColor.z = 0.0f;
+		}
+	}
+
+	void PortalOutScript::IncreaseColor()
+	{
+		mColor += (Vector4(3.0f, 3.0f, 0.0f, 0.0f) * Time::DeltaTime());
+		if (mColor.x >= 1.0f)
+		{
+			mColor.x = 1.0f;
+		}
+
+		if (mColor.y >= 1.0f)
+		{
+			mColor.y = 1.0f;
 		}
 	}
 }
