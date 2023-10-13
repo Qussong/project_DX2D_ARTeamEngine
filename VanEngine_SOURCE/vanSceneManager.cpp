@@ -6,6 +6,8 @@
 #include "vanPlayer.h"
 #include "vanInput.h"
 #include "..//VanEngine_Windows//vanStage1.h"
+#include "..//VanEngine_Windows//vanStage2.h"
+
 
 #include "vanRigidbody.h"
 #include "vanCollider.h"
@@ -49,6 +51,17 @@ namespace van
 				LoadScene(L"Stage1");
 				mPlayer->SetPlayerDeadCheck(false);
 			}
+			else if (mActiveScene->GetName() == L"Stage2")
+			{
+				mActiveScene->RemoveLayer(enums::LAYER::PLAYER);
+				mActiveScene->RemoveLayer(enums::LAYER::FLOOR);
+				SceneManager::DeleteScene<Stage2>(L"Stage2");
+
+				SceneManager::CreateScene<Stage2>(L"Stage2");
+
+				LoadScene(L"Stage2");
+				mPlayer->SetPlayerDeadCheck(false);
+			}
 			
 		}
 
@@ -58,6 +71,14 @@ namespace van
 			if (mActiveScene->GetName() == L"PlayScene")
 			{
 				LoadScene(L"Stage1");
+			}
+			if (mActiveScene->GetName() == L"Stage1")
+			{
+				LoadScene(L"Stage2");
+			}
+			if (mActiveScene->GetName() == L"Stage2")
+			{
+				LoadScene(L"PlayScene");
 			}
 		}
 

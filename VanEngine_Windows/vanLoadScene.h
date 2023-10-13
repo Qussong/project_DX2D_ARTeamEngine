@@ -1,7 +1,8 @@
 #pragma once
-#include "..\\VanEngine_SOURCE\\vanSceneManager.h"
+#include "vanSceneManager.h"
 #include "vanPlayScene.h"
 #include "vanStage1.h"
+#include "vanStage2.h"
 
 
 //#ifdef  _DEBUG
@@ -16,7 +17,8 @@ namespace van
 	{
 		SceneManager::CreateScene<PlayScene>(L"PlayScene");
 		SceneManager::CreateScene<Stage1>(L"Stage1");
+		SceneManager::CreateScene<Stage2>(L"Stage2");
 
-		SceneManager::LoadScene(L"PlayScene");
+		SceneManager::LoadScene(L"Stage2");
 	}
 }

@@ -38,6 +38,9 @@
     <ClInclude Include="vanDoubleJumpScript.h">
       <Filter>Scripts\Item\DoubleJump</Filter>
     </ClInclude>
+    <ClInclude Include="vanStage2.h">
+      <Filter>Scenes\Stage2</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="vanPlayScene.cpp">
@@ -75,6 +78,9 @@
     </ClCompile>
     <ClCompile Include="vanDoubleJumpScript.cpp">
       <Filter>Scripts\Item\DoubleJump</Filter>
+    </ClCompile>
+    <ClCompile Include="vanStage2.cpp">
+      <Filter>Scenes\Stage2</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -125,6 +131,9 @@
     </Filter>
     <Filter Include="Scripts\Item\DoubleJump">
       <UniqueIdentifier>{cffb7f58-162b-45f8-931f-40f3d5575a04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scenes\Stage2">
+      <UniqueIdentifier>{c3bb1c75-5077-4e6a-8799-83866c759184}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
