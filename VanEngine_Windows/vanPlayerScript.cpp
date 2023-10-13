@@ -21,13 +21,14 @@
 namespace van
 {
 	PlayerScript::PlayerScript()
-		: mSize(Vector3::Zero),
-		mPosition(Vector3::Zero),
-		mColor(Vector4::Zero)
 	{
 		mTransform = SceneManager::GetPlayer()->GetComponent<Transform>();
 		mCollider = SceneManager::GetPlayer()->GetComponent<Collider>();;
 		mRigidbody = SceneManager::GetPlayer()->GetComponent<Rigidbody>();;
+
+		mSize = mTransform->GetScale();
+		mPosition = mTransform->GetPosition();
+		mColor = Vector4::Zero;
 	}
 
 	PlayerScript::~PlayerScript()
@@ -36,7 +37,6 @@ namespace van
 
 	void PlayerScript::Initialize()
 	{
-
 	}
 
 	void PlayerScript::Update()
@@ -46,15 +46,12 @@ namespace van
 		Vector3 pos = mTransform->GetPosition();
 		Vector3 playerVelocty = player->GetComponent<Rigidbody>()->GetVelocity();
 
-
-
 		if (Input::GetKeyState(KEY_CODE::A) == KEY_STATE::PRESSED
 			|| Input::GetKeyState(KEY_CODE::LEFT) == KEY_STATE::PRESSED)
 		{
 			player->SetPlayerDir(PlayerDir::Left);
 			mRigidbody->SetFriction(1.0f);
 			mRigidbody->AddVelocity(Vector3(-VELOCITY_X, 0.0f, 0.0f) * Time::DeltaTime());
-			
 		}
 
 		if (Input::GetKeyState(KEY_CODE::D) == KEY_STATE::PRESSED
@@ -67,22 +64,17 @@ namespace van
 
 		if (Input::GetKeyState(KEY_CODE::A) == KEY_STATE::UP
 			|| Input::GetKeyState(KEY_CODE::D) == KEY_STATE::UP)
-		{
 			mRigidbody->SetFriction(10.0f);
-		}
 
 		bool bCheck = player->GetDoubleJumpCheck();
 		if (Input::GetKeyState(KEY_CODE::SPACE) == KEY_STATE::DOWN && bCheck)
 		{
 			mRigidbody->SetLimitedVeloctyX(0.85f);
+
 			if (player->GetPlayerDir() == PlayerDir::Left)
-			{
 				mRigidbody->SetVelocity(Vector3(-0.85f, 1.1f, 0.0f));
-			}
 			else
-			{
 				mRigidbody->SetVelocity(Vector3(0.85f, 1.1f, 0.0f));
-			}
 
 			player->SetDoubleJumpCheck(false);
 		}
@@ -93,10 +85,25 @@ namespace van
 
 	void PlayerScript::LateUpdate()
 	{
-		
 	}
 
 	void PlayerScript::Render()
 	{
+		//Player* owner = dynamic_cast<Player*>(GetOwner());
+
+		//mColor += Vector4(0.0f, 1.0f, 0.0f, 0.0f);
+
+		//// 상수버퍼설정
+		//ConstantBuffer* cb = renderer::constantBuffers[(UINT)graphics::eCBType::Transform];
+		//renderer::TransformCB data = {};
+		//data.pos = mPosition;
+		//data.color = mColor;
+		//data.scale = mSize;
+
+		//cb->SetData(&data);
+		//cb->Bind(graphics::eShaderStage::VS);
+
+		////owner->GetComponent<Shader>()->Update();
+		//owner->GetComponent<Mesh>()->Render();
 	}
 }

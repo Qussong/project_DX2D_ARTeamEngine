@@ -67,7 +67,7 @@ namespace van
         //renderer::constantBuffers[(UINT)graphics::CBTYPES::TRANSFORM]->Bind(eShaderStage::VS);
 
         //// Input Assembeler 단계에 버텍스버퍼 정보 지정
-       BindBuffer();
+        BindBuffer();
         //renderer::mesh->BindBuffer();             // 리소스->FindMesh-> SetMesh 에서 다시 Rederer::mesh해주는게 리소스findMesh로 리턴받는게 의미가없어짐 
         //renderer::mesh2->BindBuffer();
         //Vector4 pos(0.5f, 0.2f, 0.0f, 0.0f);

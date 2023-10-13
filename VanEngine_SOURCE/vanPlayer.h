@@ -30,15 +30,14 @@ namespace van
 
 		bool GetDoubleJumpCheck() { return mbDoubleJumpCheck; }
 		void SetDoubleJumpCheck(bool value) { mbDoubleJumpCheck = value; }
+
 	private:
 
 		Player* mPlayer;
 		bool mbDead;
 		bool mbCollisionCheck;
 		bool mbDoubleJumpCheck;
-
 		PlayerDir mPlayerDir;
-
 		Collider* mCollisionOther;
 	};
 }

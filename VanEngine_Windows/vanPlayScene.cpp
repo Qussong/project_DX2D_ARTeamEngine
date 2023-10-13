@@ -61,7 +61,6 @@ namespace van
 		{
 			Floor* floor = new Floor();
 			floor->GetComponent<Transform>()->SetPosition(Vector3(i * GAP_X - 0.6f, -0.6f, 0.0f));
-			FloorScript* basic = floor->AddComponent<FloorScript>();
 			DisappearScript* disappear = floor->AddComponent<DisappearScript>();
 			AddGameObject(floor, LAYER::FLOOR);
 		}

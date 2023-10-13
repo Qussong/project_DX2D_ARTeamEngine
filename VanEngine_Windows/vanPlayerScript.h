@@ -26,7 +26,6 @@ namespace van
 		void Render() override;
 
 	private:
-
 		Mesh* mMesh;
 		Shader* mShader;
 		
@@ -37,7 +36,5 @@ namespace van
 		Transform* mTransform;
 		Collider* mCollider;
 		Rigidbody* mRigidbody;
-
-
 	};
 }

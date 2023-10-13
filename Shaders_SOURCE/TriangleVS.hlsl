@@ -18,8 +18,14 @@ cbuffer TRANSFORM : register(b0)
     float3 cbScale;
     int padd2;
     float4 cbColor;
-
 };
+
+//cbuffer PLAYER : register(b1)
+//{
+//    float4 cbPocs2;
+//    float4 cbScale2;
+//    float4 cbColor2;
+//};
 
 VTX_OUT VS_Player(VTX_IN _in)
 {
@@ -29,7 +35,8 @@ VTX_OUT VS_Player(VTX_IN _in)
     output.vPos.xyz += cbPocs.xyz;
     
     //output.vPos *= 5.5f;
-    output.vColor = _in.vColor + float4(0.0f, 0.0f, 0.0f, 0.0f);
+    //output.vColor = _in.vColor + float4(0.0f, 0.0f, 0.0f, 0.0f);
+    output.vColor = _in.vColor + cbColor;
     
     return output;
 }

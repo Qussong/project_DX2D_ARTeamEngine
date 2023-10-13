@@ -89,10 +89,8 @@ namespace van
 
 			comp->Render();
 		}
-
-	
-	
 	}
+
 	void GameObject::OnCollisionEnter(Collider* other)
 	{
 	}

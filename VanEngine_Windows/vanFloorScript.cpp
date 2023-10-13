@@ -108,21 +108,17 @@ namespace van
 
 	void FloorScript::Render()
 	{
-
 		ConstantBuffer* cb = renderer::constantBuffers[(UINT)graphics::eCBType::Transform];
 
 		renderer::TransformCB data = {};
 		data.pos = mFloorTransform->GetPosition();
 		data.color = mColor;
 		data.scale = mSize;
+
 		cb->SetData(&data);
-
-
-
 		cb->Bind(graphics::eShaderStage::VS);
 
 		mShader->SetToplogy(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
-
 		mShader->Update();
 		mMesh->Render();
 	}

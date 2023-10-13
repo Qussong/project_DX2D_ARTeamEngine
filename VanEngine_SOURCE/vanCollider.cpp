@@ -68,7 +68,6 @@ namespace van
 			mShader->Update();
 			mMesh->Render();
 		}
-
 	}
 
 	void Collider::OnCollisionEnter(Collider* other)
