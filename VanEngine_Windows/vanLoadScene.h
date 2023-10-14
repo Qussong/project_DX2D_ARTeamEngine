@@ -3,6 +3,7 @@
 #include "vanPlayScene.h"
 #include "vanStage1.h"
 #include "vanStage2.h"
+#include "vanStage3.h"
 
 
 //#ifdef  _DEBUG
@@ -18,7 +19,8 @@ namespace van
 		SceneManager::CreateScene<PlayScene>(L"PlayScene");
 		SceneManager::CreateScene<Stage1>(L"Stage1");
 		SceneManager::CreateScene<Stage2>(L"Stage2");
+		SceneManager::CreateScene<Stage3>(L"Stage3");
 
-		SceneManager::LoadScene(L"Stage1");
+		SceneManager::LoadScene(L"Stage3");
 	}
 }

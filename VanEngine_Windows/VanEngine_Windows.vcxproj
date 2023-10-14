@@ -24,6 +24,7 @@
     <ClInclude Include="vanFloorScript.h" />
     <ClInclude Include="vanJumpScript.h" />
     <ClInclude Include="vanLoadScene.h" />
+    <ClInclude Include="vanMoveFloorScript.h" />
     <ClInclude Include="vanPlayerScript.h" />
     <ClInclude Include="vanPlayScene.h" />
     <ClInclude Include="vanPortalInScript.h" />
@@ -31,6 +32,7 @@
     <ClInclude Include="vanSpikeScript.h" />
     <ClInclude Include="vanStage1.h" />
     <ClInclude Include="vanStage2.h" />
+    <ClInclude Include="vanStage3.h" />
     <ClInclude Include="vanStarScript.h" />
     <ClInclude Include="vanStraightScript.h" />
   </ItemGroup>
@@ -39,6 +41,7 @@
     <ClCompile Include="vanDoubleJumpScript.cpp" />
     <ClCompile Include="vanFloorScript.cpp" />
     <ClCompile Include="vanJumpScript.cpp" />
+    <ClCompile Include="vanMoveFloorScript.cpp" />
     <ClCompile Include="vanPlayerScript.cpp" />
     <ClCompile Include="vanPlayScene.cpp" />
     <ClCompile Include="vanPortalInScript.cpp" />
@@ -46,6 +49,7 @@
     <ClCompile Include="vanSpikeScript.cpp" />
     <ClCompile Include="vanStage1.cpp" />
     <ClCompile Include="vanStage2.cpp" />
+    <ClCompile Include="vanStage3.cpp" />
     <ClCompile Include="vanStarScript.cpp" />
     <ClCompile Include="vanStraightScript.cpp" />
   </ItemGroup>
