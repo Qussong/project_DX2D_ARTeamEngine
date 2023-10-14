@@ -54,6 +54,15 @@ void van::Player::Update()
 	if (pos.y < -1.0f)
 		mbDead = true;
 
+	if (mbDoubleJumpCheck)
+	{
+		tr->SetColor(1.0f, 1.0f, 0.0f, 0.0f);		// 아이템 먹을시 플레이어 색변환 현재값 흰색
+	}
+	else
+	{
+		tr->SetColor(0.0f, 0.5f, 1.f, 1.f);
+	}
+
 }
 
 void van::Player::LateUpdate()

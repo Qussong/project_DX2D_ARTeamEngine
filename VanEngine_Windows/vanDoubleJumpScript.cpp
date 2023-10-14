@@ -21,7 +21,7 @@ namespace van
 	DoubleJumpScript::DoubleJumpScript()
 		: mSize(0.05f, 0.05f, 0.0f),
 		mPosition(Vector3::Zero),
-		mColor(Vector4(1.0f, 0.5f, 0.2f, 0.0f))
+		mColor(Vector4(0.0f, 0.245f, 0.81f, 0.0f))
 	{
 	}
 
@@ -36,12 +36,17 @@ namespace van
 		mItemRigidbody = GetOwner()->GetComponent<Rigidbody>();
 		mItemCollider->SetVisible(false);
 
+		
+
+
 		mPlayerTransform = SceneManager::GetPlayer()->GetComponent<Transform>();
 		mPlayerCollider = SceneManager::GetPlayer()->GetComponent<Collider>();
 		mPlayerRigidbody = SceneManager::GetPlayer()->GetComponent<Rigidbody>();
 
 		mSize = mItemTransform->GetScale();
-		mSize += Vector3(0.02f, -0.05f, 0.0f); // GetOwner()의 사이즈 수정
+		mSize = Vector3(0.07f, 0.07f, 0.0f); // GetOwner()의 사이즈 수정
+
+		mItemCollider->SetScale(Vector3(0.04f, 0.07f, 0.0f));
 
 		mMesh = ResourceManager::Find<Mesh>(L"CircleMesh");
 		mShader = ResourceManager::Find<Shader>(L"FloorShader");
@@ -55,7 +60,6 @@ namespace van
 		if (owner->GetCollisionEnter())
 		{
 			player->SetDoubleJumpCheck(true);
-			mPlayerTransform->SetColor(1.0f, 1.0f, 1.0f, 0.0f);		// 아이템 먹을시 플레이어 색변환 현재값 흰색
 			mItemTransform->SetPosition(Vector3(10.0f, 10.0f, 0.0f));
 		}
 	}

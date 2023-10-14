@@ -40,8 +40,9 @@ namespace van
 		mPlayerTransform = SceneManager::GetPlayer()->GetComponent<Transform>();
 		mPlayerCollider = SceneManager::GetPlayer()->GetComponent<Collider>();
 		mPlayerRigidbody = SceneManager::GetPlayer()->GetComponent<Rigidbody>();
-
+		
 		mFloorCollider->SetScale(Vector3(0.125f * 0.5625, 0.05f, 1.f));
+		mFloorCollider->SetVisible(false);
 
 		mMesh = ResourceManager::Find<Mesh>(L"DeathBlockMesh");
 		mShader = ResourceManager::Find<Shader>(L"FloorShader");

@@ -33,12 +33,16 @@ namespace van
 		mItemCollider = GetOwner()->GetComponent<Collider>();
 		mItemRigidbody = GetOwner()->GetComponent<Rigidbody>();
 
+		mItemCollider->SetVisible(true);
+
 		mPlayerTransform = SceneManager::GetPlayer()->GetComponent<Transform>();
 		mPlayerCollider = SceneManager::GetPlayer()->GetComponent<Collider>();
 		mPlayerRigidbody = SceneManager::GetPlayer()->GetComponent<Rigidbody>();
 
 		mSize = mItemTransform->GetScale();
-		mSize = Vector3(mSize.x - 0.001f, mSize.y - 0.005f, 0.0f);
+		mSize = Vector3(0.05f, 0.05f, 0.0f);
+		mItemCollider->SetScale(mSize);
+
 		mMesh = ResourceManager::Find<Mesh>(L"TriangleMesh");
 		mShader = ResourceManager::Find<Shader>(L"FloorShader");
 

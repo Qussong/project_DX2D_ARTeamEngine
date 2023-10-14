@@ -29,6 +29,10 @@ namespace van
 	{
 		if (mPlayer->GetPlayerDeadCheck())
 		{
+			mPlayer->GetComponent<Rigidbody>()->SetVelocity(Vector3::Zero);
+			mPlayer->GetComponent<Rigidbody>()->SetGround(false);
+			mPlayer->SetDoubleJumpCheck(false);
+
 			if (mActiveScene->GetName() == L"PlayScene")
 			{
 				mActiveScene->RemoveLayer(enums::LAYER::PLAYER);
