@@ -121,7 +121,7 @@ namespace van
 
 	void PortalOutScript::IncreaseColor()
 	{
-		mColor += (Vector4(3.0f, 3.0f, 0.0f, 0.0f) * Time::DeltaTime());
+		mColor += (Vector4(3.5f, 3.5f, 0.0f, 0.0f) * Time::DeltaTime());
 		if (mColor.x >= 1.0f)
 		{
 			mColor.x = 1.0f;

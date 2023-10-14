@@ -39,11 +39,11 @@ namespace van
 		mPlayerCollider = SceneManager::GetPlayer()->GetComponent<Collider>();
 		mPlayerRigidbody = SceneManager::GetPlayer()->GetComponent<Rigidbody>();
 
-		mSize = mItemTransform->GetScale();
-		mSize = Vector3(0.05f, 0.05f, 0.0f);
-		mItemCollider->SetScale(mSize);
+		mItemCollider->SetScale(Vector3(0.07f, 0.07f, 0.07f));
 
-		mMesh = ResourceManager::Find<Mesh>(L"TriangleMesh");
+		mSize = mItemTransform->GetScale();
+		mSize *= 0.3f;
+		mMesh = ResourceManager::Find<Mesh>(L"StarMesh");
 		mShader = ResourceManager::Find<Shader>(L"FloorShader");
 
 		mStarCount = SceneManager::GetActiveScene()->GetStarCount();
@@ -51,7 +51,7 @@ namespace van
 	}
 	void StarScript::Update()
 	{
-		Player* player = SceneManager::GetPlayer();
+		Player* player = SceneManager::GetPlayer(); 
 		Item* owner = dynamic_cast<Item*>(GetOwner());
 		int StarCount = SceneManager::GetActiveScene()->GetStarCount();
 		
