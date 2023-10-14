@@ -28,13 +28,13 @@ namespace van
 
 	void SceneManager::Update()
 	{
-		if (mPlayer->GetPlayerDeadCheck())
+		if (mPlayer->GetPlayerDeadCheck())				//Player가 Dead면 레이어에서 제거후 다시 씬을만들어줌
 		{
 			mPlayer->GetComponent<Rigidbody>()->SetVelocity(Vector3::Zero);
 			mPlayer->GetComponent<Rigidbody>()->SetGround(false);
 			mPlayer->SetDoubleJumpCheck(false);
 
-			if (mActiveScene->GetName() == L"PlayScene")
+			if (mActiveScene->GetName() == L"PlayScene")			
 			{
 				mActiveScene->RemoveLayer(enums::LAYER::PLAYER);
 				mActiveScene->RemoveLayer(enums::LAYER::FLOOR);
@@ -84,18 +84,20 @@ namespace van
 		if (mActiveScene->GetStarCount() <= 0)
 		{
 
-			if (mActiveScene->GetName() == L"PlayScene")
+			if (mActiveScene->GetName() == L"Stage1")				// 스테이지 클리어시 다음 스테이지 로드
 			{
-				LoadScene(L"Stage1");
-			}
-			if (mActiveScene->GetName() == L"Stage1")
-			{
+				mActiveScene->RemoveLayer(enums::LAYER::PLAYER);
+				mActiveScene->RemoveLayer(enums::LAYER::FLOOR);
 				LoadScene(L"Stage2");
 			}
-			if (mActiveScene->GetName() == L"Stage2")
-			{
-				LoadScene(L"PlayScene");
-			}
+			//if (mActiveScene->GetName() == L"Stage2")
+			//{
+			//	LoadScene(L"Stage2");
+			//}
+			//if (mActiveScene->GetName() == L"Stage2")
+			//{
+			//	LoadScene(L"PlayScene");
+			//}
 		}
 
 		mActiveScene->Update();

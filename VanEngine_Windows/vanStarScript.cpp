@@ -33,7 +33,7 @@ namespace van
 		mItemCollider = GetOwner()->GetComponent<Collider>();
 		mItemRigidbody = GetOwner()->GetComponent<Rigidbody>();
 
-		mItemCollider->SetVisible(true);
+		mItemCollider->SetVisible(false);
 
 		mPlayerTransform = SceneManager::GetPlayer()->GetComponent<Transform>();
 		mPlayerCollider = SceneManager::GetPlayer()->GetComponent<Collider>();
