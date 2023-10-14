@@ -72,18 +72,20 @@ namespace van
 		if (mActiveScene->GetStarCount() <= 0)
 		{
 
-			if (mActiveScene->GetName() == L"PlayScene")
-			{
-				LoadScene(L"Stage1");
-			}
 			if (mActiveScene->GetName() == L"Stage1")
 			{
+				mActiveScene->RemoveLayer(enums::LAYER::PLAYER);
+				mActiveScene->RemoveLayer(enums::LAYER::FLOOR);
 				LoadScene(L"Stage2");
 			}
-			if (mActiveScene->GetName() == L"Stage2")
-			{
-				LoadScene(L"PlayScene");
-			}
+			//if (mActiveScene->GetName() == L"Stage2")
+			//{
+			//	LoadScene(L"Stage2");
+			//}
+			//if (mActiveScene->GetName() == L"Stage2")
+			//{
+			//	LoadScene(L"PlayScene");
+			//}
 		}
 
 		mActiveScene->Update();
