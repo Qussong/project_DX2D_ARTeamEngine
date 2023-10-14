@@ -29,6 +29,12 @@ namespace van
 	{
 		if (mPlayer->GetPlayerDeadCheck())
 		{
+			if (mPlayer->GetDoubleJumpCheck())
+			{
+				mPlayer->GetComponent<Transform>()->SetColor(0.0f, 0.0f, 0.0f, 0.0f);
+				mPlayer->SetDoubleJumpCheck(false);
+			}
+
 			if (mActiveScene->GetName() == L"PlayScene")
 			{
 				mActiveScene->RemoveLayer(enums::LAYER::PLAYER);
