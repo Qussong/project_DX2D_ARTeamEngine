@@ -245,13 +245,41 @@ namespace van
 			DisappearScript* disappearScript = floor->AddComponent<DisappearScript>();
 			AddGameObject(floor, LAYER::FLOOR);
 
+			if (i == 2)
+			{
+				Item* item = new Item;
+				item->GetComponent<Transform>()->SetPosition(i* GAP_X + 0.15f, -0.7f, 0.0f);
+				DoubleJumpScript* doubleJumpScript = item->AddComponent<DoubleJumpScript>();
+				AddGameObject(item, LAYER::ITEM);
+			}
+
 		}
 
-		for (size_t i = 0; i < 3; ++i)
+
+
+		for (size_t i = 0; i < 9; ++i)
+		{
+			Floor* floor = new Floor();
+			floor->GetComponent<Transform>()->SetPosition(Vector3(i * GAP_X - 0.9f, -0.8f, 0.0f));
+
+			DisappearScript* disappearScript = floor->AddComponent<DisappearScript>();
+			AddGameObject(floor, LAYER::FLOOR);
+
+		}
+
+		for (size_t i = 0; i < 4; ++i)
 		{
 			Item* item = new Item();
-			item->GetComponent<Transform>()->SetPosition(i* 0.2f + 0.2f, -0.7f, 0.0f);
-			StarScript* Script = item->AddComponent<StarScript>();
+			item->GetComponent<Transform>()->SetPosition(i* 0.15f - 0.87f, -0.7f, 0.0f);
+			StarScript* starScript = item->AddComponent<StarScript>();
+			AddGameObject(item, LAYER::ITEM);
+		}
+
+		for (size_t i = 0; i < 4; ++i)
+		{
+			Item* item = new Item();
+			item->GetComponent<Transform>()->SetPosition(i* 0.17f + 0.2f, -0.7f, 0.0f);
+			StarScript* starScript = item->AddComponent<StarScript>();
 			AddGameObject(item, LAYER::ITEM);
 		}
 
