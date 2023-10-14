@@ -44,7 +44,9 @@
     <ClInclude Include="vanStage3.h">
       <Filter>Scenes\Stage3</Filter>
     </ClInclude>
-    <ClInclude Include="vanMoveFloorScript.h" />
+    <ClInclude Include="vanMoveFloorScript.h">
+      <Filter>Scripts\Floor\Move</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="vanPlayScene.cpp">
@@ -89,7 +91,9 @@
     <ClCompile Include="vanStage3.cpp">
       <Filter>Scenes\Stage3</Filter>
     </ClCompile>
-    <ClCompile Include="vanMoveFloorScript.cpp" />
+    <ClCompile Include="vanMoveFloorScript.cpp">
+      <Filter>Scripts\Floor\Move</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Scenes">
@@ -145,6 +149,9 @@
     </Filter>
     <Filter Include="Scenes\Stage3">
       <UniqueIdentifier>{39b1241b-7e16-485a-8282-f7c64aece638}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts\Floor\Move">
+      <UniqueIdentifier>{7cbf6129-7981-40b1-9c02-7accad17b22b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

@@ -81,7 +81,7 @@ namespace van
 			
 		}
 
-		if (mActiveScene->GetStarCount() <= 0)
+		if (mActiveScene->GetStarCount() <= 0 || Input::GetKeyState(KEY_CODE::Q) == KEY_STATE::DOWN) // Q버튼 누를시 다음 스테이지 로드
 		{
 
 			if (mActiveScene->GetName() == L"Stage1")				// 스테이지 클리어시 다음 스테이지 로드
@@ -90,10 +90,12 @@ namespace van
 				mActiveScene->RemoveLayer(enums::LAYER::FLOOR);
 				LoadScene(L"Stage2");
 			}
-			//if (mActiveScene->GetName() == L"Stage2")
-			//{
-			//	LoadScene(L"Stage2");
-			//}
+			else if (mActiveScene->GetName() == L"Stage2")
+			{
+				mActiveScene->RemoveLayer(enums::LAYER::PLAYER);
+				mActiveScene->RemoveLayer(enums::LAYER::FLOOR);
+				LoadScene(L"Stage3");
+			}
 			//if (mActiveScene->GetName() == L"Stage2")
 			//{
 			//	LoadScene(L"PlayScene");

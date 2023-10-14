@@ -157,19 +157,11 @@ namespace van
 				floor->GetComponent<Transform>()->SetPosition(Vector3(i * GAP_X - 0.9595f, -0.95f + GAP_Y * i, 0.0f));
 				if (i % 2 != 0)
 				{
-					FloorScript* floorScript = floor->AddComponent<FloorScript>();
+					SpikeScript* floorScript = floor->AddComponent<SpikeScript>();
 				}
 				else
-					SpikeScript* floorScript = floor->AddComponent<SpikeScript>();
+					FloorScript* floorScript = floor->AddComponent<FloorScript>();
 				AddGameObject(floor, LAYER::FLOOR);
-
-				if (i == 1)
-				{
-					Item* item = new Item();
-					item->GetComponent<Transform>()->SetPosition(Vector3(i* GAP_X - 0.9595f, -0.95f + GAP_Y * (i + 1), 0.0f));
-					DoubleJumpScript* itemScript = item->AddComponent<DoubleJumpScript>();
-					AddGameObject(item, LAYER::ITEM);
-				}
 			}
 
 			{
@@ -185,6 +177,13 @@ namespace van
 				item->GetComponent<Transform>()->SetPosition(Vector3(4* GAP_X - 0.9595f, -0.95f + GAP_Y * 3, 0.0f));
 				StarScript* itemScript = item->AddComponent<StarScript>();
 				AddGameObject(item, LAYER::FLOOR);
+			}
+
+			{
+				Item* item = new Item();
+				item->GetComponent<Transform>()->SetPosition(Vector3(10 * GAP_X - 0.9595f, -0.95f + GAP_Y * 3, 0.0f));
+				DoubleJumpScript* itemScript = item->AddComponent<DoubleJumpScript>();
+				AddGameObject(item, LAYER::ITEM);
 			}
 
 			// Move floor

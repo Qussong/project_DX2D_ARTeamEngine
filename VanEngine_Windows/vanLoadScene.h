@@ -21,6 +21,6 @@ namespace van
 		SceneManager::CreateScene<Stage2>(L"Stage2");
 		SceneManager::CreateScene<Stage3>(L"Stage3");
 
-		SceneManager::LoadScene(L"Stage3");
+		SceneManager::LoadScene(L"Stage1");
 	}
 }
