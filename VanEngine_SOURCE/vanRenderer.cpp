@@ -34,32 +34,45 @@ namespace van::renderer
 		// star
 		{
 			std::vector<Vertex> vertexes;
-			vertexes.resize(5);
+			vertexes.resize(6);
 
-			vertexes[0].pos = Vector3(-0.5f, 0.3f, 0.f);
+			vertexes[0].pos = Vector3(0.f, 0.f, 0.f);
 			vertexes[0].color = Vector4(1.f, 1.f, 0.f, 1.f);
-
-			vertexes[1].pos = Vector3(0.f, 0.3f, 0.f);
-			vertexes[1].color = Vector4(1.f, 1.f, 0.f, 1.f);
-
-			vertexes[2].pos = Vector3(0.5f, 0.3f, 0.f);
-			vertexes[2].color = Vector4(1.f, 1.f, 0.f, 1.f);
-
-			vertexes[3].pos = Vector3(-0.3f, -0.3f, 0.f);
-			vertexes[3].color = Vector4(1.f, 1.f, 0.f, 1.f);
-
-			vertexes[4].pos = Vector3(0.3f, -0.3f, 0.f);
-			vertexes[4].color = Vector4(1.f, 1.f, 0.f, 1.f);
+			for (int i = 0; i < 5; i++)
+			{
+				vertexes[i + 1].pos = Vector3(cos(Radian(18.f + (72 * i))), sin(Radian(18.f + (72 * i))), 0.f);
+				vertexes[i + 1].color = Vector4(1.f, 1.f, 0.f, 1.f);
+			}
 
 			std::vector<UINT> indexes;
 			indexes.push_back(0);
-		
+			indexes.push_back(3);
+			indexes.push_back(1);
+
+			indexes.push_back(0);
+			indexes.push_back(5);
+			indexes.push_back(3);
+
+			indexes.push_back(0);
+			indexes.push_back(4);
+			indexes.push_back(2);
+
+			indexes.push_back(0);
+			indexes.push_back(1);
+			indexes.push_back(4);
+
+			indexes.push_back(0);
+			indexes.push_back(5);
+			indexes.push_back(3);
+
+			indexes.push_back(0);
+			indexes.push_back(2);
+			indexes.push_back(5);
 
 			// star vertex buffer
-			meshStar->CreateVertexBuffer(vertexes.data(), 5);
+			meshStar->CreateVertexBuffer(vertexes.data(), 6);
 			meshStar->CreateIndexBuffer(indexes.data(), indexes.size());
 			ResourceManager::Insert(L"StarMesh", meshStar);
-
 		}
 
 		// Spike
