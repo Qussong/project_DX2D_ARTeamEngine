@@ -8,6 +8,7 @@
 #include "..//VanEngine_Windows//vanStage1.h"
 #include "..//VanEngine_Windows//vanStage2.h"
 #include "..//VanEngine_Windows//vanStage3.h"
+#include "..//VanEngine_Windows//vanStage4.h"
 
 
 #include "vanRigidbody.h"
@@ -15,7 +16,6 @@
 #include "..//VanEngine_Windows//vanPlayScene.h"
 namespace van
 {
-	//Scene* SceneManager::mPlayScene = nullptr;
 	Scene* SceneManager::mActiveScene = nullptr;
 	Player* SceneManager::mPlayer = new Player;
 
@@ -28,7 +28,8 @@ namespace van
 
 	void SceneManager::Update()
 	{
-		if (mPlayer->GetPlayerDeadCheck())				//Player가 Dead면 레이어에서 제거후 다시 씬을만들어줌
+		//Player가 Dead면 레이어에서 제거후 다시 씬을만들어줌
+		if (mPlayer->GetPlayerDeadCheck())				
 		{
 			mPlayer->GetComponent<Rigidbody>()->SetVelocity(Vector3::Zero);
 			mPlayer->GetComponent<Rigidbody>()->SetGround(false);
@@ -78,13 +79,29 @@ namespace van
 				LoadScene(L"Stage3");
 				mPlayer->SetPlayerDeadCheck(false);
 			}
-			
+			else if (mActiveScene->GetName() == L"Stage4")
+			{
+				mActiveScene->RemoveLayer(enums::LAYER::PLAYER);
+				mActiveScene->RemoveLayer(enums::LAYER::FLOOR);
+				SceneManager::DeleteScene<Stage4>(L"Stage4");
+				SceneManager::CreateScene<Stage4>(L"Stage4");
+
+				LoadScene(L"Stage4");
+				mPlayer->SetPlayerDeadCheck(false);
+			}
 		}
 
-		if (mActiveScene->GetStarCount() <= 0 || Input::GetKeyState(KEY_CODE::Q) == KEY_STATE::DOWN) // Q버튼 누를시 다음 스테이지 로드
+		// 다음 스테이지 로드(Q버튼)
+		if (mActiveScene->GetStarCount() <= 0 
+			|| Input::GetKeyState(KEY_CODE::Q) == KEY_STATE::DOWN) 
 		{
+			// 플레이어 상태 초기화
+			mPlayer->GetComponent<Rigidbody>()->SetVelocity(Vector3::Zero);
+			mPlayer->GetComponent<Rigidbody>()->SetGround(false);
+			mPlayer->SetDoubleJumpCheck(false);
 
-			if (mActiveScene->GetName() == L"Stage1")				// 스테이지 클리어시 다음 스테이지 로드
+			// 스테이지 클리어시 다음 스테이지 로드
+			if (mActiveScene->GetName() == L"Stage1")				
 			{
 				mActiveScene->RemoveLayer(enums::LAYER::PLAYER);
 				mActiveScene->RemoveLayer(enums::LAYER::FLOOR);
@@ -96,10 +113,47 @@ namespace van
 				mActiveScene->RemoveLayer(enums::LAYER::FLOOR);
 				LoadScene(L"Stage3");
 			}
-			//if (mActiveScene->GetName() == L"Stage2")
-			//{
-			//	LoadScene(L"PlayScene");
-			//}
+			else if (mActiveScene->GetName() == L"Stage3")
+			{
+				mActiveScene->RemoveLayer(enums::LAYER::PLAYER);
+				mActiveScene->RemoveLayer(enums::LAYER::FLOOR);
+				LoadScene(L"Stage4");
+			}
+			else if (mActiveScene->GetName() == L"Stage4")
+			{
+				mActiveScene->RemoveLayer(enums::LAYER::PLAYER);
+				mActiveScene->RemoveLayer(enums::LAYER::FLOOR);
+				LoadScene(L"PlayScene");
+			}
+		}
+
+		//  이전 스테이지 로드(W버튼)
+		if (Input::GetKeyState(KEY_CODE::W) == KEY_STATE::DOWN)
+		{
+			// 플레이어 상태 초기화
+			mPlayer->GetComponent<Rigidbody>()->SetVelocity(Vector3::Zero);
+			mPlayer->GetComponent<Rigidbody>()->SetGround(false);
+			mPlayer->SetDoubleJumpCheck(false);
+
+			// 스테이지 클리어시 다음 스테이지 로드
+			if (mActiveScene->GetName() == L"Stage2")
+			{
+				mActiveScene->RemoveLayer(enums::LAYER::PLAYER);
+				mActiveScene->RemoveLayer(enums::LAYER::FLOOR);
+				LoadScene(L"Stage1");
+			}
+			else if (mActiveScene->GetName() == L"Stage3")
+			{
+				mActiveScene->RemoveLayer(enums::LAYER::PLAYER);
+				mActiveScene->RemoveLayer(enums::LAYER::FLOOR);
+				LoadScene(L"Stage2");
+			}
+			else if (mActiveScene->GetName() == L"Stage4")
+			{
+				mActiveScene->RemoveLayer(enums::LAYER::PLAYER);
+				mActiveScene->RemoveLayer(enums::LAYER::FLOOR);
+				LoadScene(L"Stage3");
+			}
 		}
 
 		mActiveScene->Update();
@@ -131,6 +185,4 @@ namespace van
 		}
 		return iter->second;
 	}
-
-
 }

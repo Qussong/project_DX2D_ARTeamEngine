@@ -8,8 +8,6 @@ namespace van
 	{
 	}
 
-	
-
 	Scene::~Scene()
 	{
 	}
@@ -21,7 +19,6 @@ namespace van
 			layer.Initialize();
 		}
 		//mLayers.resize((UINT)LAYER::MAX);
-
 	}
 
 	void Scene::Update()

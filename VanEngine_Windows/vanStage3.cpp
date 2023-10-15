@@ -31,9 +31,11 @@ namespace van
 	van::Stage3::Stage3()
 	{
 	}
+
 	Stage3::~Stage3()
 	{
 	}
+
 	void Stage3::Initialize()
 	{
 		Player* player = SceneManager::GetPlayer();
@@ -160,7 +162,7 @@ namespace van
 					SpikeScript* floorScript = floor->AddComponent<SpikeScript>();
 				}
 				else
-					FloorScript* floorScript = floor->AddComponent<FloorScript>();
+				FloorScript* floorScript = floor->AddComponent<FloorScript>();
 				AddGameObject(floor, LAYER::FLOOR);
 			}
 
@@ -238,18 +240,18 @@ namespace van
 		CollisionManager::CollisionLayerCheck(LAYER::PLAYER, LAYER::FLOOR, true);
 		CollisionManager::CollisionLayerCheck(LAYER::PLAYER, LAYER::ITEM, true);
 	}
+
 	void Stage3::Update()
 	{
-
-
-
 		int test = SceneManager::GetActiveScene()->GetStarCount();
 		Scene::Update();
 	}
+
 	void Stage3::LateUpdate()
 	{
 		Scene::LateUpdate();
 	}
+
 	void Stage3::Render()
 	{
 		Scene::Render();

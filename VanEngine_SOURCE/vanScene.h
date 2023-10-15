@@ -18,7 +18,6 @@ namespace van
 		virtual void LateUpdate();
 		virtual void Render();
 
-		//Layer* GetLayer(UINT index) { return&mLayers[index]; }
 		Layer& GetLayer(UINT index) { return mLayers[index]; }
 		void AddGameObject(GameObject* gameObject, UINT layerIndex);
 		void RemoveLayer(enums::LAYER type);

@@ -104,9 +104,7 @@ namespace van
 			floor->GetComponent<Transform>()->SetPosition(Vector3(-GAP_X * 2, i * GAP_Y + 0.0f, 0.0f));
 			FloorScript* jumpScript = floor->AddComponent<FloorScript>();
 			AddGameObject(floor, LAYER::FLOOR);
-
 		}
-
 
 		{
 			Floor* floor = new Floor();
@@ -115,7 +113,6 @@ namespace van
 			straightScript->SetDirection(StraightDir::Left);
 			AddGameObject(floor, LAYER::FLOOR);
 		}
-
 
 		for (size_t i = 0; i < 5; ++i)
 		{
@@ -142,7 +139,6 @@ namespace van
 			AddGameObject(floor, LAYER::FLOOR);
 
 			portalInScript->SetOutPortalPos(Vector3(-0.886f, 0.7f, 0.0f));
-
 		}
 
 		for (size_t i = 0; i < 4; i++)
@@ -151,9 +147,7 @@ namespace van
 			floor->GetComponent<Transform>()->SetPosition(Vector3(-0.57f, i * GAP_Y + 0.5f, 0.0f));
 			SpikeScript* spikeScript = floor->AddComponent<SpikeScript>();
 			AddGameObject(floor, LAYER::FLOOR);
-
 		}
-
 
 		{
 			Floor* floor = new Floor();
@@ -161,7 +155,6 @@ namespace van
 			StraightScript* straightScript = floor->AddComponent<StraightScript>();
 			straightScript->SetDirection(StraightDir::Right);
 			AddGameObject(floor, LAYER::FLOOR);
-
 		}
 
 		{
@@ -170,7 +163,6 @@ namespace van
 			StraightScript* straightScript = floor->AddComponent<StraightScript>();
 			straightScript->SetDirection(StraightDir::Left);
 			AddGameObject(floor, LAYER::FLOOR);
-
 		}
 
 		{
@@ -179,7 +171,6 @@ namespace van
 			StraightScript* straightScript = floor->AddComponent<StraightScript>();
 			straightScript->SetDirection(StraightDir::Right);
 			AddGameObject(floor, LAYER::FLOOR);
-
 		}
 
 		{
@@ -188,7 +179,6 @@ namespace van
 			PortalInScript* portalInScript = floor->AddComponent<PortalInScript>();
 			portalInScript->SetOutPortalPos(Vector3(-0.9f, -0.13f, 0.0f));
 			AddGameObject(floor, LAYER::FLOOR);
-
 		}
 
 		for (size_t i = 0; i < 5; i++)
@@ -198,7 +188,6 @@ namespace van
 			StarScript* starScript = item->AddComponent<StarScript>();
 			AddGameObject(item, LAYER::ITEM);
 		}
-
 
 		for (size_t i = 0; i < 25; i++)
 		{
@@ -216,7 +205,6 @@ namespace van
 				SpikeScript* spikeScript = floor->AddComponent<SpikeScript>();
 				AddGameObject(floor, LAYER::FLOOR);
 			}
-
 		}
 
 		for (size_t i = 0; i < 6; i++)
@@ -252,10 +240,7 @@ namespace van
 				DoubleJumpScript* doubleJumpScript = item->AddComponent<DoubleJumpScript>();
 				AddGameObject(item, LAYER::ITEM);
 			}
-
 		}
-
-
 
 		for (size_t i = 0; i < 9; ++i)
 		{
@@ -264,7 +249,6 @@ namespace van
 
 			DisappearScript* disappearScript = floor->AddComponent<DisappearScript>();
 			AddGameObject(floor, LAYER::FLOOR);
-
 		}
 
 		for (size_t i = 0; i < 4; ++i)

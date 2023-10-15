@@ -33,6 +33,7 @@
     <ClInclude Include="vanStage1.h" />
     <ClInclude Include="vanStage2.h" />
     <ClInclude Include="vanStage3.h" />
+    <ClInclude Include="vanStage4.h" />
     <ClInclude Include="vanStarScript.h" />
     <ClInclude Include="vanStraightScript.h" />
   </ItemGroup>
@@ -50,6 +51,7 @@
     <ClCompile Include="vanStage1.cpp" />
     <ClCompile Include="vanStage2.cpp" />
     <ClCompile Include="vanStage3.cpp" />
+    <ClCompile Include="vanStage4.cpp" />
     <ClCompile Include="vanStarScript.cpp" />
     <ClCompile Include="vanStraightScript.cpp" />
   </ItemGroup>
