@@ -40,7 +40,6 @@ namespace van
 		// Player
 		Player* player = SceneManager::GetPlayer();
 		player->GetComponent<Transform>()->SetPosition(Vector3(0.95f, 0.8f, 0.0f));
-		player->GetComponent<PlayerScript>();
 
 		// Floor1
 		for (size_t i = 0; i < 5; ++i)
