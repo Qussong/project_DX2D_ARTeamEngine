@@ -184,22 +184,7 @@ namespace van
 		if (mActiveScene != nullptr)
 		{
 			mActiveScene->AddGameObject(mPlayer, LAYER::PLAYER);
-			if (mActiveScene->GetName() == L"Stage1")
-			{
-				mPlayer->GetComponent<Transform>()->SetPosition(Vector3(0.95f, 0.8f, 0.0f));
-			}
-			else if(mActiveScene->GetName() == L"Stage2")
-			{
-				mPlayer->GetComponent<Transform>()->SetPosition(Vector3(-0.95f, 0.8f, 0.0f));
-			}
-			else if (mActiveScene->GetName() == L"Stage3")
-			{
-				mPlayer->GetComponent<Transform>()->SetPosition(Vector3(-0.8877f, 0.8f, 0.0f));
-			}
-			else if (mActiveScene->GetName() == L"Stage4")
-			{
-
-			}
+			mActiveScene->Initialize();
 		}
 		return iter->second;
 	}

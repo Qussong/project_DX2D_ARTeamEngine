@@ -61,9 +61,9 @@ namespace van
 			mRigidbody->AddVelocity(Vector3(VELOCITY_X, 0.0f, 0.0f) * Time::DeltaTime());
 		}
 
-		if (Input::GetKeyState(KEY_CODE::A) == KEY_STATE::UP
-			|| Input::GetKeyState(KEY_CODE::D) == KEY_STATE::UP)
-			mRigidbody->SetFriction(10.0f);
+		//if (Input::GetKeyState(KEY_CODE::A) == KEY_STATE::UP
+		//	|| Input::GetKeyState(KEY_CODE::D) == KEY_STATE::UP)
+		//	//mRigidbody->SetFriction(10.0f);
 
 		bool bCheck = player->GetDoubleJumpCheck();
 		if (Input::GetKeyState(KEY_CODE::SPACE) == KEY_STATE::DOWN && bCheck)
@@ -75,7 +75,7 @@ namespace van
 			else
 				mRigidbody->SetVelocity(Vector3(0.85f, 1.1f, 0.0f));
 
-			mTransform->SetColor(0.0f,0.0f,0.0f,0.0f);	// 아이템 사용시 원래 색으로
+			//mTransform->SetColor(0.0f,0.0f,0.0f,0.0f);	// 아이템 사용시 원래 색으로
 
 			player->SetDoubleJumpCheck(false);
 		}
