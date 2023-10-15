@@ -51,105 +51,123 @@ namespace van
 		for (size_t i = 0; i < 10; ++i)
 		{
 			Floor* floor = new Floor();
-			floor->GetComponent<Transform>()->SetPosition(Vector3(i * GAP_X - 0.4f, -0.8f, 0.0f));
-			FloorScript* straightScript = floor->AddComponent<FloorScript>();
+			floor->GetComponent<Transform>()->SetPosition(Vector3(i * GAP_X - 0.35f, -0.8f, 0.0f));
+			FloorScript* floorScript = floor->AddComponent<FloorScript>();
 			AddGameObject(floor, LAYER::FLOOR);
 		}
 
-		// Disappear
-		for (size_t i = 0; i < 3; ++i)
+
+		// E
 		{
-			Floor* floor = new Floor();
-			floor->GetComponent<Transform>()->SetPosition(Vector3(i * GAP_X - 0.6f, -0.6f, 0.0f));
-			DisappearScript* disappear = floor->AddComponent<DisappearScript>();
-			AddGameObject(floor, LAYER::FLOOR);
-		}
+			for (size_t i = 0; i < 4; ++i)
+			{
+				Floor* floor = new Floor();
+				floor->GetComponent<Transform>()->SetPosition(Vector3(i * GAP_X - 0.7f, 6 * GAP_Y + 0.f, 0.0f));
+				FloorScript* floorScript = floor->AddComponent<FloorScript>();
+				AddGameObject(floor, LAYER::FLOOR);
+			}
 
-		// FloorV
-		for (size_t i = 0; i < 4; ++i)
+			for (size_t i = 0; i < 4; ++i)
+			{
+				Floor* floor = new Floor();
+				floor->GetComponent<Transform>()->SetPosition(Vector3(i * GAP_X - 0.7f, 3 * GAP_Y + 0.f, 0.0f));
+				FloorScript* floorScript = floor->AddComponent<FloorScript>();
+				AddGameObject(floor, LAYER::FLOOR);
+			}
+
+			for (size_t i = 0; i < 4; ++i)
+			{
+				Floor* floor = new Floor();
+				floor->GetComponent<Transform>()->SetPosition(Vector3(i * GAP_X - 0.7f, 0.f, 0.0f));
+				FloorScript* floorScript = floor->AddComponent<FloorScript>();
+				AddGameObject(floor, LAYER::FLOOR);
+			}
+
+			for (size_t i = 0; i < 7; ++i)
+			{
+				Floor* floor = new Floor();
+				floor->GetComponent<Transform>()->SetPosition(Vector3(-0.7f, i* GAP_Y - 0.f, 0.0f));
+				FloorScript* floorScript = floor->AddComponent<FloorScript>();
+				AddGameObject(floor, LAYER::FLOOR);
+			}
+		}
+		
+		// n
 		{
-			Floor* floor = new Floor();
-			floor->GetComponent<Transform>()->SetPosition(Vector3(0.35f, i * GAP_Y - 0.8f, 0.0f));
-			StraightScript* straightScript = floor->AddComponent<StraightScript>();
-			straightScript->SetDirection(StraightDir::Right);
-			AddGameObject(floor, LAYER::FLOOR);
+			for (size_t i = 0; i < 4; ++i)
+			{
+				Floor* floor = new Floor();
+				floor->GetComponent<Transform>()->SetPosition(Vector3(-0.2f, i * GAP_Y - 0.f, 0.0f));
+				FloorScript* floorScript = floor->AddComponent<FloorScript>();
+				AddGameObject(floor, LAYER::FLOOR);
+			}
+
+			for (size_t i = 0; i < 5; ++i)
+			{
+				Floor* floor = new Floor();
+				floor->GetComponent<Transform>()->SetPosition(Vector3(i * GAP_X - 0.2f, 3* GAP_Y+ 0.f, 0.0f));
+				FloorScript* floorScript = floor->AddComponent<FloorScript>();
+				AddGameObject(floor, LAYER::FLOOR);
+			}
+
+			for (size_t i = 0; i < 4; ++i)
+			{
+				Floor* floor = new Floor();
+				floor->GetComponent<Transform>()->SetPosition(Vector3(4 * GAP_X - 0.2f, i * GAP_Y - 0.f, 0.0f));
+				FloorScript* floorScript = floor->AddComponent<FloorScript>();
+				AddGameObject(floor, LAYER::FLOOR);
+			}
 		}
 
-		//// FloorH2
-		///*for (size_t i = 0; i < 1; ++i)
-		//{*/
-		//	Floor* floor = new Floor();
-		//	floor->GetComponent<Transform>()->SetPosition(Vector3(0.f, -0.3f, 0.0f));
-		//	StraightScript* straightScript = floor->AddComponent<StraightScript>();
-		//	straightScript->SetDirection(StraightDir::Left);
-		//	AddGameObject(floor, LAYER::FLOOR);
-		////}
 
-		// FloorH3
-		//for (size_t i = 0; i < 3; ++i)
-		//{
-		//	Floor* floor = new Floor();
-		//	floor->GetComponent<Transform>()->SetPosition(Vector3(i * GAP_X - 0.5f, -0.5f, 0.0f));
-		//	SpikeScript* straightScript = floor->AddComponent<SpikeScript>();
-		//	AddGameObject(floor, LAYER::FLOOR);
-		//}
-
+		// d
 		{
-			Floor* floor = new Floor();
-			floor->GetComponent<Transform>()->SetPosition(Vector3(0.15f, -0.5f, 0.0f));
-			PortalInScript* portalinScript = floor->AddComponent<PortalInScript>();
-			portalinScript->SetOutPortalPos(Vector3(-0.5f, 0.5f, 0.f));
-			AddGameObject(floor, LAYER::FLOOR);
+			for (size_t i = 0; i < 4; ++i)
+			{
+				Floor* floor = new Floor();
+				floor->GetComponent<Transform>()->SetPosition(Vector3(0.4f, i * GAP_Y - 0.f, 0.0f));
+				FloorScript* floorScript = floor->AddComponent<FloorScript>();
+				AddGameObject(floor, LAYER::FLOOR);
+			}
+
+			for (size_t i = 0; i < 4; ++i)
+			{
+				Floor* floor = new Floor();
+				floor->GetComponent<Transform>()->SetPosition(Vector3(i * GAP_X + 0.4f, 3 * GAP_Y + 0.f, 0.0f));
+				FloorScript* floorScript = floor->AddComponent<FloorScript>();
+				AddGameObject(floor, LAYER::FLOOR);
+			}
+
+			for (size_t i = 0; i < 4; ++i)
+			{
+				Floor* floor = new Floor();
+				floor->GetComponent<Transform>()->SetPosition(Vector3(i * GAP_X + 0.4f, 0.f, 0.0f));
+				FloorScript* floorScript = floor->AddComponent<FloorScript>();
+				AddGameObject(floor, LAYER::FLOOR);
+			}
+
+			for (size_t i = 0; i < 7; ++i)
+			{
+				Floor* floor = new Floor();
+				floor->GetComponent<Transform>()->SetPosition(Vector3(3 * GAP_X + 0.4f, i * GAP_Y - 0.f, 0.0f));
+				FloorScript* floorScript = floor->AddComponent<FloorScript>();
+				AddGameObject(floor, LAYER::FLOOR);
+			}
 		}
 
-		for (size_t i = 0; i < 4; ++i)
-		{
-			Floor* floor = new Floor();
-			floor->GetComponent<Transform>()->SetPosition(Vector3(0.0f, i * GAP_Y, 0.0f));
-			JumpScript* jumpScript = floor->AddComponent<JumpScript>();
-			AddGameObject(floor, LAYER::FLOOR);
-		}
+		
 
-		//for (size_t i = 0; i < 4; ++i)
-		//{
-		//	Floor* floor = new Floor();
-		//	floor->GetComponent<Transform>()->SetPosition(Vector3(0.55f, i * GAP_Y - 0.8f, 0.0f));
-		//	PortalOutScript* straightScript = floor->AddComponent<PortalOutScript>();
-		//	AddGameObject(floor, LAYER::FLOOR);
-		//}
-
-
-		//for (size_t i = 0; i < 4; ++i)
-		//{
-		//	Floor* floor = new Floor();
-		//	floor->GetComponent<Transform>()->SetPosition(Vector3(0.75f, i * GAP_Y - 0.8f, 0.0f));
-		//	DoubleJumpScript* straightScript = floor->AddComponent<DoubleJumpScript>();
-		//	AddGameObject(floor, LAYER::FLOOR);
-		//}
-
-		// Star1
+		// Star
 		{
 			Item* item = new Item();
-			item->GetComponent<Transform>()->SetPosition(Vector3(0.f, -0.5f, 0.0f));
+			item->GetComponent<Transform>()->SetPosition(Vector3(0.5f, 0.2f, 0.0f));
 			StarScript* Script = item->AddComponent<StarScript>();
 			AddGameObject(item, LAYER::ITEM);
 		}
+	
+	
 
-		// Star2
-		{
-			Item* item = new Item();
-			item->GetComponent<Transform>()->SetPosition(Vector3(-1.0f, -0.5f, 0.0f));
-			StarScript* Script = item->AddComponent<StarScript>();
-			AddGameObject(item, LAYER::ITEM);
-		}
-
-		// DoubleJump Item
-		{
-			Item* item = new Item();
-			item->GetComponent<Transform>()->SetPosition(Vector3(-0.1f, -0.6f, 0.0f));
-			DoubleJumpScript* Script = item->AddComponent<DoubleJumpScript>();
-			AddGameObject(item, LAYER::ITEM);
-		}
+	
 
 		// Collision Setting
 		CollisionManager::CollisionLayerCheck(LAYER::PLAYER, LAYER::FLOOR, true);
