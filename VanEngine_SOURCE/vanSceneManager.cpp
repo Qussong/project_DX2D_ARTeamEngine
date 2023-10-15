@@ -88,12 +88,14 @@ namespace van
 			{
 				mActiveScene->RemoveLayer(enums::LAYER::PLAYER);
 				mActiveScene->RemoveLayer(enums::LAYER::FLOOR);
+
 				LoadScene(L"Stage2");
 			}
 			else if (mActiveScene->GetName() == L"Stage2")
 			{
 				mActiveScene->RemoveLayer(enums::LAYER::PLAYER);
 				mActiveScene->RemoveLayer(enums::LAYER::FLOOR);
+
 				LoadScene(L"Stage3");
 			}
 			//if (mActiveScene->GetName() == L"Stage2")
@@ -128,6 +130,22 @@ namespace van
 		if (mActiveScene != nullptr)
 		{
 			mActiveScene->AddGameObject(mPlayer, LAYER::PLAYER);
+			if (mActiveScene->GetName() == L"Stage1")
+			{
+				mPlayer->GetComponent<Transform>()->SetPosition(Vector3(0.95f, 0.8f, 0.0f));
+			}
+			else if(mActiveScene->GetName() == L"Stage2")
+			{
+				mPlayer->GetComponent<Transform>()->SetPosition(Vector3(-0.95f, 0.8f, 0.0f));
+			}
+			else if (mActiveScene->GetName() == L"Stage3")
+			{
+				mPlayer->GetComponent<Transform>()->SetPosition(Vector3(-0.8877f, 0.8f, 0.0f));
+			}
+			else if (mActiveScene->GetName() == L"Stage4")
+			{
+
+			}
 		}
 		return iter->second;
 	}
