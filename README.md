@@ -35,12 +35,14 @@ BBounce Ball
 3주차 : Stage 제작 및 버그 수정
 
 ### $\large\bf\color{#CD5C5C}Notion\ URL$
+$\color{#4F4F4F}(\ ↓ 이미지\ 클릭시\ 해당\ 페이지로\ 이동합니다.↓\ )$</br>
 <a href="https://reminiscent-moth-47a.notion.site/DirecX11-11b7e40d2ccc80de939bd3c8d4a05951?pvs=4">
     <img src="./ReadMe/Notion.png" alt="BBounceBall 개발일지" width="400"/>
 </a>
 </br>
 
 ### $\large\bf\color{#CD5C5C}Naver\ Blog\ URL$
+$\color{#4F4F4F}(\ ↓ 이미지\ 클릭시\ 해당\ 페이지로\ 이동합니다.↓\ )$</br>
 <a href="https://blog.naver.com/qussong_coding_story/223238671600">
     <img src="./ReadMe/BBounceBall.png" alt="게임잼 참여후기" width="400"/>
 </a>
